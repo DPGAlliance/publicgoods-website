@@ -349,7 +349,7 @@ var svg = d3.select("#treemap")
 .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
   .attr("viewBox", "0 0 1000 300")
-var data_sdg = {"name":"SDGs","children":[{"name":2,"value":11},{"name":3,"value":19},{"name":4,"value":31},{"name":7,"value":1},{"name":8,"value":2},{"name":9,"value":11},{"name":10,"value":2},{"name":11,"value":5},{"name":12,"value":3},{"name":13,"value":1},{"name":15,"value":1},{"name":16,"value":11}]};var data_type = [{"name":"data","value":40},{"name":"software","value":56},{"name":"standard","value":4}];var sdg_labels = ["No Poverty","Zero Hunger","Good Health and Well-being","Quality Education","Gender Equality","Clean Water and Sanitation","Affordable and Clean Energy","Decent Work and Economic Growth","Industry, Innovation and Infrastructure","Reduced Inequality","Sustainable Cities and Communities","Responsible Consumption and Production","Climate Action","Life Below Water","Life on Land","Peace and Justice Strong Institutions","Partnerships to achieve the Goal"];
+var data_sdg = {"name":"SDGs","children":[{"name":2,"value":11},{"name":3,"value":19},{"name":4,"value":31},{"name":7,"value":1},{"name":8,"value":2},{"name":9,"value":11},{"name":10,"value":2},{"name":11,"value":5},{"name":12,"value":3},{"name":13,"value":1},{"name":15,"value":1},{"name":16,"value":11}]};var data_type = [{"name":"data","value":40},{"name":"software","value":56},{"name":"standard","value":4}];var sdg_labels = ["No Poverty","Zero Hunger","Good Health and Well-being","Quality Education","Gender Equality","Clean Water and Sanitation","Affordable and Clean Energy","Decent Work and Economic Growth","Industry, Innovation and Infrastructure","Reduced Inequality","Sustainable Cities and Communities","Responsible Consumption and Production","Climate Action","Life Below Water","Life on Land","Peace and Justice Strong Institutions","Partnerships to achieve the Goal"];var sdg_colors = ["#E5243B","#DDA63A","#4C9F38","#C5192D","#FF3A21","#26BDE2","#FCC30B","#A21942","#FD6925","#DD1367","#FD9D24","#BF8B2E","#3F7E44","#0A97D9","#56C02B","#00689D","#19486A"];
 
   // Give the data to this cluster layout:
   var root = d3.hierarchy(data_sdg).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
@@ -373,7 +373,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":11},{"name":3,"value
       .attr('width', function (d) { return d.x1 - d.x0; })
       .attr('height', function (d) { return d.y1 - d.y0; })
       .style("stroke", "white")
-      .style("fill", "grey")
+      .style("fill", function (d) { return sdg_colors[d.data.name-1]; })
       .on("mouseover", handleMouseOver)
       .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);
@@ -392,7 +392,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":11},{"name":3,"value
 
   function handleMouseOver(d) {  // Add interactivity
     // Use D3 to select element, change color and size
-    d3.select(this).style('fill','#e91e63');
+    d3.select(this).style('fill','grey');
   }
 
   function handleMouseMove(d) {
@@ -404,7 +404,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":11},{"name":3,"value
 
   function handleMouseOut(d, i) {
     // Use D3 to select element, change color back to normal
-    d3.select(this).style('fill','grey');
+    d3.select(this).style('fill', function (d) { return sdg_colors[d.data.name-1]; }); 
 
     // Select text by id and then remove
     tool.style("display", "none");
