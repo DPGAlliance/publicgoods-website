@@ -348,7 +348,7 @@ span.small-title {
 
 
 
-<div class="row"><div class="col-xs-2 col-xs-offset-1"><span class="big-details">108</span><span class="small-title">candidates</span></div><div class="col-xs-4" id="venn"><span class="small-title">distribution by type</span></div></div><div class="row" style="margin-bottom:5em"><div class="col-xs-10 col-xs-offset-1" id="treemap"><span class="small-title">distribution by SDG</span><div id="treemap"></div></div></div>
+<div class="row"><div class="col-xs-2 col-xs-offset-1"><span class="big-details">109</span><span class="small-title">candidates</span></div><div class="col-xs-4" id="venn"><span class="small-title">distribution by type</span></div></div><div class="row" style="margin-bottom:5em"><div class="col-xs-10 col-xs-offset-1" id="treemap"><span class="small-title">distribution by SDG</span><div id="treemap"></div></div></div>
 
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js" charset="utf-8"></script>
@@ -363,7 +363,7 @@ var svg = d3.select("#treemap")
 .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
   .attr("viewBox", "0 0 1000 300")
-var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value":35},{"name":4,"value":37},{"name":7,"value":1},{"name":8,"value":3},{"name":9,"value":14},{"name":10,"value":6},{"name":11,"value":6},{"name":12,"value":3},{"name":13,"value":2},{"name":15,"value":2},{"name":16,"value":34}]};var data_type = [{"name":"software","value":67},{"name":"data","value":31},{"name":"standard","value":2}];var sdg_labels = ["No Poverty","Zero Hunger","Good Health and Well-being","Quality Education","Gender Equality","Clean Water and Sanitation","Affordable and Clean Energy","Decent Work and Economic Growth","Industry, Innovation and Infrastructure","Reduced Inequality","Sustainable Cities and Communities","Responsible Consumption and Production","Climate Action","Life Below Water","Life on Land","Peace and Justice Strong Institutions","Partnerships to achieve the Goal"];var sdg_colors = ["#E5243B","#DDA63A","#4C9F38","#C5192D","#FF3A21","#26BDE2","#FCC30B","#A21942","#FD6925","#DD1367","#FD9D24","#BF8B2E","#3F7E44","#0A97D9","#56C02B","#00689D","#19486A"];var sets = [{"sets":[1],"size":81,"value":81,"label":"software"},{"sets":[2],"size":37,"value":37,"label":"data"},{"sets":[3],"size":3,"value":3,"label":"standard"},{"sets":[1,2],"size":10,"value":10},{"sets":[1,3],"size":1,"value":1},{"sets":[2,3],"size":0,"value":0},{"sets":[1,2,3],"size":1,"value":1}];
+var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value":35},{"name":4,"value":38},{"name":7,"value":1},{"name":8,"value":3},{"name":9,"value":14},{"name":10,"value":6},{"name":11,"value":6},{"name":12,"value":3},{"name":13,"value":2},{"name":15,"value":2},{"name":16,"value":34}]};var data_type = [{"name":"software","value":66},{"name":"data","value":31},{"name":"standard","value":2}];var sdg_labels = ["No Poverty","Zero Hunger","Good Health and Well-being","Quality Education","Gender Equality","Clean Water and Sanitation","Affordable and Clean Energy","Decent Work and Economic Growth","Industry, Innovation and Infrastructure","Reduced Inequality","Sustainable Cities and Communities","Responsible Consumption and Production","Climate Action","Life Below Water","Life on Land","Peace and Justice Strong Institutions","Partnerships to achieve the Goal"];var sdg_colors = ["#E5243B","#DDA63A","#4C9F38","#C5192D","#FF3A21","#26BDE2","#FCC30B","#A21942","#FD6925","#DD1367","#FD9D24","#BF8B2E","#3F7E44","#0A97D9","#56C02B","#00689D","#19486A"];var sets = [{"sets":[1],"size":81,"value":81,"label":"software"},{"sets":[2],"size":38,"value":38,"label":"data"},{"sets":[3],"size":3,"value":3,"label":"standard"},{"sets":[1,2],"size":10,"value":10},{"sets":[1,3],"size":1,"value":1},{"sets":[2,3],"size":0,"value":0},{"sets":[1,2,3],"size":1,"value":1}];
 
   // Give the data to this cluster layout:
   var root = d3.hierarchy(data_sdg).sum(function(d){ return d.value}) // Here the size of each leave is given in the 'value' field in input data
@@ -564,9 +564,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="BSIS"></a></div><a href="https://www.jembi.org" target="_blank">Blood Safety Information System</a></td><td style="vertical-align: top;">System to monitor blood inventory from collection to transfusion.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/jembi/bsis/blob/develop/LICENSE" target="_blank">BSD-3-Clause</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Book_Dash"></a></div><a href="https://bookdash.org" target="_blank">Book Dash</a></td><td style="vertical-align: top;">Book Dash gathers creative volunteers to create new African storybooks that anyone can freely print, translate and distribute.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY-SA-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="BSIS"></a></div><a href="https://www.jembi.org" target="_blank">Blood Safety Information System</a></td><td style="vertical-align: top;">System to monitor blood inventory from collection to transfusion.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/jembi/bsis/blob/develop/LICENSE" target="_blank">BSD-3-Clause</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-13254298" x1="0" x2="0" y1="1" y2="0">
@@ -576,7 +574,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-13254298" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,3 3,3 6,2 9,10 12,1 15,1 18,4 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,6 150,1 153,10 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,4 3,2 6,9 9,2 12,1 15,4 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,6 150,10 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -585,9 +583,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="CCVMS"></a></div><a href="https://github.com/EL-BID/ccvms" target="_blank">Cold Chain and Vaccination Management System</a></td><td style="vertical-align: top;">Monitoring and management tool for vaccine coverage and cold chain management.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/EL-BID/API-SGiS/blob/master/LICENSE.md" target="_blank">CC-BY-NC-ND-3.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="CCVMS"></a></div><a href="https://github.com/EL-BID/ccvms" target="_blank">Cold Chain and Vaccination Management System</a></td><td style="vertical-align: top;">Monitoring and management tool for vaccine coverage and cold chain management.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/EL-BID/API-SGiS/blob/master/LICENSE.md" target="_blank">CC-BY-NC-ND-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-143585391" x1="0" x2="0" y1="1" y2="0">
@@ -625,22 +621,24 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Consul"></a></div><a href="http://consulproject.org" target="_blank">Consul</a></td><td style="vertical-align: top;">Citizen participation and open government web application that helps public officials carry out participatory processes with their citizens. Through an accessible and friendly interface, governments can facilitate direct citizen participation through a number of activities, including citizen proposals, participatory budgets, collaborative legislation, debates and voting.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg11" target="_blank"><img src="/wp-content/uploads/2019/02/SDG11.png" width="40" alt="Responsible Consumption and Production" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/consul/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Consul"></a></div><a href="http://consulproject.org" target="_blank">Consul</a></td><td style="vertical-align: top;">Citizen participation and open government web application that helps public officials carry out participatory processes with their citizens. Through an accessible and friendly interface, governments can facilitate direct citizen participation through a number of activities, including citizen proposals, participatory budgets, collaborative legislation, debates and voting.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg11" target="_blank"><img src="/wp-content/uploads/2019/02/SDG11.png" width="40" alt="Responsible Consumption and Production" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/consul/consul/blob/master/LICENSE-AGPLv3.txt" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
-        <linearGradient id="gradient-123322086" x1="0" x2="0" y1="1" y2="0">
+        <linearGradient id="gradient-39152554" x1="0" x2="0" y1="1" y2="0">
             <stop offset="10%" stop-color="#c6e48b"/>
             <stop offset="33%" stop-color="#7bc96f"/>
             <stop offset="66%" stop-color="#239a3b"/>
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
-        <mask id="sparkline-123322086" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+        <mask id="sparkline-39152554" x="0" y="0" width="155" height="28">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,5.6 3,3.78 6,3.2 9,8.66 12,2.26 15,5.09 18,1.8599999999999999 21,1.94 24,2.44 27,2.1399999999999997 30,2.1100000000000003 33,2.1100000000000003 36,2.7199999999999998 39,2.74 42,3.43 45,2.54 48,2.5700000000000003 51,29.0 54,2.31 57,1.58 60,1.81 63,2.9699999999999998 66,2.67 69,2.44 72,2.01 75,2.26 78,1.63 81,2.42 84,1.6600000000000001 87,1.6600000000000001 90,2.19 93,1.96 96,2.74 99,3.38 102,1.63 105,1.51 108,1.96 111,2.26 114,1.2 117,1.03 120,1.03 123,1.05 126,1.3 129,1.03 132,1.05 135,1.03 138,1.18 141,2.1100000000000003 144,1.38 147,4.01 150,3.38 153,2.34 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -12)">
-        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-123322086); mask: url(#sparkline-123322086)"/>
+      <g transform="translate(0, 2.0)">
+        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-39152554); mask: url(#sparkline-39152554)"/>
       </g>
     </svg>
   </span>
@@ -663,7 +661,9 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Curriki"></a></div><a href="https://www.curriki.org" target="_blank">Curriki</a></td><td style="vertical-align: top;">A community for teaching or studying: Create, share, and explore high quality K-12 content..</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.curriki.org/terms-of-service" target="_blank">CC-BY-NC-3.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="DHIS2"></a></div><a href="https://www.dhis2.org/" target="_blank">District Health Information System 2</a></td><td style="vertical-align: top;">A health management data platform for reporting, analysis and dissemination of data for all health programs, developed on open source Java technologies.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/dhis2/dhis2-core/blob/master/LICENSE" target="_blank">BSD-3-Clause</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Curriki"></a></div><a href="https://www.curriki.org" target="_blank">Curriki</a></td><td style="vertical-align: top;">A community for teaching or studying: Create, share, and explore high quality K-12 content..</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.curriki.org/terms-of-service" target="_blank">CC-BY-NC-3.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="DHIS2"></a></div><a href="https://www.dhis2.org/" target="_blank">District Health Information System 2</a></td><td style="vertical-align: top;">A health management data platform for reporting, analysis and dissemination of data for all health programs, developed on open source Java technologies.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/dhis2/dhis2-core/blob/master/LICENSE" target="_blank">BSD-3-Clause</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-66940520" x1="0" x2="0" y1="1" y2="0">
@@ -673,7 +673,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-66940520" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,9.37 3,8.33 6,6.23 9,12.51 12,12.51 15,7.02 18,7.54 21,4.140000000000001 24,5.19 27,7.8 30,2.83 33,2.5700000000000003 36,4.4 39,3.88 42,4.66 45,7.8 48,7.28 51,8.33 54,5.45 57,6.5 60,7.8 63,8.85 66,8.33 69,7.02 72,12.51 75,11.21 78,4.66 81,19.58 84,18.01 87,8.07 90,12.25 93,22.2 96,12.51 99,16.439999999999998 102,6.5 105,1.52 108,9.37 111,7.02 114,5.71 117,5.19 120,2.31 123,29.0 126,15.92 129,18.79 132,6.23 135,8.85 138,5.45 141,4.4 144,3.36 147,6.23 150,2.5700000000000003 153,4.93 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,8.120000000000001 3,7.88 6,5.27 9,14.05 12,9.54 15,5.75 18,8.120000000000001 21,2.9 24,4.8 27,7.64 30,1.47 33,3.14 36,3.37 39,4.08 42,4.8 45,6.22 48,7.41 51,7.17 54,5.75 57,5.98 60,6.69 63,8.120000000000001 66,8.120000000000001 69,7.41 72,10.25 75,10.49 78,3.37 81,20.69 84,15.47 87,6.69 90,10.02 93,23.07 96,8.83 99,14.76 102,5.98 105,2.19 108,11.44 111,3.85 114,5.75 117,3.37 120,2.19 123,29.0 126,11.92 129,18.32 132,4.8 135,8.120000000000001 138,5.75 141,3.37 144,3.61 147,5.75 150,2.19 153,4.32 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -720,9 +720,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Facility_Reconciliation_Tool"></a></div><a href="https://facility-recon.readthedocs.io" target="_blank">Facility Reconciliation Tool</a></td><td style="vertical-align: top;">The Facility Reconciliation Tool is an open source and open standards-based product used to compare lists of (health) facilities from different data sources.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openhie/facility-recon/blob/master/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Facility_Reconciliation_Tool"></a></div><a href="https://facility-recon.readthedocs.io" target="_blank">Facility Reconciliation Tool</a></td><td style="vertical-align: top;">The Facility Reconciliation Tool is an open source and open standards-based product used to compare lists of (health) facilities from different data sources.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openhie/facility-recon/blob/master/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-134755349" x1="0" x2="0" y1="1" y2="0">
@@ -732,11 +730,11 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-134755349" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,16 3,12 6,13 9,2 12,2 15,7 18,6 21,2 24,8 27,5 30,1 33,1 36,3 39,7 42,9 45,13 48,8 51,6 54,5 57,2 60,2 63,1 66,5 69,3 72,1 75,1 78,8 81,1 84,8 87,2 90,3 93,14 96,3 99,4 102,4 105,4 108,12 111,14 114,17 117,8 120,7 123,10 126,2 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,3 153,3 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,21 3,8 6,13 9,1 12,2 15,7 18,6 21,7 24,6 27,2 30,1 33,1 36,4 39,6 42,11 45,11 48,9 51,5 54,6 57,1 60,2 63,1 66,5 69,3 72,1 75,2 78,7 81,1 84,8 87,2 90,3 93,16 96,1 99,4 102,4 105,4 108,15 111,14 114,15 117,8 120,6 123,10 126,2 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,3 153,4 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -4)">
+      <g transform="translate(0, -2)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-134755349); mask: url(#sparkline-134755349)"/>
       </g>
     </svg>
@@ -772,11 +770,11 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-48418599" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,2 3,5 6,2 9,6 12,7 15,8 18,5 21,10 24,3 27,7 30,5 33,9 36,2 39,4 42,3 45,2 48,4 51,7 54,7 57,14 60,22 63,14 66,1 69,6 72,1 75,5 78,4 81,3 84,4 87,4 90,1 93,1 96,5 99,1 102,16 105,18 108,3 111,24 114,23 117,3 120,7 123,3 126,1 129,1 132,4 135,1 138,6 141,2 144,2 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,2 3,5 6,3 9,5 12,11 15,4 18,8 21,7 24,3 27,7 30,6 33,8 36,5 39,1 42,4 45,1 48,4 51,9 54,6 57,25 60,16 63,8 66,3 69,4 72,1 75,5 78,4 81,5 84,2 87,4 90,1 93,1 96,5 99,1 102,25 105,11 108,2 111,24 114,22 117,3 120,7 123,3 126,1 129,1 132,4 135,1 138,6 141,2 144,2 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -1)">
+      <g transform="translate(0, 0)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-48418599); mask: url(#sparkline-48418599)"/>
       </g>
     </svg>
@@ -800,7 +798,9 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Fundza_Novels"></a></div><a href="https://live.fundza.mobi/specials/yoza-content-on-fundza/" target="_blank">Fundza Novels</a></td><td style="vertical-align: top;">Mobile novel, plays and poems for teenagers from South Africa</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://creativecommons.org/licenses/by-sa/2.5/za/" target="_blank">CC-BY-SA-2.5</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="GDL"></a></div><a href="https://home.digitallibrary.io/" target="_blank">Global Digital Library</a></td><td style="vertical-align: top;">An open collection of high-quality educational reading resources, making them available on the web, mobile and for print.</td><td style="vertical-align: top;">software, data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://home.digitallibrary.io/cc/" target="_blank">CC-BY-3.0,CC-BY-SA-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Fundza_Novels"></a></div><a href="https://live.fundza.mobi/specials/yoza-content-on-fundza/" target="_blank">Fundza Novels</a></td><td style="vertical-align: top;">Mobile novel, plays and poems for teenagers from South Africa</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://creativecommons.org/licenses/by-sa/2.5/za/" target="_blank">CC-BY-SA-2.5</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="GDL"></a></div><a href="https://home.digitallibrary.io/" target="_blank">Global Digital Library</a></td><td style="vertical-align: top;">An open collection of high-quality educational reading resources, making them available on the web, mobile and for print.</td><td style="vertical-align: top;">software, data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://home.digitallibrary.io/cc/" target="_blank">CC-BY-3.0,CC-BY-SA-3.0</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-101615219" x1="0" x2="0" y1="1" y2="0">
@@ -810,11 +810,11 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-101615219" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,6 3,7 6,10 9,3 12,5 15,2 18,1 21,1 24,1 27,1 30,1 33,3 36,6 39,2 42,4 45,1 48,1 51,1 54,1 57,1 60,2 63,2 66,1 69,1 72,5 75,1 78,1 81,1 84,3 87,3 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,6 3,5 6,12 9,3 12,5 15,2 18,1 21,1 24,1 27,1 30,1 33,3 36,6 39,2 42,3 45,2 48,1 51,1 54,1 57,1 60,2 63,2 66,1 69,1 72,5 75,1 78,1 81,1 84,3 87,1 90,3 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -8)">
+      <g transform="translate(0, -7)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-101615219); mask: url(#sparkline-101615219)"/>
       </g>
     </svg>
@@ -841,19 +841,19 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
 </td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="GrowStuff"></a></div><a href="https://www.growstuff.org/" target="_blank">GrowStuff</a></td><td style="vertical-align: top;">Open data project for small-scale food growers.</td><td style="vertical-align: top;">software, data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg2" target="_blank"><img src="/wp-content/uploads/2019/02/SDG2.png" width="40" alt="Good Health and Well-being" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/Growstuff/growstuff/blob/dev/LICENSE.txt" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
-        <linearGradient id="gradient-59665433" x1="0" x2="0" y1="1" y2="0">
+        <linearGradient id="gradient-5337437" x1="0" x2="0" y1="1" y2="0">
             <stop offset="10%" stop-color="#c6e48b"/>
             <stop offset="33%" stop-color="#7bc96f"/>
             <stop offset="66%" stop-color="#239a3b"/>
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
-        <mask id="sparkline-59665433" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+        <mask id="sparkline-5337437" x="0" y="0" width="155" height="28">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,6.52 3,1.71 6,2.7 9,2.13 12,1.42 15,1.0 18,2.7 21,1.5699999999999998 24,1.5699999999999998 27,1.0 30,1.1400000000000001 33,20.8 36,2.98 39,5.95 42,22.92 45,4.68 48,8.35 51,11.46 54,1.85 57,1.28 60,1.28 63,5.38 66,6.66 69,7.65 72,5.53 75,4.390000000000001 78,9.63 81,14.58 84,4.82 87,2.56 90,6.66 93,11.61 96,6.37 99,10.9 102,26.31 105,5.67 108,17.83 111,7.08 114,29.0 117,6.37 120,9.34 123,2.7 126,9.77 129,5.38 132,6.94 135,1.28 138,4.68 141,1.99 144,2.84 147,3.69 150,1.42 153,1.99 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -12)">
-        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-59665433); mask: url(#sparkline-59665433)"/>
+      <g transform="translate(0, 2.0)">
+        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-5337437); mask: url(#sparkline-5337437)"/>
       </g>
     </svg>
   </span>
@@ -867,18 +867,16 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-25261082" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,4 18,4 21,5 24,2 27,1 30,1 33,1 36,1 39,1 42,1 45,8 48,3 51,10 54,25 57,1 60,1 63,2 66,1 69,1 72,1 75,6 78,3 81,6 84,17 87,5 90,21 93,23 96,24 99,1 102,1 105,7 108,3 111,10 114,18 117,17 120,7 123,5 126,1 129,6 132,7 135,5 138,7 141,9 144,3 147,4 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,4 18,4 21,5 24,2 27,1 30,1 33,1 36,1 39,1 42,1 45,8 48,3 51,18 54,17 57,1 60,2 63,1 66,1 69,1 72,1 75,6 78,3 81,10 84,16 87,2 90,24 93,21 96,23 99,1 102,2 105,6 108,4 111,11 114,29 117,6 120,5 123,5 126,1 129,6 132,7 135,7 138,5 141,9 144,4 147,3 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, 0)">
+      <g transform="translate(0, 2)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-25261082); mask: url(#sparkline-25261082)"/>
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Humansis"></a></div><a href="https://humansis.org/" target="_blank">Humansis</a></td><td style="vertical-align: top;">Humansis provides a more open, secure, functional and easy to use method of aid delivery, promoting transparency, and reducing opportunities for fraud and data theft.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/humansis/front/blob/dev/LICENSE" target="_blank">MIT</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Humansis"></a></div><a href="https://humansis.org/" target="_blank">Humansis</a></td><td style="vertical-align: top;">Humansis provides a more open, secure, functional and easy to use method of aid delivery, promoting transparency, and reducing opportunities for fraud and data theft.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/humansis/front/blob/dev/LICENSE" target="_blank">MIT</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-197076203" x1="0" x2="0" y1="1" y2="0">
@@ -888,7 +886,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-197076203" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,5.78 3,19.27 6,11.76 9,7.49 12,7.49 15,10.39 18,7.49 21,14.83 24,13.12 27,17.73 30,4.41 33,12.1 36,18.41 39,29.0 42,8.34 45,26.1 48,10.05 51,16.880000000000003 54,11.76 57,13.12 60,15.34 63,13.98 66,13.46 69,6.63 72,4.59 75,7.15 78,8.17 81,16.2 84,12.95 87,20.46 90,17.73 93,13.29 96,12.1 99,10.22 102,12.44 105,4.59 108,7.83 111,26.1 114,20.98 117,13.46 120,9.88 123,2.02 126,3.22 129,1.6800000000000002 132,1.0 135,1.51 138,3.56 141,5.1 144,1.34 147,1.0 150,1.6800000000000002 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,7.11 3,15.15 6,10.68 9,7.26 12,6.21 15,9.94 18,8.6 21,11.57 24,12.62 27,14.11 30,3.09 33,17.53 36,11.87 39,25.43 42,6.36 45,23.34 48,7.7 51,15.3 54,12.62 57,9.19 60,14.4 63,12.47 66,10.98 69,5.02 72,4.13 75,6.51 78,6.36 81,17.23 84,8.45 87,21.85 90,12.17 93,12.47 96,10.98 99,8.15 102,10.38 105,4.57 108,8.45 111,29.0 114,13.81 117,9.34 120,7.85 123,2.94 126,2.04 129,1.45 132,1.0 135,1.45 138,4.279999999999999 141,3.53 144,1.3 147,1.0 150,1.6 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -928,7 +926,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-49976939" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,15.95 3,9.29 6,9.43 9,9.7 12,2.3600000000000003 15,3.58 18,3.85 21,7.12 24,12.01 27,16.5 30,12.28 33,6.71 36,11.47 39,15.14 42,23.16 45,28.05 48,29.0 51,24.65 54,11.06 57,17.45 60,9.02 63,6.57 66,10.24 69,10.92 72,7.12 75,6.98 78,18.81 81,18.13 84,13.37 87,16.36 90,11.47 93,17.17 96,11.19 99,13.37 102,10.38 105,9.16 108,16.36 111,12.55 114,10.24 117,11.74 120,16.09 123,13.37 126,10.65 129,8.75 132,11.33 135,2.77 138,7.66 141,3.72 144,4.67 147,4.9399999999999995 150,4.26 153,1.95 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,13.44 3,8.219999999999999 6,8.719999999999999 9,8.469999999999999 12,2.12 15,3.36 18,3.86 21,7.84 24,10.58 27,17.55 30,8.469999999999999 33,7.72 36,11.58 39,15.31 42,18.42 45,29.0 48,25.52 51,21.28 54,10.96 57,15.44 60,6.97 63,6.23 66,9.96 69,9.59 72,6.48 75,5.73 78,19.42 81,17.8 84,10.46 87,16.060000000000002 90,9.96 93,14.56 96,10.71 99,12.57 102,9.09 105,10.46 108,14.32 111,10.58 114,10.46 117,10.71 120,14.81 123,12.82 126,8.34 129,8.719999999999999 132,9.71 135,2.74 138,6.6 141,3.24 144,4.98 147,5.73 150,2.62 153,1.25 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -977,26 +975,30 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Medic_Mobile"></a></div><a href="http://medicmobile.org" target="_blank">Medic Mobile</a></td><td style="vertical-align: top;">A community health application framework, which you can use to build responsive, offline-first community health apps. The framework is highly configurable, with support for interactive messaging, decision support, task management, health records, data collection, and analytics.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/medic/medic/blob/master/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Medic_Mobile"></a></div><a href="http://medicmobile.org" target="_blank">Medic Mobile</a></td><td style="vertical-align: top;">A community health application framework, which you can use to build responsive, offline-first community health apps. The framework is highly configurable, with support for interactive messaging, decision support, task management, health records, data collection, and analytics.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/medic/medic/blob/master/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
-        <linearGradient id="gradient-93524218" x1="0" x2="0" y1="1" y2="0">
+        <linearGradient id="gradient-2698821" x1="0" x2="0" y1="1" y2="0">
             <stop offset="10%" stop-color="#c6e48b"/>
             <stop offset="33%" stop-color="#7bc96f"/>
             <stop offset="66%" stop-color="#239a3b"/>
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
-        <mask id="sparkline-93524218" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,2 9,7 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,8 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,2 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+        <mask id="sparkline-2698821" x="0" y="0" width="155" height="28">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,12.2 3,15.93 6,26.2 9,12.2 12,14.07 15,18.73 18,26.2 21,19.67 24,16.869999999999997 27,15.0 30,4.73 33,3.8 36,15.0 39,13.13 42,20.6 45,29.0 48,20.6 51,15.0 54,15.93 57,6.6 60,4.73 63,4.73 66,5.67 69,11.27 72,5.67 75,6.6 78,1.0 81,8.469999999999999 84,7.53 87,12.2 90,12.2 93,14.07 96,4.73 99,4.73 102,2.87 105,6.6 108,10.33 111,9.4 114,9.4 117,4.73 120,8.469999999999999 123,6.6 126,13.13 129,12.2 132,8.469999999999999 135,4.73 138,7.53 141,11.27 144,9.4 147,13.13 150,7.53 153,1.9300000000000002 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -9)">
-        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-93524218); mask: url(#sparkline-93524218)"/>
+      <g transform="translate(0, 2.0)">
+        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-2698821); mask: url(#sparkline-2698821)"/>
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="MERLOT"></a></div><a href="https://www.merlot.org/merlot/" target="_blank">MERLOT</a></td><td style="vertical-align: top;">The MERLOT system provides access to curated online learning and support materials and content creation tools, led by an international community of educators, learners and researchers.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="http://info.merlot.org/merlothelp/topic.htm#t=Policies_and_Practices.htm" target="_blank">CC-BY-NC-SA-3.0,CC-BY-NC-ND-3.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="MET_Norway_Weather"></a></div><a href="https://api.met.no/" target="_blank">MET Norway Weather</a></td><td style="vertical-align: top;">Open interface to a world weather data produced by MET Norway.</td><td style="vertical-align: top;">software, data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg13" target="_blank"><img src="/wp-content/uploads/2019/02/SDG13.png" width="40" alt="Life Below Water" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://api.met.no/license_data.html" target="_blank">CC-BY-4.0,NLOD-1.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="mHero"></a></div><a href="https://www.mhero.org/" target="_blank">mHero</a></td><td style="vertical-align: top;">mHero is a two-way, mobile phone-based communication system that uses basic text messaging, or SMS, to connect ministries of health and health workers.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.ihris.org/2007/07/ihris-under-gplv3/" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Mifos"></a></div><a href="https://mifos.org/" target="_blank">Mifos</a></td><td style="vertical-align: top;">Mifos X is an extended platform for delivering the complete range of financial services needed for an effective financial inclusion solution.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg10" target="_blank"><img src="/wp-content/uploads/2019/02/SDG10.png" width="40" alt="Sustainable Cities and Communities" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg11" target="_blank"><img src="/wp-content/uploads/2019/02/SDG11.png" width="40" alt="Responsible Consumption and Production" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openMF/community-app/blob/develop/LICENSE.txt" target="_blank">MPL-2.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="MIT_OpenCourseWare"></a></div><a href="https://ocw.mit.edu" target="_blank">MIT OpenCourseWare</a></td><td style="vertical-align: top;">Web-based publication of virtually all MIT course content, open and available to the world.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-BY-NC-SA-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Mojaloop"></a></div><a href="https://mojaloop.io/" target="_blank">Mojaloop</a></td><td style="vertical-align: top;">Open source software for creating payment platforms that will help unbanked people access digital financial services.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/mojaloop/mojaloop/blob/master/LICENSE.md" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="MERLOT"></a></div><a href="https://www.merlot.org/merlot/" target="_blank">MERLOT</a></td><td style="vertical-align: top;">The MERLOT system provides access to curated online learning and support materials and content creation tools, led by an international community of educators, learners and researchers.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="http://info.merlot.org/merlothelp/topic.htm#t=Policies_and_Practices.htm" target="_blank">CC-BY-NC-SA-3.0,CC-BY-NC-ND-3.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="MET_Norway_Weather"></a></div><a href="https://api.met.no/" target="_blank">MET Norway Weather</a></td><td style="vertical-align: top;">Open interface to a world weather data produced by MET Norway.</td><td style="vertical-align: top;">software, data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg13" target="_blank"><img src="/wp-content/uploads/2019/02/SDG13.png" width="40" alt="Life Below Water" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://api.met.no/license_data.html" target="_blank">CC-BY-4.0,NLOD-1.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="mHero"></a></div><a href="https://www.mhero.org/" target="_blank">mHero</a></td><td style="vertical-align: top;">mHero is a two-way, mobile phone-based communication system that uses basic text messaging, or SMS, to connect ministries of health and health workers.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.ihris.org/2007/07/ihris-under-gplv3/" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Mifos"></a></div><a href="https://mifos.org/" target="_blank">Mifos</a></td><td style="vertical-align: top;">Mifos X is an extended platform for delivering the complete range of financial services needed for an effective financial inclusion solution.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg10" target="_blank"><img src="/wp-content/uploads/2019/02/SDG10.png" width="40" alt="Sustainable Cities and Communities" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg11" target="_blank"><img src="/wp-content/uploads/2019/02/SDG11.png" width="40" alt="Responsible Consumption and Production" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openMF/community-app/blob/develop/LICENSE.txt" target="_blank">MPL-2.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="MIT_OpenCourseWare"></a></div><a href="https://ocw.mit.edu" target="_blank">MIT OpenCourseWare</a></td><td style="vertical-align: top;">Web-based publication of virtually all MIT course content, open and available to the world.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-BY-NC-SA-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Mojaloop"></a></div><a href="https://mojaloop.io/" target="_blank">Mojaloop</a></td><td style="vertical-align: top;">Open source software for creating payment platforms that will help unbanked people access digital financial services.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/mojaloop/mojaloop/blob/master/LICENSE.md" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-132504277" x1="0" x2="0" y1="1" y2="0">
@@ -1006,11 +1008,11 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-132504277" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,2 6,3 9,1 12,1 15,1 18,3 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,2 45,1 48,1 51,1 54,3 57,8 60,8 63,3 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,2 9,3 12,1 15,1 18,2 21,2 24,1 27,1 30,1 33,1 36,1 39,1 42,2 45,1 48,1 51,1 54,2 57,9 60,6 63,3 66,3 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -9)">
+      <g transform="translate(0, -8)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-132504277); mask: url(#sparkline-132504277)"/>
       </g>
     </svg>
@@ -1025,7 +1027,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-195234542" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,9.05 3,7.65 6,7.3 9,4.890000000000001 12,14.41 15,21.86 18,19.68 21,18.65 24,26.68 27,13.0 30,14.27 33,17.7 36,18.19 39,15.73 42,17.97 45,17.14 48,20.76 51,10.14 54,19.76 57,12.68 60,17.81 63,24.41 66,21.92 69,13.22 72,21.57 75,23.59 78,10.76 81,16.14 84,13.32 87,19.54 90,29.0 93,23.62 96,22.51 99,21.46 102,14.43 105,16.16 108,13.65 111,10.0 114,6.78 117,7.19 120,3.84 123,7.54 126,7.76 129,3.7 132,3.68 135,4.46 138,1.76 141,1.19 144,1.0 147,1.0 150,1.0 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,9.26 3,8.27 6,7.4 9,6.41 12,15.75 15,26.54 18,21.97 21,21.49 24,27.44 27,14.4 30,17.85 33,17.49 36,21.25 39,17.31 42,18.3 45,20.29 48,19.54 51,14.4 54,20.02 57,15.57 60,19.57 63,28.19 66,22.27 69,14.67 72,29.0 75,21.34 78,11.55 81,20.35 84,10.49 87,27.08 90,28.88 93,26.87 96,27.62 99,20.95 102,13.68 105,18.88 108,13.29 111,12.24 114,6.95 117,6.32 120,4.82 123,8.690000000000001 126,7.79 129,3.4 132,4.79 135,4.18 138,1.51 141,1.21 144,1.0 147,1.0 150,1.0 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -1053,9 +1055,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="mSpray"></a></div><a href="https://akros.com/mspray/" target="_blank">mSpray</a></td><td style="vertical-align: top;">Tool for enumeration, targeting and monitoring of Indoor Residual Spraying (IRS) for malaria interventions.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/onaio/mspray/blob/master/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="mSpray"></a></div><a href="https://akros.com/mspray/" target="_blank">mSpray</a></td><td style="vertical-align: top;">Tool for enumeration, targeting and monitoring of Indoor Residual Spraying (IRS) for malaria interventions.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/onaio/mspray/blob/master/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-19082954" x1="0" x2="0" y1="1" y2="0">
@@ -1065,7 +1065,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-19082954" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,6.67 3,9.86 6,4.54 9,8.09 12,15.89 15,18.37 18,29.0 21,12.7 24,21.56 27,12.7 30,2.06 33,1.0 36,1.0 39,1.0 42,1.0 45,1.35 48,2.06 51,1.0 54,1.0 57,1.0 60,1.0 63,1.0 66,1.0 69,1.0 72,1.0 75,1.0 78,1.0 81,1.0 84,1.0 87,1.0 90,1.0 93,1.0 96,1.0 99,1.0 102,1.0 105,1.0 108,1.0 111,1.0 114,1.0 117,1.0 120,1.0 123,1.0 126,1.0 129,1.0 132,1.0 135,1.0 138,1.0 141,1.0 144,1.0 147,1.0 150,1.0 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,10.88 3,7.18 6,7.59 9,10.06 12,16.65 15,26.53 18,29.0 21,15.82 24,22.0 27,14.18 30,1.8199999999999998 33,1.0 36,1.0 39,1.0 42,1.0 45,1.41 48,2.24 51,1.0 54,1.0 57,1.0 60,1.0 63,1.0 66,1.0 69,1.0 72,1.0 75,1.0 78,1.0 81,1.0 84,1.0 87,1.0 90,1.0 93,1.0 96,1.0 99,1.0 102,1.0 105,1.0 108,1.0 111,1.0 114,1.0 117,1.0 120,1.0 123,1.0 126,1.0 129,1.0 132,1.0 135,1.0 138,1.0 141,1.0 144,1.0 147,1.0 150,1.0 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -1093,9 +1093,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Open_Ag_Data_Alliance"></a></div><a href="http://openag.io/" target="_blank">Open Ag Data Alliance</a></td><td style="vertical-align: top;">Open data project for small-scale food growers.</td><td style="vertical-align: top;">software, data, standard</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg2" target="_blank"><img src="/wp-content/uploads/2019/02/SDG2.png" width="40" alt="Good Health and Well-being" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/OADA/oada-srvc-docker/blob/master/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Open_Ag_Data_Alliance"></a></div><a href="http://openag.io/" target="_blank">Open Ag Data Alliance</a></td><td style="vertical-align: top;">Open data project for small-scale food growers.</td><td style="vertical-align: top;">software, data, standard</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg2" target="_blank"><img src="/wp-content/uploads/2019/02/SDG2.png" width="40" alt="Good Health and Well-being" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/OADA/oada-srvc-docker/blob/master/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-89021364" x1="0" x2="0" y1="1" y2="0">
@@ -1105,16 +1103,18 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-89021364" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,4 12,4 15,2 18,8 21,4 24,3 27,1 30,2 33,2 36,4 39,3 42,1 45,1 48,1 51,1 54,4 57,1 60,1 63,2 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,4 12,5 15,1 18,9 21,3 24,3 27,1 30,2 33,2 36,4 39,3 42,1 45,1 48,1 51,1 54,4 57,1 60,1 63,2 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -9)">
+      <g transform="translate(0, -8)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-89021364); mask: url(#sparkline-89021364)"/>
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OCDS"></a></div><a href="http://standard.open-contracting.org" target="_blank">Open Contract Data Standard</a></td><td style="vertical-align: top;">The Open Contracting Data Standard (OCDS) enables disclosure of data and documents at all stages of the contracting process by defining a common data model. It was created to support organizations to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.</td><td style="vertical-align: top;">standard</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/open-contracting/standard/blob/1.1-dev/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OCDS"></a></div><a href="http://standard.open-contracting.org" target="_blank">Open Contract Data Standard</a></td><td style="vertical-align: top;">The Open Contracting Data Standard (OCDS) enables disclosure of data and documents at all stages of the contracting process by defining a common data model. It was created to support organizations to increase contracting transparency, and allow deeper analysis of contracting data by a wide range of users.</td><td style="vertical-align: top;">standard</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/open-contracting/standard/blob/1.1-dev/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-99252037" x1="0" x2="0" y1="1" y2="0">
@@ -1124,7 +1124,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-99252037" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,9 9,1 12,1 15,3 18,4 21,5 24,1 27,1 30,1 33,1 36,10 39,1 42,10 45,7 48,2 51,2 54,1 57,2 60,6 63,1 66,6 69,3 72,2 75,1 78,1 81,4 84,5 87,2 90,2 93,1 96,1 99,3 102,4 105,3 108,10 111,4 114,1 117,1 120,1 123,4 126,7 129,1 132,2 135,6 138,1 141,2 144,2 147,5 150,5 153,3 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,7 9,3 12,1 15,2 18,5 21,2 24,4 27,1 30,1 33,1 36,9 39,2 42,8 45,9 48,2 51,2 54,1 57,2 60,4 63,3 66,6 69,2 72,3 75,1 78,1 81,4 84,5 87,2 90,2 93,1 96,1 99,3 102,4 105,2 108,8 111,7 114,1 117,1 120,1 123,4 126,4 129,4 132,2 135,6 138,1 141,2 144,2 147,5 150,5 153,3 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -1152,9 +1152,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenAerialMap"></a></div><a href="https://openaerialmap.org/" target="_blank">OpenAerialMap</a></td><td style="vertical-align: top;">OpenAerialMap provides a simple open way to host and provide access to imagery for humanitarian response and disaster preparedness.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/hotosm/oam-api/blob/develop/LICENSE" target="_blank">BSD-3-Clause</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenAerialMap"></a></div><a href="https://openaerialmap.org/" target="_blank">OpenAerialMap</a></td><td style="vertical-align: top;">OpenAerialMap provides a simple open way to host and provide access to imagery for humanitarian response and disaster preparedness.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/hotosm/oam-api/blob/develop/LICENSE" target="_blank">BSD-3-Clause</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-21242489" x1="0" x2="0" y1="1" y2="0">
@@ -1173,9 +1171,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenCHS"></a></div><a href="http://www.openchs.org/" target="_blank">Open Community Health System</a></td><td style="vertical-align: top;">OpenCHS is a platform that supports field workers, when they provide services to their clients in a field or when they do data collection.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/OpenCHS/openchs-server/blob/master/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenCHS"></a></div><a href="http://www.openchs.org/" target="_blank">Open Community Health System</a></td><td style="vertical-align: top;">OpenCHS is a platform that supports field workers, when they provide services to their clients in a field or when they do data collection.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/OpenCHS/openchs-server/blob/master/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-64591222" x1="0" x2="0" y1="1" y2="0">
@@ -1185,18 +1181,16 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-64591222" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,12 3,7 6,11 9,7 12,6 15,12 18,8 21,10 24,9 27,7 30,7 33,2 36,4 39,3 42,7 45,12 48,11 51,4 54,1 57,7 60,8 63,7 66,13 69,8 72,29 75,19 78,6 81,8 84,21 87,6 90,8 93,10 96,21 99,13 102,5 105,4 108,8 111,11 114,15 117,5 120,6 123,6 126,7 129,7 132,7 135,6 138,13 141,11 144,9 147,7 150,7 153,9 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,11 3,11 6,8 9,6 12,6 15,13 18,9 21,9 24,8 27,7 30,8 33,2 36,3 39,6 42,8 45,8 48,12 51,3 54,4 57,5 60,8 63,11 66,9 69,15 72,25 75,17 78,4 81,10 84,20 87,6 90,9 93,13 96,19 99,13 102,2 105,4 108,10 111,9 114,16 117,5 120,5 123,7 126,9 129,5 132,7 135,7 138,12 141,11 144,9 147,7 150,9 153,12 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, 2)">
+      <g transform="translate(0, 0)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-64591222); mask: url(#sparkline-64591222)"/>
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenELIS"></a></div><a href="https://www.openelis.org/" target="_blank">Open Electronic Laboratory Information System</a></td><td style="vertical-align: top;">OpenELIS is a free open-source laboratory information system (LIS) designed to act as a software and business process framework for the robust functioning of public health laboratories.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openelisglobal/openelisglobal-core/blob/develop/LICENSE.md" target="_blank">MPL-2.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenELIS"></a></div><a href="https://www.openelis.org/" target="_blank">Open Electronic Laboratory Information System</a></td><td style="vertical-align: top;">OpenELIS is a free open-source laboratory information system (LIS) designed to act as a software and business process framework for the robust functioning of public health laboratories.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openelisglobal/openelisglobal-core/blob/develop/LICENSE.md" target="_blank">MPL-2.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-1576747" x1="0" x2="0" y1="1" y2="0">
@@ -1206,18 +1200,16 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-1576747" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,3 3,1 6,2 9,1 12,1 15,2 18,2 21,4 24,4 27,3 30,1 33,1 36,1 39,1 42,2 45,4 48,9 51,5 54,4 57,2 60,3 63,2 66,1 69,1 72,1 75,1 78,10 81,7 84,12 87,21 90,6 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,2 9,1 12,1 15,2 18,2 21,4 24,4 27,3 30,1 33,1 36,1 39,1 42,2 45,4 48,9 51,5 54,4 57,2 60,3 63,2 66,1 69,1 72,1 75,6 78,5 81,12 84,8 87,20 90,6 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -2)">
+      <g transform="translate(0, -3)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-1576747); mask: url(#sparkline-1576747)"/>
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenEMIS"></a></div><a href="http://www.openemis.org" target="_blank">OpenEMIS</a></td><td style="vertical-align: top;">An Education Management Information System for the education sector. Its main purpose is to collect, analyze, and report data related to the management of educational activities.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" target="_blank">GPL-2.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenFarm"></a></div><a href="https://openfarm.cc/" target="_blank">OpenFarm</a></td><td style="vertical-align: top;">Free and open database and web application for farming and gardening knowledge. One might think of it as the Wikipedia for growing plants, though it functions more like a cooking recipes site.</td><td style="vertical-align: top;">software, data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg2" target="_blank"><img src="/wp-content/uploads/2019/02/SDG2.png" width="40" alt="Good Health and Well-being" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openfarmcc/OpenFarm/blob/master/LICENSE" target="_blank">MIT,CC0-1.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenEMIS"></a></div><a href="http://www.openemis.org" target="_blank">OpenEMIS</a></td><td style="vertical-align: top;">An Education Management Information System for the education sector. Its main purpose is to collect, analyze, and report data related to the management of educational activities.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" target="_blank">GPL-2.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenFarm"></a></div><a href="https://openfarm.cc/" target="_blank">OpenFarm</a></td><td style="vertical-align: top;">Free and open database and web application for farming and gardening knowledge. One might think of it as the Wikipedia for growing plants, though it functions more like a cooking recipes site.</td><td style="vertical-align: top;">software, data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg2" target="_blank"><img src="/wp-content/uploads/2019/02/SDG2.png" width="40" alt="Good Health and Well-being" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openfarmcc/OpenFarm/blob/master/LICENSE" target="_blank">MIT,CC0-1.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-13895958" x1="0" x2="0" y1="1" y2="0">
@@ -1227,11 +1219,11 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-13895958" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,6 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,18 63,1 66,6 69,8 72,1 75,1 78,9 81,1 84,1 87,1 90,1 93,8 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,11 120,19 123,6 126,3 129,5 132,7 135,4 138,6 141,2 144,3 147,6 150,3 153,9 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,6 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,4 60,15 63,6 66,8 69,1 72,1 75,1 78,9 81,1 84,1 87,1 90,1 93,8 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,22 120,10 123,5 126,2 129,5 132,8 135,4 138,5 141,2 144,4 147,5 150,3 153,9 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -3)">
+      <g transform="translate(0, -2)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-13895958); mask: url(#sparkline-13895958)"/>
       </g>
     </svg>
@@ -1255,9 +1247,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Open_Food_Source"></a></div><a href="http://www.openfoodsource.org/" target="_blank">Open Food Source</a></td><td style="vertical-align: top;">A web-based open source software system that coordinates and manages local food systems where many producers sell to many customers in an online 24-7 marketplace.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg2" target="_blank"><img src="/wp-content/uploads/2019/02/SDG2.png" width="40" alt="Good Health and Well-being" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg8" target="_blank"><img src="/wp-content/uploads/2019/02/SDG8.png" width="40" alt="Industry, Innovation and Infrastructure" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg12" target="_blank"><img src="/wp-content/uploads/2019/02/SDG12.png" width="40" alt="Climate Action" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openfoodsource/OFS_trunk/blob/master/LICENSE" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Open_Food_Source"></a></div><a href="http://www.openfoodsource.org/" target="_blank">Open Food Source</a></td><td style="vertical-align: top;">A web-based open source software system that coordinates and manages local food systems where many producers sell to many customers in an online 24-7 marketplace.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg2" target="_blank"><img src="/wp-content/uploads/2019/02/SDG2.png" width="40" alt="Good Health and Well-being" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg8" target="_blank"><img src="/wp-content/uploads/2019/02/SDG8.png" width="40" alt="Industry, Innovation and Infrastructure" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg12" target="_blank"><img src="/wp-content/uploads/2019/02/SDG12.png" width="40" alt="Climate Action" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openfoodsource/OFS_trunk/blob/master/LICENSE" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-26098062" x1="0" x2="0" y1="1" y2="0">
@@ -1276,9 +1266,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenHIM"></a></div><a href="http://openhim.org/" target="_blank">Open Health Information Mediator</a></td><td style="vertical-align: top;">A middleware component designed to ease interoperability between disparate information systems, connecting health systems simply, securely and safely.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/jembi/openhim-core-js/blob/master/LICENSE" target="_blank">MPL-2.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenHIM"></a></div><a href="http://openhim.org/" target="_blank">Open Health Information Mediator</a></td><td style="vertical-align: top;">A middleware component designed to ease interoperability between disparate information systems, connecting health systems simply, securely and safely.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/jembi/openhim-core-js/blob/master/LICENSE" target="_blank">MPL-2.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-16686826" x1="0" x2="0" y1="1" y2="0">
@@ -1288,7 +1276,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-16686826" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1.0 3,1.0 6,1.0 9,3.98 12,5.77 15,9.94 18,3.38 21,19.47 24,9.94 27,3.38 30,1.0 33,6.96 36,20.06 39,29.0 42,10.53 45,1.0 48,9.34 51,4.57 54,5.17 57,1.0 60,1.0 63,1.0 66,1.0 69,1.0 72,1.0 75,6.36 78,3.38 81,1.0 84,1.0 87,1.0 90,1.0 93,1.0 96,1.0 99,1.0 102,1.0 105,1.0 108,1.6 111,1.6 114,1.0 117,1.0 120,1.0 123,1.0 126,1.0 129,1.0 132,1.0 135,2.79 138,1.0 141,5.77 144,1.0 147,1.0 150,1.0 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1.0 3,1.0 6,1.0 9,7.51 12,3.6 15,10.77 18,5.56 21,20.53 24,8.809999999999999 27,3.6 30,1.0 33,10.12 36,29.0 39,25.09 42,8.16 45,1.0 48,10.77 51,4.91 54,4.91 57,1.0 60,1.0 63,1.0 66,1.0 69,1.0 72,1.0 75,7.51 78,2.95 81,1.0 84,1.0 87,1.0 90,1.0 93,1.0 96,1.0 99,1.0 102,1.0 105,1.0 108,2.3 111,1.0 114,1.0 117,1.0 120,1.0 123,1.0 126,1.0 129,1.0 132,1.0 135,2.95 138,1.0 141,6.21 144,1.0 147,1.0 150,1.0 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -1297,9 +1285,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenIMIS"></a></div><a href="http://www.openimis.org/" target="_blank">Open Insurance Management Information System</a></td><td style="vertical-align: top;">OpenIMIS is open source software that manages social (health) protection schemes. It links beneficiary, provider and payer data.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openimis/web_app_vb/blob/master/GNU%20AFFERO%20GENERAL%20PUBLIC%20LICENSE.md" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenIMIS"></a></div><a href="http://www.openimis.org/" target="_blank">Open Insurance Management Information System</a></td><td style="vertical-align: top;">OpenIMIS is open source software that manages social (health) protection schemes. It links beneficiary, provider and payer data.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/openimis/web_app_vb/blob/master/GNU%20AFFERO%20GENERAL%20PUBLIC%20LICENSE.md" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-137318066" x1="0" x2="0" y1="1" y2="0">
@@ -1309,11 +1295,11 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-137318066" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,2 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,2 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,6 81,17 84,20 87,13 90,4 93,1 96,3 99,1 102,3 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,2 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,2 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,6 81,21 84,17 87,15 90,1 93,1 96,3 99,1 102,3 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -3)">
+      <g transform="translate(0, -2)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-137318066); mask: url(#sparkline-137318066)"/>
       </g>
     </svg>
@@ -1321,19 +1307,19 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
 </td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenLearn"></a></div><a href="https://www.open.edu/openlearn/" target="_blank">OpenLearn</a></td><td style="vertical-align: top;">Free online learning from The Open University. OpenLearn gives you free access to course materials and expert opinion on topical issues.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.open.edu/openlearn/get-started/openlearn-welcomes-creative-commons-40" target="_blank">CC-BY-NC-SA-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenLMIS"></a></div><a href="http://openlmis.org" target="_blank">Open Logistics Management Information System</a></td><td style="vertical-align: top;">Cloud-based electronic logistics management information system (LMIS) purpose-built to manage health commodity distribution in low- and middle-income countries.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="http://openlmis.org/tools/license/" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenMRS"></a></div><a href="https://openmrs.org" target="_blank">Open Medical Record System</a></td><td style="vertical-align: top;">Software platform and reference application which enables design of a customized medical records system with no programming knowledge.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://openmrs.org/license/" target="_blank">MPL-2.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenSRP"></a></div><a href="http://smartregister.org/" target="_blank">Open Smart Register Program</a></td><td style="vertical-align: top;">Open source mobile health platform that allows frontline health workers to electronically register and track the health of their entire client population.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Open_Stax"></a></div><a href="https://openstax.org" target="_blank">Open Stax</a></td><td style="vertical-align: top;">Publish high-quality, peer-reviewed, openly licensed college textbooks that are absolutely free online and low cost in print.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://openstax.org/license" target="_blank">CC-BY-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OpenStreetMap"></a></div><a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a></td><td style="vertical-align: top;">A map of the world, created by people like you and free to use under an open license.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg11" target="_blank"><img src="/wp-content/uploads/2019/02/SDG11.png" width="40" alt="Responsible Consumption and Production" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.openstreetmap.org/copyright" target="_blank">ODbL-1.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="British_Columbia_Open_Textbook_Collection"></a></div><a href="https://open.bccampus.ca/" target="_blank">British Columbia Open Textbook Collection</a></td><td style="vertical-align: top;">A collection of open textbooks that can help improve the learning experience for students while mitigating the financial barriers keeping them from achieving their academic goals.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Open_Textbook_Library"></a></div><a href="https://open.umn.edu/opentextbooks/" target="_blank">Open Textbook Library</a></td><td style="vertical-align: top;">Open textbooks are textbooks that have been funded, published, and licensed to be freely used, adapted, and distributed. These books have been reviewed by faculty from a variety of colleges and universities to assess their quality. </td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="OPTIONAL"></a></div><a href="https://openupresources.org" target="_blank">Open Up Resources</a></td><td style="vertical-align: top;">Open Up Resources is a nonprofit developing the very best core curricula available to districts, provided for free to promote equity in education.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://openupresources.org/oer-and-creative-commons-licenses/" target="_blank">CC-BY-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Oppia"></a></div><a href="https://www.oppia.org/" target="_blank">Oppia</a></td><td style="vertical-align: top;">Tool for collaboratively building interactive lessons.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/oppia/oppia/blob/develop/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
-        <linearGradient id="gradient-148093817" x1="0" x2="0" y1="1" y2="0">
+        <linearGradient id="gradient-40687563" x1="0" x2="0" y1="1" y2="0">
             <stop offset="10%" stop-color="#c6e48b"/>
             <stop offset="33%" stop-color="#7bc96f"/>
             <stop offset="66%" stop-color="#239a3b"/>
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
-        <mask id="sparkline-148093817" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,6 117,1 120,7 123,1 126,1 129,1 132,2 135,2 138,3 141,5 144,9 147,10 150,6 153,13 " fill="transparent" stroke="#8cc665" stroke-width="2">
+        <mask id="sparkline-40687563" x="0" y="0" width="155" height="28">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,5.08 3,8.58 6,5.67 9,7.42 12,8.58 15,7.42 18,8.58 21,5.67 24,8.58 27,10.92 30,8.0 33,6.83 36,9.75 39,10.33 42,3.92 45,6.83 48,15.0 51,10.33 54,10.92 57,10.33 60,13.83 63,10.92 66,10.33 69,6.25 72,10.33 75,7.42 78,10.92 81,6.83 84,6.83 87,4.5 90,8.58 93,14.42 96,9.17 99,15.0 102,29.0 105,22.58 108,23.17 111,17.92 114,13.83 117,16.17 120,22.0 123,8.58 126,23.75 129,17.33 132,13.25 135,22.58 138,14.42 141,19.67 144,14.42 147,10.33 150,8.0 153,8.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -6)">
-        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-148093817); mask: url(#sparkline-148093817)"/>
+      <g transform="translate(0, 2.0)">
+        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-40687563); mask: url(#sparkline-40687563)"/>
       </g>
     </svg>
   </span>
@@ -1368,7 +1354,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-58648374" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1.9300000000000002 3,7.53 6,1.0 9,1.0 12,2.87 15,1.9300000000000002 18,1.0 21,1.0 24,1.9300000000000002 27,1.0 30,1.0 33,1.0 36,1.0 39,1.0 42,8.469999999999999 45,1.0 48,1.0 51,1.0 54,1.0 57,2.87 60,1.0 63,6.6 66,8.469999999999999 69,20.6 72,15.93 75,8.469999999999999 78,2.87 81,1.0 84,3.8 87,10.33 90,29.0 93,9.4 96,16.869999999999997 99,3.8 102,5.67 105,1.0 108,1.0 111,1.0 114,1.0 117,1.0 120,1.0 123,1.0 126,1.0 129,1.0 132,1.0 135,1.0 138,1.0 141,1.0 144,1.0 147,1.0 150,26.2 153,7.53 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1.0 3,7.32 6,1.0 9,1.0 12,2.81 15,1.9 18,1.0 21,1.0 24,1.9 27,1.0 30,1.0 33,1.0 36,1.0 39,1.0 42,8.23 45,1.0 48,1.0 51,1.0 54,1.9 57,1.9 60,1.0 63,6.42 66,9.13 69,19.06 72,22.68 75,1.0 78,2.81 81,1.0 84,3.71 87,10.03 90,29.0 93,10.94 96,14.55 99,2.81 102,5.52 105,1.0 108,1.0 111,1.0 114,1.0 117,1.0 120,1.0 123,1.0 126,1.0 129,1.0 132,1.0 135,1.0 138,1.0 141,1.0 144,1.0 147,1.9 150,27.19 153,4.609999999999999 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -1377,9 +1363,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="PLOS"></a></div><a href="https://journals.plos.org/" target="_blank">Pubic Library of Science</a></td><td style="vertical-align: top;">A library of open-access journal sand other scientific literature under an open-content license.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.plos.org/license" target="_blank">CC-BY-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Pollit"></a></div><a href="https://pollit.instedd.org" target="_blank">Pollit</a></td><td style="vertical-align: top;">Pollit helps you use the ease of text messaging to conduct surveys reaching your audience at their convenience.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/instedd/pollit/blob/master/LICENSE" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="PLOS"></a></div><a href="https://journals.plos.org/" target="_blank">Pubic Library of Science</a></td><td style="vertical-align: top;">A library of open-access journal sand other scientific literature under an open-content license.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.plos.org/license" target="_blank">CC-BY-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Pollit"></a></div><a href="https://pollit.instedd.org" target="_blank">Pollit</a></td><td style="vertical-align: top;">Pollit helps you use the ease of text messaging to conduct surveys reaching your audience at their convenience.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/instedd/pollit/blob/master/LICENSE" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-26972117" x1="0" x2="0" y1="1" y2="0">
@@ -1389,7 +1373,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-26972117" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,2 21,3 24,1 27,1 30,1 33,1 36,1 39,1 42,19 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,2 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,2 18,1 21,3 24,1 27,1 30,1 33,1 36,1 39,1 42,19 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,2 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,1 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -1398,7 +1382,9 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Practical_Plants"></a></div><a href="https://practicalplants.org" target="_blank">Practical Plants</a></td><td style="vertical-align: top;">A collaboratively edited encyclopedia and database of information on plants cultivated with a practical intention.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg15" target="_blank"><img src="/wp-content/uploads/2019/02/SDG15.png" width="40" alt="Peace and Justice Strong Institutions" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://practicalplants.org/wiki/PracticalPlants:Copyrights" target="_blank">CC-BY-SA-3.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Primero"></a></div><a href="https://www.primero.org/" target="_blank">Primero</a></td><td style="vertical-align: top;">An easy-to-use information management platform developed by the humanitarian protection community, now being used widely by social services workforce, humanitarian, and development workers.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg10" target="_blank"><img src="/wp-content/uploads/2019/02/SDG10.png" width="40" alt="Sustainable Cities and Communities" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/primeroIMS/primero/blob/maint_1.6/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Practical_Plants"></a></div><a href="https://practicalplants.org" target="_blank">Practical Plants</a></td><td style="vertical-align: top;">A collaboratively edited encyclopedia and database of information on plants cultivated with a practical intention.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg15" target="_blank"><img src="/wp-content/uploads/2019/02/SDG15.png" width="40" alt="Peace and Justice Strong Institutions" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://practicalplants.org/wiki/PracticalPlants:Copyrights" target="_blank">CC-BY-SA-3.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Primero"></a></div><a href="https://www.primero.org/" target="_blank">Primero</a></td><td style="vertical-align: top;">An easy-to-use information management platform developed by the humanitarian protection community, now being used widely by social services workforce, humanitarian, and development workers.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg10" target="_blank"><img src="/wp-content/uploads/2019/02/SDG10.png" width="40" alt="Sustainable Cities and Communities" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/primeroIMS/primero/blob/maint_1.6/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-72849464" x1="0" x2="0" y1="1" y2="0">
@@ -1408,7 +1394,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-72849464" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,17.12 3,4.390000000000001 6,20.52 9,4.390000000000001 12,6.09 15,7.79 18,6.94 21,18.82 24,5.24 27,20.52 30,2.7 33,7.79 36,20.52 39,5.24 42,2.7 45,13.73 48,29.0 51,12.03 54,5.24 57,12.03 60,1.0 63,7.79 66,9.48 69,8.64 72,15.42 75,9.48 78,17.97 81,17.97 84,12.88 87,12.88 90,7.79 93,28.15 96,5.24 99,9.48 102,4.390000000000001 105,1.85 108,6.94 111,6.09 114,6.94 117,1.0 120,8.64 123,6.94 126,8.64 129,23.06 132,19.67 135,17.12 138,6.09 141,3.55 144,7.79 147,6.09 150,5.24 153,1.85 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,15.0 3,5.94 6,14.18 9,8.41 12,7.59 15,7.59 18,5.94 21,18.29 24,5.12 27,10.88 30,11.71 33,4.29 36,24.06 39,5.12 42,2.65 45,11.71 48,22.41 51,19.12 54,5.12 57,8.41 60,4.29 63,6.76 66,10.06 69,8.41 72,11.71 75,12.53 78,2.65 81,29.0 84,15.82 87,12.53 90,7.59 93,22.41 96,10.06 99,6.76 102,4.29 105,4.29 108,6.76 111,5.12 114,5.12 117,3.47 120,8.41 123,5.94 126,6.76 129,19.12 132,24.06 135,15.82 138,4.29 141,6.76 144,7.59 147,3.47 150,6.76 153,2.65 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
@@ -1455,7 +1441,9 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="RapidPro"></a></div><a href="https://rapidpro.io" target="_blank">RapidPro</a></td><td style="vertical-align: top;">Open Source platform that allows anyone to build interactive messaging systems using an easy visual interface</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg10" target="_blank"><img src="/wp-content/uploads/2019/02/SDG10.png" width="40" alt="Sustainable Cities and Communities" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/rapidpro/rapidpro/blob/master/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="RapidPro"></a></div><a href="https://rapidpro.io" target="_blank">RapidPro</a></td><td style="vertical-align: top;">Open Source platform that allows anyone to build interactive messaging systems using an easy visual interface</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg3" target="_blank"><img src="/wp-content/uploads/2019/02/SDG3.png" width="40" alt="Quality Education" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg10" target="_blank"><img src="/wp-content/uploads/2019/02/SDG10.png" width="40" alt="Sustainable Cities and Communities" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/rapidpro/rapidpro/blob/master/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-27091452" x1="0" x2="0" y1="1" y2="0">
@@ -1474,9 +1462,7 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Resource_Map"></a></div><a href="http://resourcemap.instedd.org/" target="_blank">Resource Map</a></td><td style="vertical-align: top;">A free, open-source tool that helps you make better decisions by giving you better insight into the location and distribution of your resources.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/instedd/resourcemap/blob/master/LICENSE" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Resource_Map"></a></div><a href="http://resourcemap.instedd.org/" target="_blank">Resource Map</a></td><td style="vertical-align: top;">A free, open-source tool that helps you make better decisions by giving you better insight into the location and distribution of your resources.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/instedd/resourcemap/blob/master/LICENSE" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-23546406" x1="0" x2="0" y1="1" y2="0">
@@ -1535,28 +1521,28 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="StoryWeaver"></a></div><a href="https://storyweaver.org.in" target="_blank">StoryWeaver</a></td><td style="vertical-align: top;">StoryWeaver is an open source platform by Pratham Books for multilingual children’s stories. It addresses all the issues around the lack of content by using an open access framework and technology as force multipliers combined with a platform that supports translation and re-mixing av stories.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://storyweaver.org.in/attributions" target="_blank">CC-BY-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Surveda"></a></div><a href="https://surveda.instedd.org/" target="_blank">Surveda</a></td><td style="vertical-align: top;">An open source survey tool that collects data from populations via mobile phone.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/instedd/surveda/blob/master/LICENSE" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="StoryWeaver"></a></div><a href="https://storyweaver.org.in" target="_blank">StoryWeaver</a></td><td style="vertical-align: top;">StoryWeaver is an open source platform by Pratham Books for multilingual children’s stories. It addresses all the issues around the lack of content by using an open access framework and technology as force multipliers combined with a platform that supports translation and re-mixing av stories.</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://storyweaver.org.in/attributions" target="_blank">CC-BY-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Surveda"></a></div><a href="https://surveda.instedd.org/" target="_blank">Surveda</a></td><td style="vertical-align: top;">An open source survey tool that collects data from populations via mobile phone.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/instedd/surveda/blob/master/LICENSE" target="_blank">GPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
-        <linearGradient id="gradient-64226398" x1="0" x2="0" y1="1" y2="0">
+        <linearGradient id="gradient-99153250" x1="0" x2="0" y1="1" y2="0">
             <stop offset="10%" stop-color="#c6e48b"/>
             <stop offset="33%" stop-color="#7bc96f"/>
             <stop offset="66%" stop-color="#239a3b"/>
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
-        <mask id="sparkline-64226398" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,5 3,6 6,6 9,5 12,11 15,5 18,2 21,7 24,21 27,1 30,2 33,2 36,3 39,5 42,5 45,2 48,4 51,1 54,1 57,2 60,1 63,1 66,5 69,11 72,1 75,2 78,1 81,1 84,1 87,2 90,8 93,4 96,1 99,1 102,3 105,1 108,5 111,1 114,1 117,2 120,11 123,5 126,7 129,2 132,1 135,12 138,22 141,11 144,6 147,4 150,8 153,9 " fill="transparent" stroke="#8cc665" stroke-width="2">
+        <mask id="sparkline-99153250" x="0" y="0" width="155" height="28">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,1 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,4 144,1 147,2 150,2 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -2)">
-        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-64226398); mask: url(#sparkline-64226398)"/>
+      <g transform="translate(0, -11)">
+        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-99153250); mask: url(#sparkline-99153250)"/>
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Tania"></a></div><a href="https://usetania.org/" target="_blank">Tania</a></td><td style="vertical-align: top;">Farmer journal to help you manage your farm easily by accessing information you need on-the-go.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg2" target="_blank"><img src="/wp-content/uploads/2019/02/SDG2.png" width="40" alt="Good Health and Well-being" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/Tanibox/tania-core/blob/master/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Tania"></a></div><a href="https://usetania.org/" target="_blank">Tania</a></td><td style="vertical-align: top;">Farmer journal to help you manage your farm easily by accessing information you need on-the-go.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg2" target="_blank"><img src="/wp-content/uploads/2019/02/SDG2.png" width="40" alt="Good Health and Well-being" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg9" target="_blank"><img src="/wp-content/uploads/2019/02/SDG9.png" width="40" alt="Reduced Inequality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/Tanibox/tania-core/blob/master/LICENSE" target="_blank">Apache-2.0</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-114613642" x1="0" x2="0" y1="1" y2="0">
@@ -1566,37 +1552,37 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
         <mask id="sparkline-114613642" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,17 45,1 48,1 51,1 54,3 57,1 60,29 63,6 66,24 69,1 72,18 75,12 78,11 81,1 84,4 87,1 90,1 93,1 96,1 99,3 102,1 105,1 108,1 111,1 114,1 117,11 120,1 123,1 126,1 129,1 132,2 135,1 138,1 141,1 144,10 147,1 150,12 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1.0 3,1.0 6,1.0 9,1.0 12,1.0 15,1.0 18,1.0 21,1.0 24,1.0 27,1.0 30,1.0 33,1.0 36,1.0 39,2.9299999999999997 42,14.52 45,1.0 48,1.0 51,1.0 54,2.9299999999999997 57,2.9299999999999997 60,29.0 63,4.859999999999999 66,21.28 69,1.0 72,19.34 75,10.66 78,9.69 81,1.0 84,3.9 87,1.0 90,1.0 93,1.0 96,1.0 99,2.9299999999999997 102,1.0 105,1.0 108,1.0 111,1.0 114,1.0 117,10.66 120,1.0 123,1.0 126,1.0 129,1.0 132,1.97 135,1.0 138,1.0 141,1.0 144,9.69 147,1.0 150,11.62 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, 2)">
+      <g transform="translate(0, 2.0)">
         <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-114613642); mask: url(#sparkline-114613642)"/>
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="TED"></a></div><a href="https://www.ted.com/" target="_blank">TED</a></td><td style="vertical-align: top;">Platform for spreading ideas, usually in the form of short, powerful talks</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy" target="_blank">CC-BY-NC-ND-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="TenFour"></a></div><a href="https://www.tenfour.org/" target="_blank">TenFour</a></td><td style="vertical-align: top;">An emergency check-in application for teams that unites multiple communication channels: SMS, email, desktop, mobile and chat.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/ushahidi/tenfour/blob/develop/LICENSE.txt" target="_blank">MIT</a></td><td style="vertical-align: top;">
-        
-  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="TED"></a></div><a href="https://www.ted.com/" target="_blank">TED</a></td><td style="vertical-align: top;">Platform for spreading ideas, usually in the form of short, powerful talks</td><td style="vertical-align: top;">data</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg4" target="_blank"><img src="/wp-content/uploads/2019/02/SDG4.png" width="40" alt="Gender Equality" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://www.ted.com/about/our-organization/our-policies-terms/ted-talks-usage-policy" target="_blank">CC-BY-NC-ND-4.0</a></td><td style="vertical-align: top;">&nbsp;</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="TenFour"></a></div><a href="https://www.tenfour.org/" target="_blank">TenFour</a></td><td style="vertical-align: top;">An emergency check-in application for teams that unites multiple communication channels: SMS, email, desktop, mobile and chat.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/ushahidi/tenfour/blob/develop/LICENSE.txt" target="_blank">MIT</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
-        <linearGradient id="gradient-195215317" x1="0" x2="0" y1="1" y2="0">
+        <linearGradient id="gradient-85569398" x1="0" x2="0" y1="1" y2="0">
             <stop offset="10%" stop-color="#c6e48b"/>
             <stop offset="33%" stop-color="#7bc96f"/>
             <stop offset="66%" stop-color="#239a3b"/>
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
-        <mask id="sparkline-195215317" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,1 3,1 6,1 9,1 12,1 15,1 18,1 21,1 24,1 27,1 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,1 72,1 75,1 78,1 81,1 84,1 87,1 90,1 93,1 96,1 99,1 102,1 105,1 108,1 111,4 114,1 117,1 120,1 123,1 126,1 129,1 132,1 135,1 138,1 141,1 144,9 147,1 150,1 153,1 " fill="transparent" stroke="#8cc665" stroke-width="2">
+        <mask id="sparkline-85569398" x="0" y="0" width="155" height="28">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,9.4 3,8.0 6,12.9 9,17.1 12,8.0 15,29.0 18,14.3 21,14.3 24,1.0 27,4.5 30,1.0 33,1.7 36,4.5 39,10.1 42,5.9 45,3.8 48,1.0 51,1.0 54,1.0 57,1.0 60,1.0 63,1.0 66,1.0 69,1.0 72,1.7 75,13.6 78,4.5 81,6.6 84,5.9 87,6.6 90,5.9 93,7.3 96,7.3 99,5.2 102,8.7 105,4.5 108,4.5 111,1.0 114,1.0 117,1.0 120,1.0 123,1.0 126,1.0 129,1.0 132,3.1 135,1.0 138,1.0 141,1.0 144,1.0 147,1.0 150,1.0 153,1.0 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, -8)">
-        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-195215317); mask: url(#sparkline-195215317)"/>
+      <g transform="translate(0, 2.0)">
+        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-85569398); mask: url(#sparkline-85569398)"/>
       </g>
     </svg>
   </span>
-</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="U-Report"></a></div><a href="https://ureport.in/" target="_blank">U-Report</a></td><td style="vertical-align: top;">Free social messaging tool and a real-time information system that allows community participation.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg10" target="_blank"><img src="/wp-content/uploads/2019/02/SDG10.png" width="40" alt="Sustainable Cities and Communities" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/rapidpro/ureport/blob/master/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
+</td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="U-Report"></a></div><a href="https://ureport.in/" target="_blank">U-Report</a></td><td style="vertical-align: top;">Free social messaging tool and a real-time information system that allows community participation.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg10" target="_blank"><img src="/wp-content/uploads/2019/02/SDG10.png" width="40" alt="Sustainable Cities and Communities" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/rapidpro/ureport/blob/master/LICENSE" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;">
+        
+  <span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
         <linearGradient id="gradient-23904562" x1="0" x2="0" y1="1" y2="0">
@@ -1618,19 +1604,19 @@ var data_sdg = {"name":"SDGs","children":[{"name":2,"value":12},{"name":3,"value
 </td></tr><tr><td style="vertical-align: top;"><div class="anchor"><a id="Ushahidi"></a></div><a href="https://www.ushahidi.com" target="_blank">Ushahidi</a></td><td style="vertical-align: top;">An open source web application for information collection, visualization and interactive mapping. It helps you to collect info from: SMS, Twitter, RSS feeds, Email.</td><td style="vertical-align: top;">software</td><td style="vertical-align: top;"><a href="https://sustainabledevelopment.un.org/sdg16" target="_blank"><img src="/wp-content/uploads/2019/02/SDG16.png" width="40" alt="Partnerships to achieve the Goal" class="sdgicon"></a><a href="https://sustainabledevelopment.un.org/sdg17" target="_blank"><img src="/wp-content/uploads/2019/02/SDG17.png" width="40" alt="undefined" class="sdgicon"></a></td><td style="vertical-align: top;"><a href="https://github.com/ushahidi/platform/blob/develop/LICENSE-AGPL" target="_blank">AGPL-3.0</a></td><td style="vertical-align: top;"><span class="tooltipped tooltipped-s" aria-label="Past year of activity">
     <svg width="155" height="30">
       <defs>
-        <linearGradient id="gradient-6126775" x1="0" x2="0" y1="1" y2="0">
+        <linearGradient id="gradient-22108131" x1="0" x2="0" y1="1" y2="0">
             <stop offset="10%" stop-color="#c6e48b"/>
             <stop offset="33%" stop-color="#7bc96f"/>
             <stop offset="66%" stop-color="#239a3b"/>
             <stop offset="90%" stop-color="#196127"/>
         </linearGradient>
-        <mask id="sparkline-6126775" x="0" y="0" width="155" height="28">
-          <polyline transform="translate(0, 28) scale(1,-1)" points="0,2.81 3,8.379999999999999 6,8.379999999999999 9,8.530000000000001 12,5.67 15,3.26 18,4.46 21,2.35 24,3.71 27,1.6 30,1.0 33,1.6 36,4.46 39,1.45 42,1.0 45,1.15 48,1.45 51,1.3 54,1.0 57,1.3 60,1.0 63,1.3 66,1.15 69,1.0 72,1.0 75,1.6 78,1.0 81,1.0 84,1.3 87,1.15 90,1.3 93,1.15 96,1.15 99,1.45 102,2.81 105,1.0 108,1.75 111,1.15 114,1.0 117,1.0 120,1.0 123,1.15 126,1.45 129,2.51 132,2.66 135,2.2 138,3.86 141,29.0 144,6.42 147,2.51 150,1.6 153,1.9 " fill="transparent" stroke="#8cc665" stroke-width="2">
+        <mask id="sparkline-22108131" x="0" y="0" width="155" height="28">
+          <polyline transform="translate(0, 28) scale(1,-1)" points="0,2 3,16 6,8 9,1 12,1 15,2 18,5 21,6 24,1 27,2 30,1 33,1 36,1 39,1 42,1 45,1 48,1 51,1 54,1 57,1 60,1 63,1 66,1 69,6 72,1 75,1 78,1 81,1 84,1 87,2 90,1 93,7 96,6 99,4 102,5 105,1 108,1 111,2 114,1 117,1 120,6 123,3 126,8 129,1 132,10 135,13 138,23 141,10 144,5 147,2 150,3 153,5 " fill="transparent" stroke="#8cc665" stroke-width="2">
         </polyline></mask>
       </defs>
 
-      <g transform="translate(0, 2.0)">
-        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-6126775); mask: url(#sparkline-6126775)"/>
+      <g transform="translate(0, -1)">
+        <rect x="0" y="-2" width="155" height="30" style="stroke: none; fill: url(#gradient-22108131); mask: url(#sparkline-22108131)"/>
       </g>
     </svg>
   </span>
