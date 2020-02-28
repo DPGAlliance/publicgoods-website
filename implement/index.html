@@ -34,8 +34,8 @@ img.emoji {
 <link rel='stylesheet' id='themeisle-block_styles-css'  href='/wp-content/plugins/themeisle-companion/vendor/codeinwp/gutenberg-blocks/build/style.css?ver=1.3.6' type='text/css' media='all' />
 <link rel='stylesheet' id='hestia-clients-bar-css'  href='/wp-content/plugins/themeisle-companion/obfx_modules/companion-legacy/assets/css/hestia/clients-bar.css?ver=5.3.2' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap-css'  href='/wp-content/themes/hestia/assets/bootstrap/css/bootstrap.min.css?ver=1.0.2' type='text/css' media='all' />
-<link rel='stylesheet' id='hestia-font-sizes-css'  href='/wp-content/themes/hestia/assets/css/font-sizes.min.css?ver=2.5.0' type='text/css' media='all' />
-<link rel='stylesheet' id='hestia_style-css'  href='/wp-content/themes/hestia/style.min.css?ver=2.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='hestia-font-sizes-css'  href='/wp-content/themes/hestia/assets/css/font-sizes.min.css?ver=2.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='hestia_style-css'  href='/wp-content/themes/hestia/style.min.css?ver=2.5.6' type='text/css' media='all' />
 <style id='hestia_style-inline-css' type='text/css'>
 .hestia-top-bar, .hestia-top-bar .widget.widget_shopping_cart .cart_list {
 			background-color: #363537
@@ -65,7 +65,7 @@ img.emoji {
 		.card-blog a.moretag:hover, 
 		.card-blog a.more-link:hover, 
 		.widget a:hover,
-		.has-accent-color,
+		.has-text-color.has-accent-color,
 		p.has-text-color a {
 		    color:#e91e63;
 		}
@@ -108,7 +108,7 @@ img.emoji {
 		.label.label-primary,
 		.hestia-work .portfolio-item:nth-child(6n+1) .label,
 		.nav-cart .nav-cart-content .widget .buttons .button,
-		.has-accent-background-color {
+		.has-accent-background-color[class*="has-background"] {
 		    background-color: #e91e63;
 		}
 		
@@ -182,8 +182,8 @@ img.emoji {
 		.navbar:not(.navbar-transparent) .hestia-toggle-search:hover {
 				color:#e91e63}
 		
-		.has-background-color-color { color: #E5E5E5; }
-		.has-background-color-background-color { background-color: #E5E5E5; }
+		.has-text-color.has-background-color-color { color: #E5E5E5; }
+		.has-background-color-background-color[class*="has-background"] { background-color: #E5E5E5; }
 		
 .btn.btn-primary:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item), input[type="submit"]:not(.search-submit), body:not(.woocommerce-account) .woocommerce .button.woocommerce-Button, .woocommerce .product button.button, .woocommerce .product button.button.alt, .woocommerce .product #respond input#submit, .woocommerce-cart .blog-post .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce-checkout #payment #place_order, .woocommerce-account.woocommerce-page button.button, .woocommerce .track_order button[type="submit"], .nav-cart .nav-cart-content .widget .buttons .button, .woocommerce a.button.wc-backward, body.woocommerce .wccm-catalog-item a.button, body.woocommerce a.wccm-button.button, form.woocommerce-form-coupon button.button, div.wpforms-container .wpforms-form button[type=submit].wpforms-submit, div.woocommerce a.button.alt, div.woocommerce table.my_account_orders .button, .btn.colored-button, .btn.btn-left, .btn.btn-right, .btn:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item):not(.hestia-sidebar-open):not(.hestia-sidebar-close){ padding-top:15px;  padding-bottom:15px;  padding-left:33px;  padding-right:33px; }
 .btn.btn-primary:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item), input[type="submit"]:not(.search-submit), body:not(.woocommerce-account) .woocommerce .button.woocommerce-Button, .woocommerce .product button.button, .woocommerce .product button.button.alt, .woocommerce .product #respond input#submit, .woocommerce-cart .blog-post .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce-checkout #payment #place_order, .woocommerce-account.woocommerce-page button.button, .woocommerce .track_order button[type="submit"], .nav-cart .nav-cart-content .widget .buttons .button, .woocommerce a.button.wc-backward, body.woocommerce .wccm-catalog-item a.button, body.woocommerce a.wccm-button.button, form.woocommerce-form-coupon button.button, div.wpforms-container .wpforms-form button[type=submit].wpforms-submit, div.woocommerce a.button.alt, div.woocommerce table.my_account_orders .button, input[type="submit"].search-submit, .hestia-view-cart-wrapper .added_to_cart.wc-forward, .woocommerce-product-search button, .woocommerce-cart .actions .button, #secondary div[id^=woocommerce_price_filter] .button, .woocommerce div[id^=woocommerce_widget_cart].widget .buttons .button, .searchform input[type=submit], .searchform button, .search-form:not(.media-toolbar-primary) input[type=submit], .search-form:not(.media-toolbar-primary) button, .woocommerce-product-search input[type=submit], .btn.colored-button, .btn.btn-left, .btn.btn-right, .btn:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item):not(.hestia-sidebar-open):not(.hestia-sidebar-close){border-radius:3px;}
@@ -202,7 +202,7 @@ img.emoji {
 </style>
 <link rel='stylesheet' id='font-awesome-5-all-css'  href='/wp-content/themes/hestia/assets/font-awesome/css/all.min.css?ver=1.0.2' type='text/css' media='all' />
 <link rel='stylesheet' id='font-awesome-4-shim-css'  href='/wp-content/themes/hestia/assets/font-awesome/css/v4-shims.min.css?ver=1.0.2' type='text/css' media='all' />
-<link rel='stylesheet' id='hestia_fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%7CRoboto+Slab%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=2.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='hestia_fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%7CRoboto+Slab%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=2.5.6' type='text/css' media='all' />
 <script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
 <script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 <link rel='https://api.w.org/' href='/wp-json/' />
@@ -358,10 +358,6 @@ span.small-title {
 
 
 
-<p></p>
-
-
-
 <p> </p>
 			</div>
 					</div>
@@ -384,7 +380,7 @@ span.small-title {
 var requestpost = {"ajaxurl":"\/wp-admin\/admin-ajax.php","disable_autoslide":"","masonry":""};
 /* ]]> */
 </script>
-<script type='text/javascript' src='/wp-content/themes/hestia/assets/js/script.min.js?ver=2.5.0'></script>
+<script type='text/javascript' src='/wp-content/themes/hestia/assets/js/script.min.js?ver=2.5.6'></script>
 <script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
 </body>
 </html>
