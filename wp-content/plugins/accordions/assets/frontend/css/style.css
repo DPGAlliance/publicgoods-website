@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.accordions .border-semi-round{
+    border-radius: 10px !important;
+}
+.accordions .border-round {
+    border-radius: 50px !important;
+}
+.accordions .border-top-round {
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+.accordions .border-bottom-round {
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+
+.accordions .border-flat {
+    border-radius: 0px !important;
+}
+
+.accordions .border-none {
+    border: none !important;
+}
+
+.accordions .border-1px {
+    border: 1px solid #999 !important;
+}
+
+.accordions .border-2px {
+    border: 2px solid #999 !important;
+
+}
+.accordions .border-3px {
+    border: 3px solid #999 !important;
+}
+.accordions .shadow-bottom {
+    box-shadow: 0 3px 4px -1px rgba(0, 0, 0, 0.29);
+}
+.accordions .shadow-top {
+    box-shadow: 0 -3px 4px -1px rgba(0, 0, 0, 0.29);
+}
+.accordions .shadow-bottom-right {
+    box-shadow: 3px 3px 4px -1px rgba(0, 0, 0, 0.29);
+}
+.accordions .shadow-bottom-left {
+    box-shadow: -3px 3px 4px -1px rgba(0, 0, 0, 0.29);
+}
+.accordions .shadow-top-right {
+    box-shadow: 3px -3px 4px -1px rgba(0, 0, 0, 0.29);
+}
+.accordions .shadow-top-left {
+    box-shadow: -3px -3px 4px -1px rgba(0, 0, 0, 0.29);
+}
+
+.accordions .border-bottom {
+    border-bottom: 2px solid #b3b3b3 !important;
+}
+.accordions .border-top {
+    border-top: 2px solid #b3b3b3 !important;
+}
+.accordions .border-bottom-right {
+    border-bottom: 3px solid #b3b3b3 !important;
+    border-right: 3px solid #b3b3b3 !important;
+}
+.accordions .border-bottom-left {
+    border-bottom: 3px solid #b3b3b3 !important;
+    border-left: 3px solid #b3b3b3 !important;
+}
+.accordions .border-top-right {
+    border-top: 3px solid #b3b3b3 !important;
+    border-right: 3px solid #b3b3b3 !important;
+}
+.accordions .border-top-left {
+    border-top: 3px solid #b3b3b3 !important;
+    border-left: 3px solid #b3b3b3 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
