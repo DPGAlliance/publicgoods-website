@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>GitHub</title>
+	<atom:link href="/tag/github/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dpgwebsite.herokuapp.com</link>
+	<description></description>
+	<lastBuildDate>Wed, 10 Feb 2021 17:45:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>Embracing openness in delivering an API for digital public goods</title>
+		<link>/blog/embracing-openness-in-delivering-an-api-for-digital-public-goods/</link>
+				<pubDate>Wed, 10 Feb 2021 17:45:56 +0000</pubDate>
+		<dc:creator><![CDATA[Victor Grau Serrat]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[developer]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<category><![CDATA[open source]]></category>
+
+		<guid isPermaLink="false">/?p=777</guid>
+				<description><![CDATA[Since day one, the Digital Public Goods Alliance (DPGA), has embraced open source values including transparency, openness, and community. The DPGA seeks to advance open source software, open data, open AI models, open standards and open content as solutions to create a more equitable world; and, simply put, we couldn&#8217;t<a class="moretag" href="/blog/embracing-openness-in-delivering-an-api-for-digital-public-goods/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p>Since day one, the Digital Public Goods Alliance (DPGA), has embraced open source values including transparency, openness, and community. The DPGA seeks to advance open source software, open data, open AI models, open standards and open content as solutions to create a more equitable world; and, simply put, we couldn&#8217;t do it any other way than the <a href="https://opensource.com/open-source-way">open source way</a>. Today, we are excited to announce the release of the <a href="https://github.com/unicef/publicgoods-api">Digital Public Goods API</a>. This article recounts the journey of how we got here.&nbsp;</p>
+
+
+
+<p>One of the first actions we embarked on was to build a <a href="https://digitalpublicgoods.net/registry/">registry</a> of digital public goods to aid their discovery. Doing so was partly as a landscaping effort to know what projects already exist that are working towards a more just world, and partly a community-building effort, welcoming input by a broad set of interested parties and contributors.</p>
+
+
+
+<p>Architecturally, the industry-standard would have been to create a database, build a well-polished front-end website, and offer an open API that welcomed others to contribute. However, that approach was neither quite right, nor good enough. This is in part because whoever runs the database would ultimately own the data, as it would inevitably be hosted on closed infrastructure (insert here any cloud hosting provider or in-premises computing). This approach is simply not transparent enough. As a technical co-lead for the DPGA, I knew we could do better.</p>
+
+
+
+<p>Enter the beauty and simplicity of a collection of text files hosted on a version control system. The format of text files was <a href="https://www.json.org/">JSON</a>, a lightweight data-interchange format. This makes it easy for humans to read and write. It is also easy for machines to parse and generate. You have the best of both worlds. <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f64c.png" alt="🙌" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<p>Due to its popularity and common use throughout the global developer community, the version control system of choice was git with hosting on GitHub. While we didn’t invest much initially on the “well-polished website” aspect of our infrastructure, we reaped the benefits from using GitHub early on. On GitHub, any code repository comes by default with the functionality of issues and <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">pull requests</a>, providing a transparent communication channel to discuss potential changes with collaborators. Plus, all the data is easily accessible to read, inspect and modify. That was indeed embracing the open source way.</p>
+
+
+
+<p>If you wonder about data consistency, conformance, and integrity, you may be concerned at the thought of managing a large dataset with plain text files. So was I. That’s where having a data schema in the form of a <a href="https://json-schema.org/">JSON schema</a> ensures data validation and checks all of the above dimensions of data quality. Pair such a JSON schema with a continuous integration (CI) pipeline to automate the data workflow, and the result is a very strong and fully transparent backend. </p>
+
+
+
+<p>As all this data is hosted on a public code repository, we postponed the offering of a dedicated API, since the data is already publicly available on the <a href="https://github.com/unicef/publicgoods-candidates">DPG repository</a>. Also, GitHub already offers their own API, providing endpoints to access the raw contents of what is available through the website. Yet, we have been longing to complement our offerings with a data API that could enhance our collaborative efforts and make it easier for others to build on this growing dataset. The beauty of storing all our data in JSON is that it is the same format that REST APIs use. Thus, little work was required to repackage this data and serve it through an API. In a clever twist of repurposing the infrastructure that GitHub provides for free through their GitHub Pages (initially conceived as a hosting for static websites—primarily documentation sites), one can pre-generate all possible API endpoints, create the underlying folder structure to host the content for all these endpoints as JSON files, and have a very robust hosting for an API that leverages GitHub’s massive Content Delivery Network (CDN) to ensure high availability and low latency all over the world.</p>
+
+
+
+<p>This brings us to this week, when the DPGA releases its <a href="https://api.digitalpublicgoods.net/">API</a>, with its accompanying <a href="https://github.com/unicef/publicgoods-api">public repository</a>. We welcome your integrations while continuing to build together on this dataset for a more equitable world.</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>Are you a software developer, product manager, UI/UX designer, or community manager that enjoys a creative exploration of innovation and technology while contributing to digital public goods for a more equitable world, including the benefit of children worldwide? Stay tuned because DPGA Co-Host UNICEF&#8217;s Office of Innovation will be opening positions in the coming weeks, keep an eye on their <a href="https://twitter.com/unicefinnovate">Twitter</a> and <a href="https://www.linkedin.com/showcase/unicef-innovation/">LinkedIn</a> feeds for more information.</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p><strong>Follow</strong> our<a href="https://medium.com/digital-public-goods"> blog</a>, or <strong>join </strong>our<a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list"> mailing list</a>.</p>
+
+
+
+<p><strong>Learn more about the Digital Public Goods Alliance</strong> on our<a href="https://digitalpublicgoods.net/"> website</a>.</p>
+
+
+
+<p><strong>Nominate digital public goods</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGzlBiecPBlVvJXmcMKXF3zdxASY8vGnrdnNNwp7fVKb169A/viewform?usp=sf_link">through this form</a>.<br></p>
+
+
+
+<p class="has-small-font-size">Cover Image: &#8220;Embracing openness at Bryce Canyon National Park in winter&#8221; by Victor Grau Serrat is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>
