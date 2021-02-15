@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Blog</title>
+	<atom:link href="/blog/feed/" rel="self" type="application/rss+xml" />
+	<link>http://dpgwebsite.herokuapp.com</link>
+	<description></description>
+	<lastBuildDate>Wed, 10 Feb 2021 17:45:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>Embracing openness in delivering an API for digital public goods</title>
+		<link>/blog/embracing-openness-in-delivering-an-api-for-digital-public-goods/</link>
+				<pubDate>Wed, 10 Feb 2021 17:45:56 +0000</pubDate>
+		<dc:creator><![CDATA[Victor Grau Serrat]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[API]]></category>
+		<category><![CDATA[developer]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[GitHub]]></category>
+		<category><![CDATA[open source]]></category>
+
+		<guid isPermaLink="false">/?p=777</guid>
+				<description><![CDATA[Since day one, the Digital Public Goods Alliance (DPGA), has embraced open source values including transparency, openness, and community. The DPGA seeks to advance open source software, open data, open AI models, open standards and open content as solutions to create a more equitable world; and, simply put, we couldn&#8217;t<a class="moretag" href="/blog/embracing-openness-in-delivering-an-api-for-digital-public-goods/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p>Since day one, the Digital Public Goods Alliance (DPGA), has embraced open source values including transparency, openness, and community. The DPGA seeks to advance open source software, open data, open AI models, open standards and open content as solutions to create a more equitable world; and, simply put, we couldn&#8217;t do it any other way than the <a href="https://opensource.com/open-source-way">open source way</a>. Today, we are excited to announce the release of the <a href="https://github.com/unicef/publicgoods-api">Digital Public Goods API</a>. This article recounts the journey of how we got here.&nbsp;</p>
+
+
+
+<p>One of the first actions we embarked on was to build a <a href="https://digitalpublicgoods.net/registry/">registry</a> of digital public goods to aid their discovery. Doing so was partly as a landscaping effort to know what projects already exist that are working towards a more just world, and partly a community-building effort, welcoming input by a broad set of interested parties and contributors.</p>
+
+
+
+<p>Architecturally, the industry-standard would have been to create a database, build a well-polished front-end website, and offer an open API that welcomed others to contribute. However, that approach was neither quite right, nor good enough. This is in part because whoever runs the database would ultimately own the data, as it would inevitably be hosted on closed infrastructure (insert here any cloud hosting provider or in-premises computing). This approach is simply not transparent enough. As a technical co-lead for the DPGA, I knew we could do better.</p>
+
+
+
+<p>Enter the beauty and simplicity of a collection of text files hosted on a version control system. The format of text files was <a href="https://www.json.org/">JSON</a>, a lightweight data-interchange format. This makes it easy for humans to read and write. It is also easy for machines to parse and generate. You have the best of both worlds. <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f64c.png" alt="🙌" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<p>Due to its popularity and common use throughout the global developer community, the version control system of choice was git with hosting on GitHub. While we didn’t invest much initially on the “well-polished website” aspect of our infrastructure, we reaped the benefits from using GitHub early on. On GitHub, any code repository comes by default with the functionality of issues and <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">pull requests</a>, providing a transparent communication channel to discuss potential changes with collaborators. Plus, all the data is easily accessible to read, inspect and modify. That was indeed embracing the open source way.</p>
+
+
+
+<p>If you wonder about data consistency, conformance, and integrity, you may be concerned at the thought of managing a large dataset with plain text files. So was I. That’s where having a data schema in the form of a <a href="https://json-schema.org/">JSON schema</a> ensures data validation and checks all of the above dimensions of data quality. Pair such a JSON schema with a continuous integration (CI) pipeline to automate the data workflow, and the result is a very strong and fully transparent backend. </p>
+
+
+
+<p>As all this data is hosted on a public code repository, we postponed the offering of a dedicated API, since the data is already publicly available on the <a href="https://github.com/unicef/publicgoods-candidates">DPG repository</a>. Also, GitHub already offers their own API, providing endpoints to access the raw contents of what is available through the website. Yet, we have been longing to complement our offerings with a data API that could enhance our collaborative efforts and make it easier for others to build on this growing dataset. The beauty of storing all our data in JSON is that it is the same format that REST APIs use. Thus, little work was required to repackage this data and serve it through an API. In a clever twist of repurposing the infrastructure that GitHub provides for free through their GitHub Pages (initially conceived as a hosting for static websites—primarily documentation sites), one can pre-generate all possible API endpoints, create the underlying folder structure to host the content for all these endpoints as JSON files, and have a very robust hosting for an API that leverages GitHub’s massive Content Delivery Network (CDN) to ensure high availability and low latency all over the world.</p>
+
+
+
+<p>This brings us to this week, when the DPGA releases its <a href="https://api.digitalpublicgoods.net/">API</a>, with its accompanying <a href="https://github.com/unicef/publicgoods-api">public repository</a>. We welcome your integrations while continuing to build together on this dataset for a more equitable world.</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>Are you a software developer, product manager, UI/UX designer, or community manager that enjoys a creative exploration of innovation and technology while contributing to digital public goods for a more equitable world, including the benefit of children worldwide? Stay tuned because DPGA Co-Host UNICEF&#8217;s Office of Innovation will be opening positions in the coming weeks, keep an eye on their <a href="https://twitter.com/unicefinnovate">Twitter</a> and <a href="https://www.linkedin.com/showcase/unicef-innovation/">LinkedIn</a> feeds for more information.</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p><strong>Follow</strong> our<a href="https://medium.com/digital-public-goods"> blog</a>, or <strong>join </strong>our<a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list"> mailing list</a>.</p>
+
+
+
+<p><strong>Learn more about the Digital Public Goods Alliance</strong> on our<a href="https://digitalpublicgoods.net/"> website</a>.</p>
+
+
+
+<p><strong>Nominate digital public goods</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGzlBiecPBlVvJXmcMKXF3zdxASY8vGnrdnNNwp7fVKb169A/viewform?usp=sf_link">through this form</a>.<br></p>
+
+
+
+<p class="has-small-font-size">Cover Image: &#8220;Embracing openness at Bryce Canyon National Park in winter&#8221; by Victor Grau Serrat is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Year in Review</title>
+		<link>/blog/year-in-review/</link>
+				<pubDate>Thu, 14 Jan 2021 14:46:42 +0000</pubDate>
+		<dc:creator><![CDATA[Digital Public Goods Alliance]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Community]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[Sustainable Development Goals]]></category>
+		<category><![CDATA[United Nations]]></category>
+		<category><![CDATA[Year in Review]]></category>
+
+		<guid isPermaLink="false">/?p=736</guid>
+				<description><![CDATA[While, like many, we were eager to end 2020 and look towards the new year with new energy, it is important to take time to reflect on the achievements made, the challenges overcome, and the opportunities presented in 2020. For the Digital Public Goods Alliance (DPGA), reflecting on 2020 actually<a class="moretag" href="/blog/year-in-review/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p>While, like many, we were eager to end 2020 and look towards the new year with new energy, it is important to take time to reflect on the achievements made, the challenges overcome, and the opportunities presented in 2020. </p>
+
+
+
+<p>For the Digital Public Goods Alliance (DPGA), reflecting on 2020 actually begins with our roots &#8211; the 2019 United Nations Secretary-General’s <a href="https://www.un.org/en/pdfs/DigitalCooperation-report-for%20web.pdf">High-level Panel on Digital Cooperation report</a> calling for the establishment of a broad, multi-stakeholder alliance, to facilitate access to and use of digital public goods. In December 2019 the DPGA was launched to answer that call, which meant kicking off 2020 with a lot of momentum.</p>
+
+
+
+<p>Throughout 2020 significant steps were taken to support and accelerate the discovery and development of digital public goods that tackle real world challenges. We started the year off with two main goals, (1) establishing the foundations of the DPGA as a strategic entity with the potential for long-term impact and sustainability and, (2) to produce valuable outputs with immediate utility for the DPG ecosystem.</p>
+
+
+
+<p>With these two goals in mind, and strengthened by the June 2020 <a href="https://www.un.org/en/content/digital-cooperation-roadmap/">Roadmap on Digital Cooperation</a>, the DPGA achieved significant milestones in 2020.  Here is an overview of our top four achievements: </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h6><strong>1. Defining Digital Public Goods</strong></h6>
+
+
+
+<p>The DPGA coordinated with other stakeholders to provide input to the definition of digital public goods that was published by the UN Secretary-General in the 2020 Roadmap. This definition contributes to a universal understanding of what constitutes a digital public good, laying the groundwork for how the DPGA can support open projects. </p>
+
+
+
+<p>Building off this momentum, the DPGA thereafter operationalised the digital public goods definition into the <a href="http://digitalpublicgoods.net/standard/">DPG Standard</a>, a set of nine indicators that comprise a comprehensive and shared assessment criteria for identifying projects as digital public goods. This standard is itself an open project and has benefited from several iterations. The DPGA is thankful to the communities and individuals that have helped support its development by contributing their thoughts and endorsements including CHAOSS, Creative Commons, DIAL, and Mozilla. The DPG Standard has also been featured by the <a href="https://joinup.ec.europa.eu/collection/open-source-observatory-osor/news/global-cooperation-governmental-open-source">Open Source Observatory</a> and <a href="https://opensource.com/article/20/12/digital-public-goods">opensource.org</a>. </p>
+
+
+
+<h6><strong>2. Launching the DPG Registry</strong></h6>
+
+
+
+<p>The DPGA mission includes promoting the discovery of digital public goods<em>.</em> To that end, in 2020 the DPGA significantly evolved the<em> </em><a href="https://digitalpublicgoods.net/registry/">DPG Registry, </a>which started as a prototype in early 2019. Today, the DPG Registry contains 471 nominated projects, and 20 verified digital public goods that have been assessed against the DPG Standard. </p>
+
+
+
+<p>Our work relies on the ethos of open source. So, in December 2020 we launched a community sourcing experiment asking for public participation to review nominated open projects against the DPG Standard with the ultimate goal of distributing and expediting the process of determining if a project qualifies as a digital public good. This experiment will run through January 2021 and has already had engagement from teachers, students, tech practitioners, and many more. We continue to invite public participation in the experiment at <a href="https://validate.digitalpublicgoods.net/">validate.digitalpublicgoods.net</a>.</p>
+
+
+
+<h6><strong>3. Engaging Experts in Sector Specific Communities</strong></h6>
+
+
+
+<p>In 2020 the DPGA began facilitating Communities of Practice (CoPs). CoPs convene thematic experts with the aim of identifying, assessing and&nbsp; advancing high-impact potential projects that work towards the attainment of the UN’s Sustainable Development Goals. Thus far, CoPs have focused on technologies for enhancing Early Grade Reading skills, Financial Inclusion, Digital Health, and Climate Change Adaptation. These groups include more than 60 experts from 40+ different institutions including NGOs, governments, think tanks, international banks, and funders. </p>
+
+
+
+<p>In 2020 the CoPs began making an impact. In November, we released a <a href="https://digitalpublicgoods.net/DPGA-Paper_Accelerating_Financial_Inclusion.pdf">paper</a> on the relationship between digital public infrastructures (DPIs) and DPGs, and the particular relevance of their intersection for driving financial inclusion. In addition, an assessment of nine early grade reading <a href="https://digitalpublicgoods.net/blog/announcing-the-first-vetted-digital-public-goods-for-foundational-literacy-and-early-grade-reading/">projects</a> was completed. 2021 will take the efforts of the CoPs even further.</p>
+
+
+
+<h6><strong>4. Launching Country Engagement Pilots</strong></h6>
+
+
+
+<p>Eager to document and share learnings that can help facilitate the impactful implementation of digital public goods, in late 2020, the DPGA developed an initial approach for piloting country engagements in low- and middle-income countries. In 2021 we will begin deploying short-term pilot activities in partnership with DPGA co-founders.</p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p> No 2020 year-in-review would be complete without a reflection on the challenges we all faced as a result of the global pandemic. While COVID-19 brought near-insurmountable challenges, it also illustrated how digital technologies can both create and prevent inequities, ultimately highlighting the need for countries to accelerate digital transformation. The need for quality digital public goods that are accessible, adaptable, and deployable is clearer than ever. </p>
+
+
+
+<p>The increasing awareness of COVID-19’s long-term economic impact added urgency to international conversations about digital public infrastructures, <a href="https://digitalpublicgoods.net/blog/dpg-alliance-and-the-digitaldecade/">sparking new energy</a> and interest in understanding, assessing, and promoting digital public goods with the potential for countries to deploy as part of their&nbsp; digital foundations. </p>
+
+
+
+<p>In 2021 we hope to capitalise on our early successes and build on the momentum in the DPG ecosystem. There is more clarity now than ever before on the urgency of digital transformation and we have a unique opportunity to scale up international cooperation around digital public goods. </p>
+
+
+
+<p>Read more about our year in review <a href="http://bit.ly/DPGA2020EOY">here</a>. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p><strong>To learn more about the Digital Public Goods Alliance</strong>:<br>Join<strong>&nbsp;</strong>our<a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list">&nbsp;mailing list</a>.<br>Follow us on Twitter&nbsp;<a href="https://twitter.com/DPGAlliance">@DPGAlliance</a>.<br>Nominate digital public goods through<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGzlBiecPBlVvJXmcMKXF3zdxASY8vGnrdnNNwp7fVKb169A/viewform?usp=sf_link">&nbsp;this form</a>.<br>Participate in the <a href="https://validate.digitalpublicgoods.net/">community sourcing experiment</a>. </p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Community Sourcing Digital Public Goods</title>
+		<link>/blog/community-sourcing-digital-public-goods/</link>
+				<pubDate>Wed, 16 Dec 2020 12:47:39 +0000</pubDate>
+		<dc:creator><![CDATA[Victor Grau Serrat]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Community]]></category>
+		<category><![CDATA[crowdsource]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[Gitcoin]]></category>
+
+		<guid isPermaLink="false">/?p=711</guid>
+				<description><![CDATA[Calling all contributors: The DPGA is now community sourcing reviews of digital public goods! Today, the Digital Public Goods Alliance (DPGA) launched our first community sourcing exercise!&#160; We’re asking you to participate by reviewing open source projects against the Digital Public Goods Standard with the ultimate goal of determining if<a class="moretag" href="/blog/community-sourcing-digital-public-goods/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p class="has-text-align-center has-medium-font-size"><strong><em>Calling all contributors: The DPGA is now <a href="http://bit.ly/DPGAcrowdsource">community sourcing reviews of digital public goods</a>!</em></strong></p>
+
+
+
+<p>Today, the Digital Public Goods Alliance (DPGA) launched our first community sourcing exercise!&nbsp;</p>
+
+
+
+<p>We’re asking <strong>you</strong> to participate by reviewing open source projects against the <a href="https://digitalpublicgoods.net/standard/">Digital Public Goods Standard</a> with the ultimate goal of determining if a project qualifies as a DPG.*</p>
+
+
+
+<figure class="wp-block-image size-large"><img src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2020/12/16115244/Screenshot_2020-12-11-https-validate-digitalpublicgoods-net.png" alt="" class="wp-image-713"/></figure>
+
+
+
+<h5><strong>Why participate?&nbsp;</strong></h5>
+
+
+
+<p>Open source represents an unprecedented opportunity to fundamentally alter power balances in international development. But, we can’t harness that power without the cooperation of many &#8211; reviewers, maintainers, creators, policy makers, and so many others (that means you!).&nbsp;</p>
+
+
+
+<p>This community sourcing exercise will give you the opportunity to delve into some of the largest up and coming open source projects. You’ll get a chance to understand their licenses and documentation, and how they’re designing for best practices, standards, privacy and more.&nbsp;</p>
+
+
+
+<p>By participating, you’ll get a better understanding of open projects that are making a difference in the world, particularly those that are advancing practical solutions to help achieve the Sustainable Development Goals (SDGs). You’ll also join a growing number of innovators working on technology for development (T4D).&nbsp;</p>
+
+
+
+<div class="wp-block-media-text alignwide" style="grid-template-columns:33% auto"><figure class="wp-block-media-text__media"><img src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2020/12/16115644/Screenshot_2020-12-16-Crowdsourcing-Experiment-Blog.png" alt="" class="wp-image-714"/></figure><div class="wp-block-media-text__content">
+<p class="has-normal-font-size"><strong>There’s more!</strong> We want to show our appreciation for your reviews! We’re working with the UNICEF Office of Innovation’s Blockchain Team to recognize those who contribute with a <a href="https://www.unicef.org/innovation/stories/transparent-provable-and-immutable-acknowledgements">blockchain-based badge</a>. This badge will be displayed on your Gitcoin profile. As a reviewer, you’ll earn the first Kudos ever issued by the DPGA!</p>
+</div></div>
+
+
+
+<p></p>
+
+
+
+<h5><strong>What We Learn When You Participate</strong></h5>
+
+
+
+<p>The Digital Public Goods Alliance (DPGA) strives to embody the principles of openness and transparency in how we operate. We want to engage people who share in our mission of promoting digital public goods for a more equitable world.</p>
+
+
+
+<p>The United Nations Secretary-General’s <a href="https://www.un.org/en/content/digital-cooperation-roadmap/">Roadmap for Digital Cooperation</a> states, “Currently, access to digital solutions is often limited through copyright regimes and proprietary systems. Most existing digital public goods are not easily accessible because they are often unevenly distributed in terms of the language, content and infrastructure required to access them.”&nbsp;&nbsp;</p>
+
+
+
+<p>To address these issues, we plan to screen and assess digital public goods that have been nominated to our <a href="http://digitalpublicgoods.net/registry/">DPG Registry</a>, but are not yet screened against the <a href="http://digitalpublicgoods.net/standard/">DPG Standard</a>. We are looking for engagement in this screening process.&nbsp;</p>
+
+
+
+<p>Our aim is to build a process that is reliable, scalable, transparent and open. Ultimately, we want our vetting process to fit with our open values and to leverage the expertise of not only our staff, but also the community to help assess these projects.&nbsp;</p>
+
+
+
+<h5><strong>Desired Outcomes&nbsp;</strong></h5>
+
+
+
+<p>Our hypothesis is that, by crowdsourcing this screening process, we will arrive at some degree of consensus and therefore be able to move a significant number of projects from “nominated” to “Digital Public Good”. We will be testing this by using confidence ratings in our questions and looking at the overall agreement among reviewers.&nbsp;</p>
+
+
+
+<p>We also want to hear from you &#8211; is there interest in participating in an activity like this in the future? Are there better ways to engage you to support an effort like this? We encourage you to leave feedback in the comment boxes throughout the process to help us learn and grow.&nbsp;</p>
+
+
+
+<p></p>
+
+
+
+<h5><strong>Want to get involved? </strong></h5>
+
+
+
+<p><strong>Here’s how you can participate:</strong></p>
+
+
+
+<ol><li>Go to <a href="https://validate.digitalpublicgoods.net/">https://validate.digitalpublicgoods.net</a>.</li><li>Login with your GitHub credentials (or <a href="https://github.com/join">create a profile</a>, if you don&#8217;t have one already).</li><li>Select an open source project that has been nominated as a Digital Public Good.</li><li>Follow the step-by-step instructions to review the project and decide whether or not you believe it meets the DPG Standard criteria.</li><li>The validate webapp will open a Pull Request on your behalf.</li><li>To receive your <a href="https://gitcoin.co/issue/unicef/publicgoods-candidates/178/100024493">blockchain-badge</a>, submit your Pull Request (PR) to the <a href="https://gitcoin.co/issue/unicef/publicgoods-candidates/178/100024493">Gitcoin Bounty</a> (login with your GitHub credentials).</li><li>Badges will be allocated on a rolling basis &#8211; check back on your Gitcoin profile for your badge!</li></ol>
+
+
+
+<p class="has-text-align-center"><strong>Ready to try for yourself?</strong></p>
+
+
+
+<div class="wp-block-button aligncenter"><a class="wp-block-button__link" href="http://bit.ly/DPGAcrowdsource">Join the exercise</a></div>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>*We define a digital public good as: “open source software, open data, open AI models, open standards and open content that adhere to privacy and other applicable laws and best practices, do no harm, and help attain the SDGs.”</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>For more information on the Digital Public Goods Alliance or the Digital Public Goods Standard,&nbsp;<a href="https://digitalpublicgoods.net/">visit our website</a>.&nbsp;</p>
+
+
+
+<p>For specific inquiries related to licensing, please reach out to:&nbsp;<a href="mailto:nominations@digitalpublicgoods.net">nominations@digitalpublicgoods.net</a></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Licensing within the Digital Public Goods Standard</title>
+		<link>/blog/licensing-within-the-digital-public-goods-standard/</link>
+				<pubDate>Thu, 19 Nov 2020 13:58:12 +0000</pubDate>
+		<dc:creator><![CDATA[Christer Gundersen]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Creative Commons]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[Licensing]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[Open Source Initiative]]></category>
+
+		<guid isPermaLink="false">/?p=672</guid>
+				<description><![CDATA[As we said in our last post, “not all open source projects are digital public goods, but all digital public goods must be open source”. To be open source, there must be distribution terms, or a license, that allows for distribution and reuse. That is why licensing appears as the<a class="moretag" href="/blog/licensing-within-the-digital-public-goods-standard/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p>As we said in <a href="https://medium.com/digital-public-goods/why-open-source-2de7ea357f78">our last post</a>, “not all open source projects are digital public goods, but all digital public goods must be open source”. To be open source, there must be distribution terms, or a license, that allows for distribution and reuse. That is why licensing appears as the second indicator in the <a href="https://digitalpublicgoods.net/standard/">Digital Public Goods Standard</a>. Licensing determines a DPG’s viability and adaptability &#8211; a linchpin of meeting the “public” criteria of a DPG. </p>
+
+
+
+<p>However, the process of identifying which “approved” licenses to include in the DPG Standard was, and continues to be, the result of a complex series of debates and discussions. The aim of this post is to share some of that discussion and the thinking behind the licenses that appear in the DPG Standard today. This will provide context for those considering submitting an openly licensed project to the <a href="https://digitalpublicgoods.net/registry/">DPG Registry</a>, as well as for projects who are choosing an open license for the first time.</p>
+
+
+
+<p>At present, the DPG Standard’s second indicator reads:</p>
+
+
+
+<figure class="wp-block-table"><table class="has-subtle-light-gray-background-color has-background"><tbody><tr><td>2. Use of approved open source license</td><td><em>Projects must demonstrate the use of an approved open source license. For Open Source Software, we only accept</em><a href="https://opensource.org/licenses"><em> OSI approved licenses</em></a><em>. For Open Content we require the use of a</em><a href="https://creativecommons.org/licenses/"><em> Creative Commons license</em></a><em> while we encourage projects to use a license which allows for both derivatives and commercial reuse (</em><a href="https://creativecommons.org/licenses/by/4.0/"><em>CC-BY</em></a><em> and</em><a href="https://creativecommons.org/licenses/by-sa/4.0/"><em> CC-BY-SA</em></a><em>), or dedicate content to the public domain (</em><a href="https://creativecommons.org/choose/zero/"><em>CC0</em></a><em>); we also accept licenses which do not allow for commercial reuse (</em><a href="https://creativecommons.org/licenses/by-nc/4.0/"><em>CC-BY-NC</em></a><em> and</em><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><em> CC-BY-NC-SA</em></a><em>). For data we require an</em><a href="https://opendefinition.org/licenses/"><em> Open Data Commons approved license</em></a><em>. You can find</em><a href="https://github.com/unicef/publicgoods-candidates/blob/master/docs/licenses.md"><em> the full license list here</em></a><em>.</em></td></tr></tbody></table></figure>
+
+
+
+<p></p>
+
+
+
+<p>By design, open source software licenses promote collaboration and sharing because they permit others to make modifications to source code and incorporate those changes into their own projects. They also encourage others to access, view, and modify open source software to build solutions for their own purpose. Read more about why we require DPGs to be open source in our <a href="https://medium.com/digital-public-goods/why-open-source-2de7ea357f78">previous blog</a>.</p>
+
+
+
+<h4><strong>Licensing Content</strong></h4>
+
+
+
+<p>For Open Content we require the use of a<a href="https://creativecommons.org/licenses/"> Creative Commons license</a> and encourage projects to use a license which allows for both derivatives and commercial reuse (<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a> and<a href="https://creativecommons.org/licenses/by-sa/4.0/"> CC-BY-SA</a>), or the ability to dedicate content to the public domain (<a href="https://creativecommons.org/choose/zero/">CC0</a>).</p>
+
+
+
+<p>When choosing which licenses to include in the DPG Standard for content, we took into account key considerations. For example, we allow the Creative Commons NonCommercial (NC) clause for content and data, but not the No-Derivatives (ND) clause. This decision was made because ND licenses put restrictions on reuse and adaptation. For example, for content that is under a ND license, translation is not allowed. A NonCommercial license allows for reuse and adaptation as long as it is not for commercial purposes. While this does limit the opportunity for commercial scalability models, we took into consideration that many stakeholders will still be able to benefit from reusing and adapting content that cannot be commercially reused. Furthermore, this increases supply, as many who have invested heavily in content creation will be more willing to use open licensing if they can apply a NC clause. </p>
+
+
+
+<h4><strong>Licensing Software</strong></h4>
+
+
+
+<p>For software we chose to accept the <a href="https://opensource.org/licenses">Open Source Initiative (OSI) approved licenses</a> not only because these licenses are widely accepted, but because they have all been vetted against the OSI definition of open source. The <a href="https://opensource.org/osd-annotated">Open Source Definition</a> is a list of ten clearly defined requirements for a license to be recognized as open source. The distribution terms of any software with OSI-approved licenses <em>must</em> comply with the Open Source Definition. Additionally, the vetted licenses undergo a review by the open source legal community. This rigorous process helps to filter out ambiguous or vague licenses that don&#8217;t explicitly comply with the requirements. However, the OSI license list is also quite long and only a few of these licenses are used in practice. </p>
+
+
+
+<h4><strong>Licensing Data </strong></h4>
+
+
+
+<p>The Open Knowledge Foundation has in its open definition requirements for open data in much the same way OSI does for software, including a definition and a list of approved licenses. However, in the open data space many countries have in parallel developed their own open government licenses for data and content, and many of these national licenses have not been approved by the Open Knowledge Foundation. This is something we are working to navigate as we develop the DPG Standard further. </p>
+
+
+
+<h4><strong>A Note on Up/Downstream Sharing </strong></h4>
+
+
+
+<p>Presently, in order to be DPG Standard compliant, the open licenses we list apply only to the core or generic project. The type of open license used for the generic project will determine which open license requirements, if any, apply for national implementations. For example, if the generic DPG project uses what is commonly called a full copy-left license like the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU Public License</a>, a national implementation will be required to be similarly licensed. At the other end of the spectrum, most permissive licenses, like <a href="https://opensource.org/licenses/Apache-2.0">Apache</a>, impose no restrictions on which licenses can be used for implementations, and allow also for proprietary approaches.</p>
+
+
+
+<h4><strong>The Case for Clarity</strong></h4>
+
+
+
+<p>Ambiguous or vague licenses are problematic because they&#8217;re open to interpretation and may cause confusion for stakeholders seeking to re-use technology, data or content. New licenses often only add to this challenge, as they are frequently developed based on bespoke use cases and purposes, and without sufficient attention to ensuring clarity and consistency in terminology.</p>
+
+
+
+<p>To enable the growth of a global community of sharing, we have therefore only included licenses in the DPG Standard that have been approved by leading stakeholders in their respective domains such as OSI, Creative Commons and Open Data Commons. As a general rule, these licenses are clear and allow broad use, modification, and sharing, without onerous restrictions (refer to the <a href="https://github.com/unicef/publicgoods-candidates/blob/master/docs/licenses.md">full list of approved licenses</a>).     <br></p>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-black-background-color has-black-color"/>
+
+
+
+<p>For more information on the Digital Public Goods Alliance or the Digital Public Goods Standard, <a href="https://digitalpublicgoods.net/">visit our website</a>. </p>
+
+
+
+<p>For specific inquiries related to licensing, please reach out to: <a href="mailto:nominations@digitalpublicgoods.net">nominations@digitalpublicgoods.net</a></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Why Open Source?</title>
+		<link>/blog/why-open-source/</link>
+				<pubDate>Tue, 17 Nov 2020 20:58:33 +0000</pubDate>
+		<dc:creator><![CDATA[Lucy Harris]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[digital development]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[Sustainability]]></category>
+		<category><![CDATA[Transparency]]></category>
+
+		<guid isPermaLink="false">/?p=662</guid>
+				<description><![CDATA[The Digital Public Goods Alliance has spent the last several months developing the Digital Public Goods Standard, and working with stakeholders from across sectors to determine criteria that allows us to answer the question: is this a digital public good? In alignment with the UN Secretary-General’s 2020 Roadmap for Digital<a class="moretag" href="/blog/why-open-source/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p>The Digital Public Goods Alliance has spent the last several months <a href="https://digitalpublicgoods.net/blog/setting-a-standard-for-digital-public-goods/">developing</a> the <a href="https://digitalpublicgoods.net/standard/">Digital Public Goods Standard</a>, and working with stakeholders from across sectors to determine criteria that allows us to answer the question: <strong>is this a digital public good?</strong></p>
+
+
+
+<p>In alignment with the UN Secretary-General’s 2020 <a href="https://www.un.org/en/content/digital-cooperation-roadmap/">Roadmap for Digital Cooperation</a>, we define digital public goods (DPGs) as open source software, open data, open AI models, open standards and open content that adhere to privacy and other applicable best practices, do no harm and are of high relevance for attaining the UN’s 2030 Sustainable Development Goals (SDGs). </p>
+
+
+
+<p>Many types of digital technologies and content – from data to apps, data visualisation tools to educational curricula – could accelerate achievement of the SDGs. However, it is only if they are freely and openly available, with minimal restrictions on how they can be distributed, adapted and reused that we can think of them as “digital public goods”. </p>
+
+
+
+<h4><strong>Why Open Source? </strong></h4>
+
+
+
+<p>Not all open source projects are digital public goods, but all digital public goods must be open source. </p>
+
+
+
+<p>Open source is broadly defined as when the original source code is made freely available and may be redistributed and modified. This is a crucial part of digital public goods where, for example, software, content and data must be accessible independently of any particular vendor and allow software, data and content to be freely used, modified, and shared. There are many existing open licenses, and the choice of license has implications on how the code, data or content can be reused. <strong>We’ll therefore dig deeper into the process of identifying which “approved” licenses were included in the DPG Standard, and why, in our next blog post.</strong> In this post we present an overview of the case for open source. </p>
+
+
+
+<p>“Open” ensures the software, data, AI model, standard or content we’re working with can be <em>adopted, scaled and adapted</em> in various country contexts. It also ensures <em>transparency</em>, can contribute to project <em>sustainability</em>, and reduces the risk of <em>vendor lock-in</em>. Below we describe each of these benefits in turn. </p>
+
+
+
+<h4><strong>Adoptability, Scalability &amp; Adaptability </strong></h4>
+
+
+
+<p>For digital public goods to scale across markets, they must be freely adoptable and adaptable. </p>
+
+
+
+<p>For example, the Modular Open Source Identity Platform (<a href="https://www.mosip.io/">MOSIP</a>), a technology that helps governments implement a foundational ID, can be freely adopted by countries who can adapt the open software to fit their local needs. This can help build long-term ownership and agency within each implementing country and can also allow the platform to scale over time across many countries. </p>
+
+
+
+<h4><strong>Transparency &amp; Sustainability </strong></h4>
+
+
+
+<p>Open source licensing allows a digital public goods’ code base to be independently scrutinized and audited. This can increase accountability and facilitate discourse about the steps that have been taken to design technologies that are inclusive and do no harm. </p>
+
+
+
+<p>Having a transparent code base can also allow for greater sustainability. As each implementing country adapts or iterates on the code, these changes can be shared back to help evolve and better the source code. </p>
+
+
+
+<h4><strong>Vendor Lock-In </strong></h4>
+
+
+
+<p>It can be costly to obtain licenses from vendors. This can also cause ‘lock-in’, meaning that a government or organization is beholden to that vendor for relevant service or maintenance for the duration of the contract. Additionally, state-owned solutions could suffer from politicization of access, where states may choose to give permission to their allies over others, making access vulnerable to geopolitical shifts and tensions. </p>
+
+
+
+<p>While the cost of implementing and configuring open source software is often comparable to purchasing a license, open source offers more control and independence and reduces the risk of vendor or political lock-in. This makes it easier for governments in particular to plan their digital futures in a holistic and long-term way.</p>
+
+
+
+<p>Finally, an open approach to digital development can help to increase collaboration and resource mobilization in the digital development community, avoid duplicating work that has already been done, and attract new investors and contributors to initiatives with high-impact potential. This allows programs to maximize their resources — and ultimately their impact — through open standards, open data, open source technologies and open innovation.</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p><strong>Open source is a necessary condition for any technology to be considered a digital public good. </strong>It enables sharing, reuse and adaptation to suit local needs. And, combined with the right support and funding structures, open source represents an unprecedented opportunity to fundamentally alter power balances in international development. This means more creation and iteration can happen locally; trust in technology can be built through agency and transparency; and, best practices and learnings can be shared across geographical, institutional and expertise borders. We believe this is critical to advancing a more equitable world and is why open source is fundamental to the Digital Public Goods Alliance (DPGA).</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p><strong>Learn more about the Digital Public Goods Alliance</strong> </p>
+
+
+
+<p>Join<strong> </strong>our<a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list"> mailing list</a>.</p>
+
+
+
+<p>Follow us on Twitter <a href="https://twitter.com/DPGAlliance">@DPGAlliance</a>.</p>
+
+
+
+<p>Nominate digital public goods through<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGzlBiecPBlVvJXmcMKXF3zdxASY8vGnrdnNNwp7fVKb169A/viewform?usp=sf_link"> this form</a>.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Accelerating financial inclusion during COVID-19 and beyond</title>
+		<link>/blog/accelerating-financial-inclusion-during-covid-19-and-beyond/</link>
+				<pubDate>Tue, 10 Nov 2020 13:52:41 +0000</pubDate>
+		<dc:creator><![CDATA[Liv Marte Nordhaug]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Covid-19]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[Finance]]></category>
+		<category><![CDATA[Fintech]]></category>
+		<category><![CDATA[India]]></category>
+		<category><![CDATA[Tech]]></category>
+
+		<guid isPermaLink="false">/?p=646</guid>
+				<description><![CDATA[In September, 2020 the Digital Public Goods Alliance Financial Inclusion Community of Practice (CoP) engaged in a thoughtful, virtual discussion about the relationship between digital public infrastructures (DPIs) and digital public goods (DPGs). In this paper, we document our progress in defining what that intersection is, and how to identify<a class="moretag" href="/blog/accelerating-financial-inclusion-during-covid-19-and-beyond/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p>In September, 2020 the Digital Public Goods Alliance Financial Inclusion Community of Practice (CoP) engaged in a thoughtful, virtual discussion about the relationship between digital public infrastructures (DPIs) and digital public goods (DPGs). In this <a href="https://digitalpublicgoods.net/DPGA-Paper_Accelerating_Financial_Inclusion.pdf">paper,</a> we document our progress in defining what that intersection is, and how to identify it. In this post we share more about the community of practice model, how it led to our exploration of digital public goods that are also foundational digital public infrastructures, and what the next steps are for the Financial Inclusion CoP. </p>
+
+
+
+<p></p>
+
+
+
+<div class="wp-block-button aligncenter"><a class="wp-block-button__link" href="https://digitalpublicgoods.net/DPGA-Paper_Accelerating_Financial_Inclusion.pdf"><strong>Read the full paper</strong></a></div>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p><strong>The DPGA Community of Practice Model</strong></p>
+
+
+
+<p>The DPGA convenes expert Communities of Practice (CoPs) to support the discovery, assessment and advancement of digital public goods with high potential for addressing critical development needs in low- and middle-income countries. Currently, there are ongoing CoPs for climate change adaptation, digital health, and financial inclusion. Within these broad topics, each CoP narrows in on particular focus areas by considering relevance and potential impact.&nbsp;</p>
+
+
+
+<p><strong>Digitalisation, financial inclusion and COVID-19</strong></p>
+
+
+
+<p>The last years have seen growing international consensus around the need to accelerate digitalisation of public financing as a driver of financial inclusion and the broader 2030-agenda. The value of digitalising government payments in developing countries is estimated at US$220-$320 billion annually by the IMF. </p>
+
+
+
+<p>The COVID-19 pandemic has accentuated this need, as governments with robust systems in place were better equipped to respond to the outbreak not only in their direct health response, but also by targeting vulnerable populations and <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="http://documents1.worldbank.org/curated/en/590531592231143435/pdf/Social-Protection-and-Jobs-Responses-to-COVID-19-A-Real-Time-Review-of-Country-Measures-June-12-2020.pdf" target="_blank">delivering payments</a> into people’s accounts to mitigate the economic hardships caused by the outbreak.</p>
+
+
+
+<p>The Financial Inclusion CoP has therefore spent the last few months working to identify and shortlist technologies that, in a given country, can be used by a range of service providers and innovators. These technologies can be built on across sectors and have features that can allow countries to freely adopt and iterate them to meet local needs. Projects that were at this particular intersection of digital public goods (DPGs) and digital public infrastructures (DPIs) stood out as meeting all of these criteria.</p>
+
+
+
+<p>Below, we share a snapshot of our thinking, but encourage you to <a href="http://bit.ly/DPGAFinancialInclusion">read the full paper</a> for more detail.&nbsp;</p>
+
+
+
+<p><strong>Defining digital public goods and digital public infrastructures</strong></p>
+
+
+
+<p>Digital public goods are defined by the UN Secretary-General’s <a href="https://www.un.org/en/content/digital-cooperation-roadmap/">Roadmap for Digital Cooperation</a> as “<em>open-source software, open data, open artificial intelligence models, open standards and open content that adhere to privacy and other applicable international and domestic laws, standards and best practices and do no harm</em>.” Encompassing the UN’s shared goals, DPGs should also be relevant for attainment of the Sustainable Development Goals.&nbsp;</p>
+
+
+
+<p>There is no similarly authoritative definition of DPIs, but they are often referred to as<em> the rails that other solutions “run on top of</em>” and their implementation typically enables many other solutions and business models to flourish. It is furthermore meaningful to divide them into foundational and functional categories, referring to<em> the extent to which</em> they are horizontal enablers.</p>
+
+
+
+<p><strong>Narrowing in on the DPIs that can drive financial inclusion at scale&nbsp;</strong></p>
+
+
+
+<p>Discussions within the CoP on which technologies could have the most potential impact on financial inclusion and would be most horizontally enabling led to an initial shortlist of technologies for further assessment.</p>
+
+
+
+<p>The DPGA Secretariat is now in the final stages of verifying these technologies against <a href="https://digitalpublicgoods.net/standard/">the 9-criteria open standard</a> that the Alliance has developed to operationalise the definition of DPGs. Key transformative features of DPGs include their adoptability and adaptability, and their resulting potential to help form new models for international digital cooperation. DPGs can be foundations for multi-stakeholder cooperation and can help transcend geographical, institutional, sectoral and expertise boundaries. Local adaptations and iterations can be shared back with the core project and help ensure long term sustainability. DPGs can also help safeguard human rights through relevant minimum standards and through providing transparency and accountability around how technologies have been designed.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2020/11/10125334/UNI232736.jpg" alt="" class="wp-image-648"/><figcaption>© UNICEF/UN0216637/Frank Dejongh</figcaption></figure></div>
+
+
+
+<p>Of particular importance for driving financial inclusion at scale is that, due to their open source licensing, DPGs can offer more control and independence and reduce the risk of vendor lock-in, making it easier for countries to make strategic decisions and have a long-term and holistic perspective when building out their digital foundations. </p>
+
+
+
+<p><strong>The shortlist</strong></p>
+
+
+
+<p>The table below depicts key features of digital public goods compared to digital public infrastructures and shows the technologies (highlighted section) that have been identified by the CoP as both foundational DPIs <em>and </em>likely<em> </em>DPGs.&nbsp;</p>
+
+
+
+<p></p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><td><br></td><td class="has-text-align-center" data-align="center"><strong><em>Proprietary</em></strong><br><em>Cannot be freely adopted or adapted</em></td><td class="has-text-align-center" data-align="center"><strong><em>Open Source</em></strong><br><em>Can be freely adopted or adapted&nbsp;</em></td></tr><tr><td><strong><em>Functional</em></strong><em><br></em><em>Enablers of public service delivery and of building out additional services in one or a few sectors</em></td><td class="has-text-align-center" data-align="center"><strong>DPI</strong></td><td class="has-text-align-center" data-align="center"><strong>DPI, DPG</strong></td></tr><tr><td><strong><em>Foundational</em></strong><em> </em><em>Backbones of public service delivery across all sectors, that solve problems impacting the state, market and consumers&nbsp;</em></td><td class="has-text-align-center" data-align="center"><strong>DPI</strong></td><td class="has-text-align-center" data-align="center"><strong>DPI, DPG </strong><br><strong><mark>*Focus area for the CoP</mark></strong><br><br>Shortlisted technologies in the final stages of DPG Standard verification: <em>MOSIP, Mojaloop, X-Road, OpenCRVS, Mifos, Apache Fineract, OpenG2P</em></td></tr></tbody></table></figure>
+
+
+
+<p><strong>Next steps</strong></p>
+
+
+
+<p>Once DPG Standard compliance is verified, the DPGA Secretariat will work with the CoP to conduct a deeper assessment of these technologies in order to compile and highlight information of key relevance to governments, donors and other stakeholders working to accelerate financial inclusion through digitalisation.&nbsp; <br></p>
+
+
+
+<p>Also, the transformative potential of DPGs can not be fully realized unless we simultaneously transform the systems, structures and practices in which these technologies are embedded. As one important step in this direction, the DPGA Secretariat is therefore working with philanthropic and government donors to align on a common global approach to resource mobilisation and coordination.<br></p>
+
+
+
+<p>To learn more about the relationship between DPIs and DPGs we encourage you to<a href="http://bit.ly/DPGAFinancialInclusion"> read the full paper</a>.&nbsp;</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>UNICEF’s Open Source Approach to Innovation</title>
+		<link>/blog/unicefs-open-source-approach-to-innovation/</link>
+				<pubDate>Tue, 27 Oct 2020 12:41:41 +0000</pubDate>
+		<dc:creator><![CDATA[Lucy Harris]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Innovation]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[UNICEF]]></category>
+
+		<guid isPermaLink="false">/?p=631</guid>
+				<description><![CDATA[Yesterday, DPGA Co-Founder UNICEF published this article outlining UNICEF&#8217;s various tools and platforms that operationalise its commitment to open source. Please find an excerpt below. UNICEF has a 70-year history of innovating for children and believes that new approaches, partnerships and technologies that support the realization of children’s rights are<a class="moretag" href="/blog/unicefs-open-source-approach-to-innovation/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p>Yesterday, DPGA Co-Founder UNICEF published <a href="https://www.unicef.org/innovation/stories/unicefs-open-source-approach-innovation">this article</a> outlining UNICEF&#8217;s various tools and platforms that operationalise its commitment to open source. </p>
+
+
+
+<p>Please find an excerpt below. </p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>UNICEF has a 70-year history of innovating for children and believes that new approaches, partnerships and technologies that support the realization of children’s rights are critical to improving their lives.</p>
+
+
+
+<p>As recognised in the <a href="https://www.un.org/en/content/digital-cooperation-roadmap/">UN Secretary-General&#8217;s Roadmap for Digital Cooperation Report</a> in June 2020,&nbsp; digital public goods &#8211; defined as “open source software, open data, open AI models, open standards and open content” have a critical role in accelerating achievement of the Sustainable Development Goals (SDGs).</p>
+
+
+
+<p>UNICEF along with the Governments of Norway and Sierra Leone, and the India-based think tank iSPIRT have jointly established the <a href="https://digitalpublicgoods.net/who-we-are/">Digital Public Goods Alliance</a>, a multi-stakeholder initiative to accelerate the attainment of the sustainable development goals in low- and middle-income countries by facilitating the discovery, development, use of, and investment in digital public goods. The DPGA is an effort to convene a network of partners from different sectors that will contribute to the identification, support, scale-up, and use of software, data, and algorithms that can advance humanity.&nbsp;</p>
+
+
+
+<p>As partners explore and scale efforts on digital public goods, UNICEF is sharing its experience in setting up operational processes and tools to support and build open source across all of it’s work.</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>Continue reading here: <a href="https://www.unicef.org/innovation/stories/unicefs-open-source-approach-innovation">https://www.unicef.org/innovation/stories/unicefs-open-source-approach-innovation</a> </p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Series Part 4: Meet our Co-Founder, UNICEF</title>
+		<link>/blog/series-part-4-meet-our-co-founder-unicef/</link>
+				<pubDate>Mon, 26 Oct 2020 11:46:19 +0000</pubDate>
+		<dc:creator><![CDATA[Liv Marte Nordhaug]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[blockchain]]></category>
+		<category><![CDATA[Connectivity]]></category>
+		<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[DPGA]]></category>
+		<category><![CDATA[Innovation]]></category>
+		<category><![CDATA[UNICEF]]></category>
+		<category><![CDATA[United Nations]]></category>
+
+		<guid isPermaLink="false">/?p=623</guid>
+				<description><![CDATA[This week, we wrap up our four part series highlighting the work of each Digital Public Goods Alliance co-founder. This week we’re featuring UNICEF. If you missed it, check out the rest of the series featuring iSPIRT, Norway and Sierra Leone. And, for more on the DPGA follow us on Twitter<a class="moretag" href="/blog/series-part-4-meet-our-co-founder-unicef/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p><strong>This week, we wrap up our four part series highlighting the work of each Digital Public Goods Alliance co-founder</strong>. This week we’re featuring UNICEF. </p>
+
+
+
+<p>If you missed it, check out the rest of the series featuring <a href="https://medium.com/digital-public-goods/series-part-1-meet-our-co-founders-ispirt-61f1f41d6642">iSPIRT</a>, <a href="https://medium.com/digital-public-goods/series-part-2-meet-our-co-founder-norway-1020112d1ad6">Norway</a> and <a href="https://medium.com/digital-public-goods/series-part-3-meet-our-co-founder-sierra-leone-d659329d6d9d">Sierra Leone</a>. And, for more on the DPGA follow us on <a href="https://twitter.com/DPGAlliance">Twitter</a> or sign up for our <a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list">newsletter</a>.</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p><strong>UNICEF&nbsp;</strong></p>
+
+
+
+<p>UNICEF is a proud co-lead of the UN Secretary General’s <a href="https://digitalcooperation.org/">The Age of Digital Interdependence</a> recommendations around universal connectivity (1A) and digital public goods (1B).</p>
+
+
+
+<p>UNICEF co-founded the Digital Public Goods Alliance as a result of recommendation 1B’s call for a “broad multi-stakeholder alliance, involving the UN, to create a platform for sharing digital public goods”. This work aims to make open source solutions more accessible to governments and to help them scale. UNICEF and other DPGA partners are working directly with national governments, UN agencies, and others who are looking for open source solutions to deploy in their countries.&nbsp;<br></p>
+
+
+
+<p>UNICEF brings a track record of sourcing, investing in, and supporting open source solutions to the DPGA. They do so through the <a href="https://www.unicef.org/innovation/venturefund">UNICEF Venture Fund</a> which provides start-ups in developing and emerging markets with equity-free seed funding. They’ve also done cutting edge work that leverages blockchain technology to provide <a href="https://cryptofund.unicef.io/">investments in cryptocurrency</a>, creating <strong>innovative financing models</strong> that <strong>incentivise and encourage the creation</strong> of open-source digital public goods. Finally, UNICEF has been a leader within the DPGA in identifying and connecting with <a href="https://digitalpublicgoods.net/who-we-are/">Pathfinder countries</a> and leveraging their experience incentivizing positive grassroots impacts through <a href="https://www.unicef.org/innovation/stories/Boost">digital tokens</a>.<br></p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2020/10/26112819/Screenshot_2020-10-20-UNICEF-Venture-Fund.png" alt="" class="wp-image-624"/><figcaption>https://www.unicef.org/innovation/venturefund</figcaption></figure></div>
+
+
+
+<p>UNICEF is actively working to address underlying barriers that currently limit access to digital public goods. UNICEF’s <a href="http://gigaconnect.org/">Giga project</a>, anchored in recommendation 1A, sets the goal of providing connectivity to every school in the world and every young person with information, opportunity and choice &#8211; including through increased access to DPGs. According to the ITU, some 3.6 billion people in the world do not have access to the internet. That lack of access means exclusion, fewer resources to learn and to grow, and limited opportunities for the most vulnerable children and youth to fulfill their potential. </p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://www.unicef.org/innovation/" target="_blank">Read more about the work of UNICEF&#8217;s Office of Innovation on their website.</a></p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>Each member of the current Interim Strategy Group (ISG) — consisting of iSPIRT, Norway, Sierra Leone and UNICEF — brings their own areas of expertise and interest to the DPGA which makes it stronger and more diverse in its reach and potential impact. As the DPGA is built out over time, membership will expand and change to include more stakeholders.</p>
+
+
+
+<p>Since its launch, the <a href="https://digitalpublicgoods.net/">Digital Public Goods Alliance</a> &#8212; an initiative co-founded by iSPIRT, Sierra Leone, The Government of Norway and UNICEF &#8212; has been working to identify, support and promote digital public goods to implement recommendation 1B from the <a href="https://digitalcooperation.org/">June 2019 Report of the UN Secretary-General’s High-level Panel on Digital Cooperation</a>. </p>
+
+
+
+<h1 id="3b4c">Get Involved</h1>
+
+
+
+<p>Only by working together can we make this happen. The Digital Public Goods Alliance is, itself an open project, and we seek engagement and support from any governments, businesses, civil society, technology providers, donors, and experts wishing to help us achieve our aim.</p>
+
+
+
+<p><strong>Learn more about the Digital Public Goods Alliance</strong>&nbsp;on our<a href="https://digitalpublicgoods.net/">&nbsp;website</a>.</p>
+
+
+
+<p><strong>Stay on top of DPGA news and updates </strong><a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list">by joining our newsletter</a>.</p>
+
+
+
+<p><strong>Nominate digital public goods</strong>&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGzlBiecPBlVvJXmcMKXF3zdxASY8vGnrdnNNwp7fVKb169A/viewform?usp=sf_link">through this form</a>.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Series Part 3: Meet our Co-Founder, Sierra Leone</title>
+		<link>/blog/series-part-3-meet-our-co-founder-sierra-leone/</link>
+				<pubDate>Tue, 20 Oct 2020 11:32:32 +0000</pubDate>
+		<dc:creator><![CDATA[Lucy Harris]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[DPGA]]></category>
+		<category><![CDATA[Innovation]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Sierra Leone]]></category>
+		<category><![CDATA[Technology]]></category>
+
+		<guid isPermaLink="false">/?p=612</guid>
+				<description><![CDATA[This is the third in a four-part series featuring exciting work from the Co-Founders of the Digital Public Goods Alliance. This week we’re featuring Sierra Leone. If you missed it, check out Part 1 on iSPIRT or Part 2 on Norway. &#160; Sierra Leone&#160;&#160;Sierra Leone’s Directorate of Science, Technology &#38;<a class="moretag" href="/blog/series-part-3-meet-our-co-founder-sierra-leone/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p><strong>This is the third in a four-part series featuring exciting work from the Co-Founders of the Digital Public Goods Alliance. </strong>This week we’re featuring Sierra Leone.</p>
+
+
+
+<p> If you missed it, check out <a rel="noreferrer noopener" href="https://medium.com/digital-public-goods/series-part-1-meet-our-co-founders-ispirt-61f1f41d6642" target="_blank">Part 1 on iSPIRT</a> or <a rel="noreferrer noopener" href="https://medium.com/digital-public-goods/series-part-2-meet-our-co-founder-norway-1020112d1ad6" target="_blank">Part 2 on Norway</a>. &nbsp;</p>
+
+
+
+<figure class="wp-block-table"><table class=""><tbody><tr><td><strong>Sierra Leone&nbsp;</strong><br><strong><br></strong>&nbsp;Sierra Leone’s Directorate of Science, Technology &amp; Innovation (DSTI) has highlighted how youth empowerment, economic reform and health infrastructure can open up regional possibilities. Like iSPIRT, Sierra Leone is leading by example, creating a virtuous cycle driven by their four pillars (Data for Decision Making, Service Delivery &amp; Citizen Engagement, Data Systems &amp; Technology Design, and Ecosystem Strengthening) that serve as a foundation to turn Sierra Leone into an innovation and entrepreneurship hub, that other developing countries can emulate.&nbsp;<br></td></tr></tbody></table></figure>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2020/10/20112028/Screenshot_2020-10-14-Sierra-Leone%E2%80%99s-Quarantine-App-Offers-Real-time-Data-Improves-Citizen-Service-Delivery-DSTI.png" alt="" class="wp-image-613"/><figcaption>https://www.dsti.gov.sl/</figcaption></figure></div>
+
+
+
+<p>The DSTI in particular is playing a key role by engaging private sector and university communities to help build the technology that makes the implementation of digital public goods possible. This comes from an understanding that, in order for DPGs to evolve at scale and with a lower barrier to entry, there needs to be a supportive ecosystem built up that addresses questions of resourcing and intellectual property.&nbsp;</p>
+
+
+
+<p>Sierra Leone is also <a href="https://www.dsti.gov.sl/sierra-leone-national-innovation-digital-strategy-2019-2029">setting an example</a> by documenting their progress and lessons learned. DSTI gathers data to support policy and decision-making in the public interest and makes relevant data gathered throughout the process publicly available.&nbsp;</p>
+
+
+
+<p><br> <a rel="noreferrer noopener" href="https://www.dsti.gov.sl/" target="_blank">Read more about the work of Sierra Leone&#8217;s Directorate of Science, Technology &amp; Innovation on their website</a>. </p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<figure class="wp-block-table"><table class=""><tbody><tr><td>Each member of the current Interim Strategy Group (ISG) &#8211; consisting of iSPIRT, Norway, Sierra Leone and UNICEF &#8211; brings their own areas of expertise and interest to the DPGA which makes it stronger and more diverse in its reach and potential impact. As the DPGA is built out over time, membership will expand and change to include more stakeholders.</td></tr></tbody></table></figure>
+
+
+
+<figure class="wp-block-table"><table class=""><tbody><tr><td>Since its launch, the <a href="https://digitalpublicgoods.net/">DPGA</a> has been working to identify, support and promote digital public goods to implement recommendation 1B from the <a href="https://digitalcooperation.org/">June 2019 Report of the UN Secretary-General’s High-level Panel on Digital Cooperation</a>.&nbsp;</td></tr></tbody></table></figure>
+
+
+
+<h2>Get Involved</h2>
+
+
+
+<p>Only by working together can we make this happen. The Digital Public Goods Alliance is, itself an open project, and we seek engagement and support from any governments, businesses, civil society, technology providers, donors, and experts wishing to help us achieve our aim.</p>
+
+
+
+<p><strong>Learn more about the Digital Public Goods Alliance</strong>&nbsp;on our<a href="https://digitalpublicgoods.net/">&nbsp;website</a>.</p>
+
+
+
+<p><strong>Follow</strong>&nbsp;our<a href="https://medium.com/digital-public-goods">&nbsp;blog</a>, or&nbsp;<strong>join&nbsp;</strong>our<a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list">&nbsp;mailing list</a>.</p>
+
+
+
+<p><strong>Stay on top of DPGA news and updates</strong> <a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list">join our newsletter.</a><br><br><strong>Nominate digital public goods</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGzlBiecPBlVvJXmcMKXF3zdxASY8vGnrdnNNwp7fVKb169A/viewform?usp=sf_link">through this form</a>.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Series Part 2: Meet our Co-Founder, Norway</title>
+		<link>/blog/series-part-2-meet-our-co-founder-norway/</link>
+				<pubDate>Tue, 13 Oct 2020 11:58:16 +0000</pubDate>
+		<dc:creator><![CDATA[Lucy Harris]]></dc:creator>
+				<category><![CDATA[Blog]]></category>
+		<category><![CDATA[climate]]></category>
+		<category><![CDATA[Digital Public Goods]]></category>
+		<category><![CDATA[health]]></category>
+		<category><![CDATA[Norad]]></category>
+		<category><![CDATA[Norway]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[philanthropy]]></category>
+		<category><![CDATA[United Nations]]></category>
+
+		<guid isPermaLink="false">/?p=577</guid>
+				<description><![CDATA[NEW: Follow the Digital Public Goods Alliance on Twitter @DPGAlliance Last week we kicked off a four part series. In each part, we will share exciting work from one of the Co-Founders of the Digital Public Goods Alliance. This week we’re featuring Norway. If you missed Part 1 on iSPIRT last<a class="moretag" href="/blog/series-part-2-meet-our-co-founder-norway/"> Read more&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p><strong>NEW: Follow the Digital Public Goods Alliance on Twitter</strong><a href="https://twitter.com/DPGAlliance"> @DPGAlliance</a></p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p><strong>Last week we kicked off a four part series. </strong>In each part, we will share exciting work from one of the Co-Founders of the Digital Public Goods Alliance. This week we’re featuring Norway.</p>
+
+
+
+<p><a rel="noreferrer noopener" href="https://medium.com/digital-public-goods/series-part-1-meet-our-co-founders-ispirt-61f1f41d6642" target="_blank">If you missed Part 1 on iSPIRT last week, you can see it here.</a></p>
+
+
+
+<p>As we said last week, one of the fundamental strengths of the Digital Public Goods Alliance (DPGA) is its decentralized, yet coordinated structure. Each member of the current Interim Strategy Group (ISG) &#8211; consisting of iSPIRT, Norway, Sierra Leone and UNICEF &#8211; brings their own areas of expertise and interest to the DPGA which makes it stronger and more diverse in its reach and potential impact. As the DPGA is built out over time, membership will expand and change to include more stakeholders.&nbsp;In this four part series, we’re pleased to offer a snapshot of the exciting work being led by each of the current ISG members. <strong>This week we focus on Norway.&nbsp;</strong></p>
+
+
+
+<h4><strong>Norway</strong></h4>
+
+
+
+<p>Norway believes in the deployment of digital public goods as a means to help countries accelerate the attainment of the Sustainable Development Goals and is a proud champion and co-founder of the DPGA together with the government of Sierra Leone, UNICEF and iSPIRT.</p>
+
+
+
+<p>Their work funds high-impact digital public goods in several sectors including health, early grade reading, climate and weather services, and plant pest management.&nbsp;</p>
+
+
+
+<p>In the wake of the COVID-19 pandemic, Norway has worked on expanding existing digital public goods in both the health and education sectors. One example is <a href="https://www.dhis2.org/about">DHIS2</a>, an open source, web-based software platform for data collection, management, and analysis, used by governments and NGOs in more than 100 countries. Starting with a pilot in Sri Lanka, more than 30 countries have deployed standardized <a href="https://www.dhis2.org/covid-19">DHIS2 COVID-19 surveillance digital data packages</a> since the pandemic began.&nbsp;</p>
+
+
+
+<p>Norway has also seen a rapid scale up in the use of the <a href="https://digitallibrary.io/">Global Digital Library platform</a> for openly licensed early grade reading resources, and together with ADEA and UNESCO are also supporting a number of countries in translating early grade reading books into local languages, and fast-tracking the availability of <a href="https://freelearning.io/">learning resources</a>.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large"><img src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2020/10/13115228/Screenshot_2020-10-08-Meld-St-11-2019%E2%80%932020-Report-to-the-Storting-white-paper-Summary.png" alt="" class="wp-image-580"/><figcaption>https://www.regjeringen.no/no/dokumenter/meldst11_summary/id2699502/?ch=1</figcaption></figure></div>
+
+
+
+<p>As the DPGA develops, Norway would like to engage other bilateral and philanthropic donors in conversations on how each can best contribute to supporting the global architecture around digital public goods.   </p>
+
+
+
+<p>You can find out more about Norway’s commitment to digital public goods by reading their white paper for <a href="https://www.regjeringen.no/no/dokumenter/meldst11_summary/id2699502/?utm_source=www.regjeringen.no&amp;utm_medium=epost&amp;utm_campaign=nyhetsvarsel%2024.04.2020&amp;utm_content=Utviklingssamarbeid">Digital Transformation and Development Policy</a> or watching <a href="https://www.jottacloud.com/s/144183dc9f125c64ba38531766cfda063f0">this address</a> from Prime Minister Solberg. </p>
+
+
+
+<p>Norway is co-hosting the DPGA and will engage at the forefront of the Climate Adaptation Community of Practice. </p>
+
+
+
+<p><a href="https://norad.no/en/front/">Visit their website</a> or <a href="https://twitter.com/noradno">follow Norway on Twitter</a> to learn more.</p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p>Since its launch, the <a href="https://digitalpublicgoods.net/">Digital Public Goods Alliance</a> &#8212; an initiative co-founded by iSPIRT, Sierra Leone, The Government of Norway and UNICEF &#8212; has been working to identify, support and promote digital public goods to implement recommendation 1B from the <a href="https://digitalcooperation.org/">June 2019 Report of the UN Secretary-General’s High-level Panel on Digital Cooperation</a>.  </p>
+
+
+
+<h2>Get Involved</h2>
+
+
+
+<p>Only by working together can we make this happen. The Digital Public Goods Alliance is, itself an open project, and we seek engagement and support from any governments, businesses, civil society, technology providers, donors, and experts wishing to help us achieve our aim.</p>
+
+
+
+<p><strong>Learn more about the Digital Public Goods Alliance</strong>&nbsp;on our<a href="https://digitalpublicgoods.net/">&nbsp;website</a>.</p>
+
+
+
+<p><strong>Follow</strong>&nbsp;our<a href="https://medium.com/digital-public-goods">&nbsp;blog</a>, or&nbsp;<strong>join&nbsp;</strong>our<a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list">&nbsp;mailing list</a>.</p>
+
+
+
+<p><strong>Want to contribute with funding, technology, or expertise?</strong><a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list">&nbsp;Sign up here</a>.&nbsp;<br><br><strong>Nominate digital public goods</strong>&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGzlBiecPBlVvJXmcMKXF3zdxASY8vGnrdnNNwp7fVKb169A/viewform?usp=sf_link">through this form</a>.</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>
