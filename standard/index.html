@@ -1,224 +1,22 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<html>
 
 <head>
-	<meta charset='UTF-8'>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-		<title>Digital Public Goods Standard</title>
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="/feed/" />
-<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="/comments/feed/" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
-			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-5-css'  href='/wp-content/plugins/themeisle-companion/obfx_modules/gutenberg-blocks/assets/fontawesome/css/all.min.css?ver=2.9.12' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-4-shims-css'  href='/wp-content/plugins/themeisle-companion/obfx_modules/gutenberg-blocks/assets/fontawesome/css/v4-shims.min.css?ver=2.9.12' type='text/css' media='all' />
-<link rel='stylesheet' id='themeisle-block_styles-css'  href='/wp-content/plugins/themeisle-companion/vendor/codeinwp/gutenberg-blocks/build/style.css?ver=1.5.3' type='text/css' media='all' />
-<link rel='stylesheet' id='hestia-clients-bar-css'  href='/wp-content/plugins/themeisle-companion/obfx_modules/companion-legacy/assets/css/hestia/clients-bar.css?ver=5.3.2' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap-css'  href='/wp-content/themes/hestia/assets/bootstrap/css/bootstrap.min.css?ver=1.0.2' type='text/css' media='all' />
-<link rel='stylesheet' id='hestia-font-sizes-css'  href='/wp-content/themes/hestia/assets/css/font-sizes.min.css?ver=2.5.6' type='text/css' media='all' />
-<link rel='stylesheet' id='hestia_style-css'  href='/wp-content/themes/hestia/style.min.css?ver=2.5.6' type='text/css' media='all' />
-<style id='hestia_style-inline-css' type='text/css'>
-.hestia-top-bar, .hestia-top-bar .widget.widget_shopping_cart .cart_list {
-			background-color: #363537
-		}
-		.hestia-top-bar .widget .label-floating input[type=search]:-webkit-autofill {
-			-webkit-box-shadow: inset 0 0 0px 9999px #363537
-		}.hestia-top-bar, .hestia-top-bar .widget .label-floating input[type=search], .hestia-top-bar .widget.widget_search form.form-group:before, .hestia-top-bar .widget.widget_product_search form.form-group:before, .hestia-top-bar .widget.widget_shopping_cart:before {
-			color: #ffffff
-		} 
-		.hestia-top-bar .widget .label-floating input[type=search]{
-			-webkit-text-fill-color:#ffffff !important 
-		}.hestia-top-bar a, .hestia-top-bar .top-bar-nav li a {
-			color: #ffffff
-		}.hestia-top-bar a:hover, .hestia-top-bar .top-bar-nav li a:hover {
-			color: #eeeeee
-		}
-	
-		a, 
-		.navbar .dropdown-menu li:hover > a,
-		.navbar .dropdown-menu li:focus > a,
-		.navbar .dropdown-menu li:active > a,
-		.navbar .navbar-nav > li .dropdown-menu li:hover > a,
-		body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a,
-		body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:hover,
-		body:not(.home) .navbar-default .navbar-nav > .active:not(.btn) > a:focus,
-		a:hover, 
-		.card-blog a.moretag:hover, 
-		.card-blog a.more-link:hover, 
-		.widget a:hover,
-		.has-text-color.has-accent-color,
-		p.has-text-color a {
-		    color:#e91e63;
-		}
-		
-		.pagination span.current, .pagination span.current:focus, .pagination span.current:hover {
-			border-color:#e91e63
-		}
-		
-		button,
-		button:hover,
-		.woocommerce .track_order button[type="submit"],
-		.woocommerce .track_order button[type="submit"]:hover,
-		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit,
-		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit:hover,
-		input[type="button"],
-		input[type="button"]:hover,
-		input[type="submit"],
-		input[type="submit"]:hover,
-		input#searchsubmit, 
-		.pagination span.current, 
-		.pagination span.current:focus, 
-		.pagination span.current:hover,
-		.btn.btn-primary,
-		.btn.btn-primary:link,
-		.btn.btn-primary:hover, 
-		.btn.btn-primary:focus, 
-		.btn.btn-primary:active, 
-		.btn.btn-primary.active, 
-		.btn.btn-primary.active:focus, 
-		.btn.btn-primary.active:hover,
-		.btn.btn-primary:active:hover, 
-		.btn.btn-primary:active:focus, 
-		.btn.btn-primary:active:hover,
-		.hestia-sidebar-open.btn.btn-rose,
-		.hestia-sidebar-close.btn.btn-rose,
-		.hestia-sidebar-open.btn.btn-rose:hover,
-		.hestia-sidebar-close.btn.btn-rose:hover,
-		.hestia-sidebar-open.btn.btn-rose:focus,
-		.hestia-sidebar-close.btn.btn-rose:focus,
-		.label.label-primary,
-		.hestia-work .portfolio-item:nth-child(6n+1) .label,
-		.nav-cart .nav-cart-content .widget .buttons .button,
-		.has-accent-background-color[class*="has-background"] {
-		    background-color: #e91e63;
-		}
-		
-		@media (max-width: 768px) { 
-	
-			.navbar-default .navbar-nav>li>a:hover,
-			.navbar-default .navbar-nav>li>a:focus,
-			.navbar .navbar-nav .dropdown .dropdown-menu li a:hover,
-			.navbar .navbar-nav .dropdown .dropdown-menu li a:focus,
-			.navbar button.navbar-toggle:hover,
-			.navbar .navbar-nav li:hover > a i {
-			    color: #e91e63;
-			}
-		}
-		
-		body:not(.woocommerce-page) button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(.close),
-		body:not(.woocommerce-page) .button:not([class^="fl-"]):not(hestia-scroll-to-top):not(.navbar-toggle):not(.add_to_cart_button),
-		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit,
-		input[type="submit"], 
-		input[type="button"], 
-		.btn.btn-primary,
-		.widget_product_search button[type="submit"],
-		.hestia-sidebar-open.btn.btn-rose,
-		.hestia-sidebar-close.btn.btn-rose,
-		.everest-forms button[type=submit].everest-forms-submit-button {
-		    -webkit-box-shadow: 0 2px 2px 0 rgba(233,30,99,0.14),0 3px 1px -2px rgba(233,30,99,0.2),0 1px 5px 0 rgba(233,30,99,0.12);
-		    box-shadow: 0 2px 2px 0 rgba(233,30,99,0.14),0 3px 1px -2px rgba(233,30,99,0.2),0 1px 5px 0 rgba(233,30,99,0.12);
-		}
-		
-		.card .header-primary, .card .content-primary,
-		.everest-forms button[type=submit].everest-forms-submit-button {
-		    background: #e91e63;
-		}
-		
-		body:not(.woocommerce-page) .button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(.add_to_cart_button):hover,
-		body:not(.woocommerce-page) button:not([class^="fl-"]):not(.hestia-scroll-to-top):not(.navbar-toggle):not(.close):hover,
-		div.wpforms-container .wpforms-form button[type=submit].wpforms-submit:hover,
-		input[type="submit"]:hover,
-		input[type="button"]:hover,
-		input#searchsubmit:hover, 
-		.widget_product_search button[type="submit"]:hover,
-		.pagination span.current, 
-		.btn.btn-primary:hover, 
-		.btn.btn-primary:focus, 
-		.btn.btn-primary:active, 
-		.btn.btn-primary.active, 
-		.btn.btn-primary:active:focus, 
-		.btn.btn-primary:active:hover, 
-		.hestia-sidebar-open.btn.btn-rose:hover,
-		.hestia-sidebar-close.btn.btn-rose:hover,
-		.pagination span.current:hover,
-		.everest-forms button[type=submit].everest-forms-submit-button:hover,
- 		.everest-forms button[type=submit].everest-forms-submit-button:focus,
- 		.everest-forms button[type=submit].everest-forms-submit-button:active {
-			-webkit-box-shadow: 0 14px 26px -12px rgba(233,30,99,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(233,30,99,0.2);
-		    box-shadow: 0 14px 26px -12px rgba(233,30,99,0.42),0 4px 23px 0 rgba(0,0,0,0.12),0 8px 10px -5px rgba(233,30,99,0.2);
-			color: #fff;
-		}
-		
-		.form-group.is-focused .form-control {
-			background-image: -webkit-gradient(linear,left top, left bottom,from(#e91e63),to(#e91e63)),-webkit-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));
-			background-image: -webkit-linear-gradient(linear,left top, left bottom,from(#e91e63),to(#e91e63)),-webkit-linear-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));
-			background-image: linear-gradient(linear,left top, left bottom,from(#e91e63),to(#e91e63)),linear-gradient(linear,left top, left bottom,from(#d2d2d2),to(#d2d2d2));
-		}
-		
-		.navbar:not(.navbar-transparent) li:not(.btn):hover > a,
-		.navbar li.on-section:not(.btn) > a, 
-		.navbar.full-screen-menu.navbar-transparent li:not(.btn):hover > a,
-		.navbar.full-screen-menu .navbar-toggle:hover,
-		.navbar:not(.navbar-transparent) .nav-cart:hover, 
-		.navbar:not(.navbar-transparent) .hestia-toggle-search:hover {
-				color:#e91e63}
-		
-		.has-text-color.has-background-color-color { color: #E5E5E5; }
-		.has-background-color-background-color[class*="has-background"] { background-color: #E5E5E5; }
-		
-.btn.btn-primary:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item), input[type="submit"]:not(.search-submit), body:not(.woocommerce-account) .woocommerce .button.woocommerce-Button, .woocommerce .product button.button, .woocommerce .product button.button.alt, .woocommerce .product #respond input#submit, .woocommerce-cart .blog-post .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce-checkout #payment #place_order, .woocommerce-account.woocommerce-page button.button, .woocommerce .track_order button[type="submit"], .nav-cart .nav-cart-content .widget .buttons .button, .woocommerce a.button.wc-backward, body.woocommerce .wccm-catalog-item a.button, body.woocommerce a.wccm-button.button, form.woocommerce-form-coupon button.button, div.wpforms-container .wpforms-form button[type=submit].wpforms-submit, div.woocommerce a.button.alt, div.woocommerce table.my_account_orders .button, .btn.colored-button, .btn.btn-left, .btn.btn-right, .btn:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item):not(.hestia-sidebar-open):not(.hestia-sidebar-close){ padding-top:15px;  padding-bottom:15px;  padding-left:33px;  padding-right:33px; }
-.btn.btn-primary:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item), input[type="submit"]:not(.search-submit), body:not(.woocommerce-account) .woocommerce .button.woocommerce-Button, .woocommerce .product button.button, .woocommerce .product button.button.alt, .woocommerce .product #respond input#submit, .woocommerce-cart .blog-post .woocommerce .cart-collaterals .cart_totals .checkout-button, .woocommerce-checkout #payment #place_order, .woocommerce-account.woocommerce-page button.button, .woocommerce .track_order button[type="submit"], .nav-cart .nav-cart-content .widget .buttons .button, .woocommerce a.button.wc-backward, body.woocommerce .wccm-catalog-item a.button, body.woocommerce a.wccm-button.button, form.woocommerce-form-coupon button.button, div.wpforms-container .wpforms-form button[type=submit].wpforms-submit, div.woocommerce a.button.alt, div.woocommerce table.my_account_orders .button, input[type="submit"].search-submit, .hestia-view-cart-wrapper .added_to_cart.wc-forward, .woocommerce-product-search button, .woocommerce-cart .actions .button, #secondary div[id^=woocommerce_price_filter] .button, .woocommerce div[id^=woocommerce_widget_cart].widget .buttons .button, .searchform input[type=submit], .searchform button, .search-form:not(.media-toolbar-primary) input[type=submit], .search-form:not(.media-toolbar-primary) button, .woocommerce-product-search input[type=submit], .btn.colored-button, .btn.btn-left, .btn.btn-right, .btn:not(.colored-button):not(.btn-left):not(.btn-right):not(.btn-just-icon):not(.menu-item):not(.hestia-sidebar-open):not(.hestia-sidebar-close){border-radius:3px;}
-@media (min-width: 769px){
-			.page-header.header-small .hestia-title,
-			.page-header.header-small .title,
-			h1.hestia-title.title-in-content,
-			.main article.section .has-title-font-size {
-				font-size: 42px;
-			}}
-
-		.page-template-builder-fullwidth-std .header > .elementor {
-			padding-top: 70px;
-		}
-
-</style>
-<link rel='stylesheet' id='font-awesome-5-all-css'  href='/wp-content/themes/hestia/assets/font-awesome/css/all.min.css?ver=1.0.2' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-4-shim-css'  href='/wp-content/themes/hestia/assets/font-awesome/css/v4-shims.min.css?ver=1.0.2' type='text/css' media='all' />
-<link rel='stylesheet' id='hestia_fonts-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C500%2C700%7CRoboto+Slab%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=2.5.6' type='text/css' media='all' />
-<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
-<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var accordions_ajax = {"accordions_ajaxurl":"\/wp-admin\/admin-ajax.php"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='/wp-content/plugins/accordions/assets/frontend/js/scripts.js?ver=5.3.2'></script>
-<link rel='https://api.w.org/' href='/wp-json/' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 5.3.2" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> &raquo; Digital Public Goods Standard</title>
+	<script>
+		var BLOG_URL = 'http://dpgwebsite.herokuapp.com';
+		var TEMPLATE_URL = '/wp-content/themes/dpga';
+		var AJAX_URL = '/wp-admin/admin-ajax.php';
+	</script>
+	<link rel="icon" type="image/png" href="/wp-content/themes/dpga/favicon.png?v1622233620" />
+	<meta name='robots' content='max-image-preview:large' />
+<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dpga-style-css'  href='/wp-content/themes/dpga/style.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dpga-fontello-css'  href='/wp-content/themes/dpga/fontello/css/fontello.css?ver=1622233620' type='text/css' media='all' />
+<link rel='stylesheet' id='dpga-style-main-css'  href='/wp-content/themes/dpga/css/style.css?ver=1622233620' type='text/css' media='all' />
 <link rel="canonical" href="/standard/" />
-<link rel='shortlink' href='/?p=501' />
-<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdpgwebsite.herokuapp.com%2Fstandard%2F" />
-<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdpgwebsite.herokuapp.com%2Fstandard%2F&#038;format=xml" />
    <script type="text/javascript">
    var _gaq = _gaq || [];
    _gaq.push(['_setAccount', 'UA-143534016-1']);
@@ -229,150 +27,46 @@ var accordions_ajax = {"accordions_ajaxurl":"\/wp-admin\/admin-ajax.php"};
    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
    })();
    </script>
-<!-- Enter your scripts here -->		<style type="text/css" id="wp-custom-css">
-			.home h1.hestia-title {
-    text-align: left;
-	  max-width: 350px
-}
-@media (min-width: 769px) {
-.hestia-about-content {
-    margin-left: 100px;
-    margin-right: 100px;
-}
-}
+</head>
 
-.footer_logo{
-	display:block;
-	float: left;
-	padding-right: 50px;
-}
+<body class="page-template-default page page-id-501 dpga-template-">
+	<div id="page">
+		<header id="header">
+			<nav class="navbar navbar-expand-xl navbar-light">
+				<div class="container">
+					<button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon">
+						</span>
+					</button>
+					<a class="navbar-brand" href="http://dpgwebsite.herokuapp.com">
+						<span><img src="/wp-content/themes/dpga/images/logo.svg" alt="Digital Public Goods Alliance" /></span>
+					</a>
 
-.sdgicon{
-	margin: 1px;
-}
-
-.hestia-about-content .has-large-font-size{
-  margin-top: 1em;
-	font-size: 36px;
-}
-
-.hestia-about ul {
-	font-size: 18px;
-}
-
-.big-details {
-	display: block;
-  font-weight: 200;
-  font-size: 75px;
-  line-height: 80px;
-  letter-spacing: -2px;
-	color: #e91e63;
-}
-
-span.small-title {
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: #aaa;
-}
-
-.toolTip {
-  position: absolute;
-  display: none;
-  width: auto;
-  height: auto;
-  background: none repeat scroll 0 0 white;
-  border: 0 none;
-	color: #aaa;
-  font-size: 13px;
-	font-weight: 700;
-  padding: 5px;
-  text-align: left;
-}
-
-.anchor a {
-  position: absolute;
-  left: 0px;
-  top: -90px;
-}
-.anchor {
-	position: relative;
-}
-
-.dpg-section-header {
-	padding-top: 1em;
-}
-
-.last-paragraph{
-	padding-bottom: 6em;
-}
-
-h3.margin-top-1em {
-	padding-top: 1em;
-}
-
-.wp-block-columns {
-	margin-bottom: 0;
-}
-
-.bulletitemspaced li {
-	padding-bottom: 1em;
-}
-
-p.credits {
-  font-size: 0.9em;
-}
-
-.contactus .info a:not(.btn) {
-    color: #e91e63;
-}		</style>
-		</head>
-
-<body class="page-template-default page page-id-501 blog-post header-layout-default">
-		<div class="wrapper  default ">
-		<header class="header ">
-			<div style="display: none"></div>		<nav class="navbar navbar-default navbar-fixed-top  hestia_left navbar-not-transparent">
-						<div class="container">
-						<div class="navbar-header">
-			<div class="title-logo-wrapper">
-				<a class="navbar-brand" href="/"
-						title="">
-					<p></p></a>
-			</div>
-								<div class="navbar-toggle-wrapper">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="sr-only">Toggle Navigation</span>
-			</button>
-					</div>
-				</div>
-		<div id="main-navigation" class="collapse navbar-collapse"><ul id="menu-main-menu" class="nav navbar-nav"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a title="Home" href="/">Home</a></li>
-<li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186"><a title="Who We Are" href="/who-we-are/">Who We Are</a></li>
-<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a title="About" href="/about/">About</a></li>
-<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-87 dropdown"><a title="Registry" href="/registry/" class="dropdown-toggle">Registry <span class="caret-wrap"><span class="caret"></span></span></a>
-<ul role="menu" class="dropdown-menu">
-	<li id="menu-item-562" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-501 current_page_item menu-item-562 active"><a title="Digital Public Goods Standard" href="/standard/">Digital Public Goods Standard</a></li>
+					<div class=" navbar-collapse" id="navbarNavDropdown">
+						<div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51"><a href="/">Home</a></li>
+<li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186"><a href="/who-we-are/">Who We Are</a></li>
+<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="/what-we-do/">What We Do</a></li>
+<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-87"><a href="/registry/">Registry</a>
+<ul class="sub-menu">
+	<li id="menu-item-562" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-501 current_page_item menu-item-562"><a href="/standard/" aria-current="page">Digital Public Goods Standard</a></li>
 </ul>
 </li>
-<li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a title="Get Involved" href="/get-involved/">Get Involved</a></li>
-<li id="menu-item-390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a title="Blog" href="/blog/">Blog</a></li>
-</ul></div>			</div>
-					</nav>
-				</header>
-<div id="primary" class=" page-header header-small" data-parallax="active" ><div class="container"><div class="row"><div class="col-md-10 col-md-offset-1 text-center"><h1 class="hestia-title ">Digital Public Goods Standard</h1></div></div></div><div class="header-filter" style="background-image: url(https://s3.amazonaws.com/dpg-website/wp-content/uploads/2020/09/18200401/Screenshot_2020-09-18-DigitalCooperation-report-for-web-pdf.png);"></div></div><div class="main ">
-		<div class="blog-post ">
-		<div class="container">
-			
+<li id="menu-item-263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-263"><a href="/get-involved/">Get Involved</a></li>
+<li id="menu-item-390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a href="/blog/">Blog</a></li>
+</ul></div>						<button class="close"><i class="icon-cancel"></i></button>
+					</div>
 
-	<article id="post-501" class="section section-text">
-		<div class="row">
-						<div class="col-md-8 page-content-wrap  col-md-offset-2">
-				
-<p>The Digital Public Goods Standard is a set of specifications and guidelines designed to maximize consensus about whether a project conforms to the definition of digital public goods set by the UN Secretary-General in the <a href="https://www.un.org/en/content/digital-cooperation-roadmap/">2020 Roadmap for Digital Cooperation</a>: <em>digital public goods must be open source software, open data, open AI models, open standards and open content that adhere to privacy and other applicable laws and best practices, do no harm, and help attain the Sustainable Development Goals (SDGs).</em></p>
+					<a href="/?s=" class="search-form"><i class="icon-search"></i></a>
+				</div>
+			</nav>
+		</header><main role="main" id="main">
+	<div class="content-wrap">
+			<header>
+		<h1>Digital Public Goods Standard</h1>
+	</header>
+<div class="body-content">
+	
+<p>The Digital Public Goods Standard is a set of specifications and guidelines designed to maximize consensus about whether a project conforms to the <a href="https://digitalpublicgoods.net/registry/">definition</a> of digital public goods set by the UN Secretary-General in the <a href="https://www.un.org/en/content/digital-cooperation-roadmap/">2020 Roadmap for Digital Cooperation</a>.</p>
 
 
 
@@ -380,7 +74,55 @@ p.credits {
 
 
 
-<p>The information below provides insight on how to nominate a digital public good to the <a href="https://digitalpublicgoods.net/registry/">DPG Registry</a> and how to contribute to the DPG Standard. To see the full submission of a digital public good, you can click on the DPG icon in the DPG Registry.</p>
+<div class="wp-block-columns are-vertically-aligned-top icons logos">
+<div class="wp-block-column is-vertically-aligned-top">
+<figure class="wp-block-image size-large"><img loading="lazy" width="2000" height="2000" src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2021/06/01203712/software-2.png" alt="" class="wp-image-933"/></figure>
+
+
+
+<p class="has-text-align-center">Open Software</p>
+</div>
+
+
+
+<div class="wp-block-column">
+<figure class="wp-block-image size-large"><img loading="lazy" width="2000" height="2000" src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2021/06/01203749/data.png" alt="" class="wp-image-934"/></figure>
+
+
+
+<p class="has-text-align-center">Open Data</p>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-top">
+<figure class="wp-block-image size-large"><img loading="lazy" width="2000" height="2000" src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2021/06/01203816/AI-models.png" alt="" class="wp-image-935"/></figure>
+
+
+
+<p class="has-text-align-center">Open AI Models</p>
+</div>
+
+
+
+<div class="wp-block-column">
+<figure class="wp-block-image size-large"><img loading="lazy" width="2000" height="2000" src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2021/06/01204130/standards-2.png" alt="" class="wp-image-940"/></figure>
+
+
+
+<p class="has-text-align-center">Open Standards</p>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-top">
+<figure class="wp-block-image size-large"><img loading="lazy" width="2000" height="2000" src="https://s3.amazonaws.com/dpg-website/wp-content/uploads/2021/06/01204138/content-2.png" alt="" class="wp-image-941"/></figure>
+
+
+
+<p class="has-text-align-center">Open Content</p>
+</div>
+</div>
 
 
 
@@ -388,7 +130,7 @@ p.credits {
 
 
 
-<h3>Digital Public Goods Standard&nbsp;</h3>
+<p>The information below provides insight on requirements submissions must meet to be digital public good found on the <a href="https://digitalpublicgoods.net/registry/">DPG Registry</a> and how to contribute to the DPG Standard. </p>
 
 
 
@@ -396,7 +138,7 @@ p.credits {
 
 
 
-<figure class="wp-block-table"><table class=""><tbody><tr><td><strong>Indicator </strong></td><td class="has-text-align-left" data-align="left"><strong>Requirement</strong></td></tr><tr><td>1. Relevance to Sustainable Development Goals</td><td class="has-text-align-left" data-align="left">All projects must indicate the <a href="https://sdgs.un.org/goals">Sustainable Development Goals</a> (SDGs) they are relevant to and provide supporting links/documentation to support their relevance.&nbsp;</td></tr><tr><td>2. Use of Approved Open Licenses</td><td class="has-text-align-left" data-align="left">Projects must demonstrate the use of an approved open license. For open source software, only <a href="https://opensource.org/licenses">OSI approved licenses</a> are accepted. For open content, the use of a <a href="https://creativecommons.org/licenses/">Creative Commons license</a> is required. While we encourage projects to use a license that allows for both derivatives and commercial reuse (CC-BY and CC-BY-SA) or dedicates content to the public domain (<a href="https://creativecommons.org/choose/zero/">CC0</a>); licenses that do not allow for commercial reuse (<a href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC</a> and <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA</a>) are also accepted. For open data,  an <a href="https://opendefinition.org/licenses/">Open Data Commons approved license</a> is required. See the<a href="https://github.com/unicef/publicgoods-candidates/blob/master/docs/licenses.md"> full license list here</a> for reference. </td></tr><tr><td>3. Clear Ownership</td><td class="has-text-align-left" data-align="left"> Ownership of everything the project produces must be clearly defined and documented. For example, through copyright, trademark, or other publicly available information.</td></tr><tr><td>4. Platform Independence</td><td class="has-text-align-left" data-align="left"> If the project has mandatory dependencies that create more restrictions than the original license, the project(s) must be able to demonstrate independence from the closed component(s) and/or indicate the existence of functional, open alternatives. </td></tr><tr><td>5. Documentation</td><td class="has-text-align-left" data-align="left">The project must have documentation of the source code, use cases,  and/or functional requirements. For content, this should include all relevant/compatible apps, software, or hardware required to access the content, and instructions regarding how to use it. For software projects, this should be technical documentation that would allow a  technical person unfamiliar with the project to launch and run the software. For data projects, this should be documentation that describes all the fields in the set, and provides context on how data was collected, and how it should be interpreted. </td></tr><tr><td>6. Mechanism for Extracting Data</td><td class="has-text-align-left" data-align="left">If the project has non personally identifiable information (PII) there must be a mechanism for extracting or importing non-PII data from the system in a non-proprietary format. </td></tr><tr><td>7. Adherence to Privacy and Applicable Laws</td><td class="has-text-align-left" data-align="left">The project must state to the best of its knowledge that it complies with relevant privacy laws, and all applicable international and domestic laws. </td></tr><tr><td>8. Adherence to Standards &amp; Best Practices</td><td class="has-text-align-left" data-align="left">Projects must demonstrate adherence to standards, best practices, and/or principles. For example, <a href="https://digitalprinciples.org/principles/">the Principles for Digital Development</a>. </td></tr><tr><td>9. Do No Harm </td><td class="has-text-align-left" data-align="left">All projects must demonstrate that they have taken steps to ensure the project anticipates, prevents, and does no harm.</td></tr><tr><td>9.a) Data Privacy &amp; Security</td><td class="has-text-align-left" data-align="left">Projects collecting data must identify the types of data collected and stored. Projects must also demonstrate how they ensure the privacy and security of this data in addition to the steps taken to prevent adverse impacts resulting from its collection, storage, and distribution. </td></tr><tr><td>9.b) Inappropriate &amp; Illegal Content</td><td class="has-text-align-left" data-align="left">Projects that collect, store or distribute content must have policies identifying inappropriate and illegal content such as child sexual abuse materials in addition to mechanisms for detecting, moderating, and removing inappropriate/illegal content. </td></tr><tr><td>9.c) Protection from Harassment</td><td class="has-text-align-left" data-align="left">If the project facilitates interactions with or between users or contributors there must be a mechanism for users and contributors to protect themselves against grief, abuse, and harassment. The project must have a mechanism to address the safety and security of underage users. </td></tr></tbody></table></figure>
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Indicator </strong></td><td class="has-text-align-left" data-align="left"><strong>Requirement</strong></td></tr><tr><td>1. Relevance to Sustainable Development Goals</td><td class="has-text-align-left" data-align="left">All projects must indicate the <a href="https://sdgs.un.org/goals">Sustainable Development Goals</a> (SDGs) they are relevant to and provide supporting links/documentation to support their relevance.&nbsp;</td></tr><tr><td>2. Use of Approved Open Licenses</td><td class="has-text-align-left" data-align="left">Projects must demonstrate the use of an approved open license. For open source software, only <a href="https://opensource.org/licenses">OSI approved licenses</a> are accepted. For open content, the use of a <a href="https://creativecommons.org/licenses/">Creative Commons license</a> is required. While we encourage projects to use a license that allows for both derivatives and commercial reuse (CC-BY and CC-BY-SA) or dedicates content to the public domain (<a href="https://creativecommons.org/choose/zero/">CC0</a>); licenses that do not allow for commercial reuse (<a href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC</a> and <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA</a>) are also accepted. For open data,  an <a href="https://opendefinition.org/licenses/">Open Data Commons approved license</a> is required. See the<a href="https://github.com/unicef/publicgoods-candidates/blob/master/docs/licenses.md"> full license list here</a> for reference. </td></tr><tr><td>3. Clear Ownership</td><td class="has-text-align-left" data-align="left"> Ownership of everything the project produces must be clearly defined and documented. For example, through copyright, trademark, or other publicly available information.</td></tr><tr><td>4. Platform Independence</td><td class="has-text-align-left" data-align="left"> If the project has mandatory dependencies that create more restrictions than the original license, the project(s) must be able to demonstrate independence from the closed component(s) and/or indicate the existence of functional, open alternatives. </td></tr><tr><td>5. Documentation</td><td class="has-text-align-left" data-align="left">The project must have documentation of the source code, use cases,  and/or functional requirements. For content, this should include all relevant/compatible apps, software, or hardware required to access the content, and instructions regarding how to use it. For software projects, this should be technical documentation that would allow a  technical person unfamiliar with the project to launch and run the software. For data projects, this should be documentation that describes all the fields in the set, and provides context on how data was collected, and how it should be interpreted. </td></tr><tr><td>6. Mechanism for Extracting Data</td><td class="has-text-align-left" data-align="left">If the project has non personally identifiable information (PII) there must be a mechanism for extracting or importing non-PII data from the system in a non-proprietary format. </td></tr><tr><td>7. Adherence to Privacy and Applicable Laws</td><td class="has-text-align-left" data-align="left">The project must state to the best of its knowledge that it complies with relevant privacy laws, and all applicable international and domestic laws. </td></tr><tr><td>8. Adherence to Standards &amp; Best Practices</td><td class="has-text-align-left" data-align="left">Projects must demonstrate adherence to standards, best practices, and/or principles. For example, <a href="https://digitalprinciples.org/principles/">the Principles for Digital Development</a>. </td></tr><tr><td>9. Do No Harm </td><td class="has-text-align-left" data-align="left">All projects must demonstrate that they have taken steps to ensure the project anticipates, prevents, and does no harm.</td></tr><tr><td>9.a) Data Privacy &amp; Security</td><td class="has-text-align-left" data-align="left">Projects collecting data must identify the types of data collected and stored. Projects must also demonstrate how they ensure the privacy and security of this data in addition to the steps taken to prevent adverse impacts resulting from its collection, storage, and distribution. </td></tr><tr><td>9.b) Inappropriate &amp; Illegal Content</td><td class="has-text-align-left" data-align="left">Projects that collect, store or distribute content must have policies identifying inappropriate and illegal content such as child sexual abuse materials in addition to mechanisms for detecting, moderating, and removing inappropriate/illegal content. </td></tr><tr><td>9.c) Protection from Harassment</td><td class="has-text-align-left" data-align="left">If the project facilitates interactions with or between users or contributors there must be a mechanism for users and contributors to protect themselves against grief, abuse, and harassment. The project must have a mechanism to address the safety and security of underage users. </td></tr></tbody></table></figure>
 
 
 
@@ -408,7 +150,7 @@ p.credits {
 
 
 
-<p>We encourage creators, maintainers, funders, implementers, and consumers to use this standard to recognize, assess, and support digital public goods. We maintain a list of digital public goods that meet the standards described above in the DPG Registry.&nbsp;&nbsp;</p>
+<p>We encourage creators, maintainers, funders, implementers, and consumers to recognize and use this standard to support digital public goods. We maintain a list of digital public goods that meet the standards described above in the DPG Registry.&nbsp; To see the full submission of a digital public good, you can click on the DPG icon in the DPG Registry.</p>
 
 
 
@@ -420,7 +162,7 @@ p.credits {
 
 
 
-<p>Movement through the process is transparently displayed on GitHub and can be <a href="https://github.com/unicef/publicgoods-candidates/pulls">viewed here</a>. If a project meets the DPG Standard it will officially be considered a digital public good, appear in the DPG Registry, and may be eligible for additional recognition and support.</p>
+<p>Movement through the process is transparently displayed on GitHub and can be <a href="https://github.com/unicef/publicgoods-candidates/pulls">viewed here</a>. If a project meets the DPG Standard it will officially be considered a digital public good, appear in the DPG Registry.</p>
 
 
 
@@ -432,7 +174,7 @@ p.credits {
 
 
 
-<p>The DPG Standard was developed through an iterative process, building off of the original 51 indicator standard used by the DPGA in the preliminary review of<a href="https://medium.com/digital-public-goods/announcing-the-first-vetted-digital-public-goods-for-foundational-literacy-and-early-grade-reading-1f5c371a50d3"> Early Grade Reading</a> projects, and refined through contributions by many experts. The DPG Standard is free for anyone to use and adapt and is licensed under a<a href="https://github.com/DPGAlliance/DPG-Standard/blob/master/LICENSE"> Creative Commons Attribution ShareAlike 4.0 International License</a>.</p>
+<p>The DPG Standard was developed through an iterative process, building off of the original 51 indicator standard used by the DPGA in the preliminary review of <a href="https://medium.com/digital-public-goods/announcing-the-first-vetted-digital-public-goods-for-foundational-literacy-and-early-grade-reading-1f5c371a50d3"> Early Grade Reading</a> projects, and refined through contributions by many experts. The DPG Standard is free for anyone to use and adapt and is licensed under a<a href="https://github.com/DPGAlliance/DPG-Standard/blob/master/LICENSE"> Creative Commons Attribution ShareAlike 4.0 International License</a>.</p>
 
 
 
@@ -445,35 +187,46 @@ p.credits {
 
 
 <p></p>
-			</div>
-					</div>
-	</article>
+</div>			</div>
+</main>
+</div>
+<footer id="footer">
+	<div>
+		<div class="container">
+			<div id="sidebar-footer" class="sidebar">
+				<aside id="text-2" class="widget widget_text"><h5 class="widget-title">Connect</h5>			<div class="textwidget"><p><span style="font-weight: 400;"><a href="https://mailchi.mp/4ae88231c358/digital-public-goods-mailing-list">Sign up to receive our monthly newsletter</a> and stay up to date on DPGA.</span></p>
+</div>
+		</aside><aside id="text-4" class="widget widget_text"><h5 class="widget-title">Inquiries</h5>			<div class="textwidget"><p>Have a question? <a href="mailto:hello@digitalpublicgoods.net">Contact us here</a>.</p>
+</div>
+		</aside><aside id="text-3" class="widget widget_text"><h5 class="widget-title">Contribute</h5>			<div class="textwidget"><p>Join us by contributing on <a href="https://github.com/dpgalliance" target="_blank" rel="noopener">Github.</a></p>
+</div>
+		</aside>			</div>
 		</div>
 	</div>
-						<footer class="footer footer-black footer-big">
-						<div class="container">
-																<div class="hestia-bottom-footer-content"><ul id="menu-footer-menu" class="footer-menu pull-left"><li id="menu-item-895" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-501 current_page_item menu-item-895"><a href="/standard/" aria-current="page">Digital Public Goods Standard</a></li>
-<li id="menu-item-896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-896"><a href="/submission-guide/">Submission Guide</a></li>
-</ul>					<div class="copyright ">
-				<div style="display:block;float:left">
-<a href="https://twitter.com/dpgalliance" target="_blank" style="padding-right:10px"><img src="https://dpg-website.s3.amazonaws.com/img/iconTwitter.svg" width="25"></a>
-<a href="https://www.linkedin.com/company/dpgalliance" target="_blank" style="padding-right:10px"><img src="https://dpg-website.s3.amazonaws.com/img/iconLinkedIn.svg" width="25"></a>
-<a href="https://medium.com/digital-public-goods" target="_blank" style="padding-right:10px"><img src="https://dpg-website.s3.amazonaws.com/img/iconMedium.svg" width="25"></a></div>
-<div style="float:right;display:block">
-<a href="https://themeisle.com/themes/hestia/" target="_blank" rel="nofollow">Hestia</a> | Powered by <a href="http://wordpress.org/" rel="nofollow">WordPress</a></div>			</div>
-			</div>			</div>
-					</footer>
+	<div>
+		<div class="container">
+			<div class="site-info">
+				<a class="footer-brand" href="http://dpgwebsite.herokuapp.com">
+					<span><img src="/wp-content/themes/dpga/images/logo-w.svg" alt="Digital Public Goods Alliance" /></span>
+				</a>
+				<div>
+					<div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-895" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-501 current_page_item menu-item-895"><a href="/standard/" aria-current="page">Digital Public Goods Standard</a></li>
+<li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915"><a href="/frequently-asked-questions/">Frequently Asked Questions</a></li>
+</ul></div>					<p>
+						Digital Public Goods Alliance						-
+						2021					</p>
 				</div>
+
+			</div>
+			<div class="menu-social-container"><ul id="menu-social" class="menu"><li id="menu-item-897" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-897"><a target="_blank" rel="noopener" href="https://twitter.com/dpgalliance">Twitter</a></li>
+<li id="menu-item-898" class="linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-898"><a target="_blank" rel="noopener" href="https://www.linkedin.com/company/dpgalliance">LinkedIn</a></li>
+<li id="menu-item-910" class="medium menu-item menu-item-type-custom menu-item-object-custom menu-item-910"><a target="_blank" rel="noopener" href="https://medium.com/digital-public-goods">Medium</a></li>
+<li id="menu-item-911" class="github menu-item menu-item-type-custom menu-item-object-custom menu-item-911"><a target="_blank" rel="noopener" href="https://github.com/dpgalliance">Github</a></li>
+</ul></div>		</div>
 	</div>
-<!-- Enter your scripts here --><script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=5.3.2'></script>
-<script type='text/javascript' src='/wp-content/themes/hestia/assets/bootstrap/js/bootstrap.min.js?ver=1.0.2'></script>
-<script type='text/javascript' src='/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var requestpost = {"ajaxurl":"\/wp-admin\/admin-ajax.php","disable_autoslide":"","masonry":""};
-/* ]]> */
-</script>
-<script type='text/javascript' src='/wp-content/themes/hestia/assets/js/script.min.js?ver=2.5.6'></script>
-<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+</footer>
+<script type='text/javascript' src='/wp-content/themes/dpga/js/libs.min.js?ver=1622233620' id='dpga-libs-js'></script>
+<script type='text/javascript' src='/wp-content/themes/dpga/js/dpga.min.js?ver=1622233620' id='dpga-main-js'></script>
 </body>
+
 </html>
