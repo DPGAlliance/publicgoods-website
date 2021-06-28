@@ -5826,7 +5826,12 @@ a.search-form i {
   line-break: auto;
   font-size: 0.9625rem;
   word-wrap: break-word;
-  opacity: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 3px 1px rgba(0, 0, 0, .11);
+  box-shadow: 0 3px 3px 1px rgba(0, 0, 0, .11);
+  border: 1px solid #d0cccc;
+  padding: 0.5rem;
 }
 .tooltip.show {
   opacity: 0.9;
