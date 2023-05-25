@@ -1,0 +1,1 @@
+window.open("https://digital-public-goods.gitbook.io/navigating-this-gitbook/","_self");
