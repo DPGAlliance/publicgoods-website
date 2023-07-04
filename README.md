@@ -10,8 +10,8 @@ This repo is one of four interconnected repositories that are used to manage the
 - [publicgoods-website](https://github.com/unicef/publicgoods-website): Holds the static version of the site available at https://digitalpublicgoods.net served through Github Pages which integrates all previous sources. Leverages Github Content Delivery Network (CDN) for great availability worldwide.
 
 ## Deployment
-The DPGA website gets automatically built and deployed every night at midnight GMT to keep it up to date from changes made in any of the sources. It can also be manually triggered through GitHub Actions.
-![image](https://github.com/DPGAlliance/publicgoods-website/assets/18178248/4d68b726-9e7e-4e71-a253-5f606eda1a77)
+The DPGA website gets automatically built and deployed every night at midnight GMT updating changes made in any of the sources. It can also be manually triggered through GitHub Actions.
+![image](https://github.com/DPGAlliance/publicgoods-website/assets/18178248/ad09d5b8-8e27-45d7-9619-2990e5e2e69b)
 
 ## How to contribute and/or request changes
 
