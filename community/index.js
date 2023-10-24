@@ -1,1 +1,1 @@
-window.open("https://digitalpublicgoods.notion.site/DPG-Community-Center-e63d461547d54ccaa66efa3bd53e446f","_self");
+window.open("https://github.com/DPGAlliance/dpg-community","_self");
