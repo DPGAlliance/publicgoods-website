@@ -1,1 +1,1 @@
-window.open("https://digital-public-goods.gitbook.io/navigating-this-gitbook/","_self");
+window.open("https://github.com/DPGAlliance/dpg-resources/wiki","_self");
