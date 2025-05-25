@@ -11118,6 +11118,20 @@ body.single-post .menu-item.blog > a {
 a:hover {
   font-weight: bold;
 }
+@supports (-webkit-touch-callout: none) and (not (overflow: -moz-hidden-unscrollable)) {
+  a:hover {
+    /* Safari-specfic style */
+    font-weight: normal;
+    color: #0f0a43;
+  }
+}
+@supports (--moz-appearance: none) {
+  a:hover {
+    /* Firefox-specifc style */
+    font-weight: normal;
+    color: #0f0a43;
+  }
+}
 
 a.wp-block-button__link:hover {
   color: #ffffff;
@@ -11457,7 +11471,7 @@ body {
   content: "\e804";
 }
 #footer > div:last-child .container #menu-social > li.twitter > a:before {
-  content: "\f099";
+  content: "𝕏";
 }
 #footer > div:last-child .container #menu-social > li.facebook > a:before {
   content: "\f09a";
