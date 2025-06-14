@@ -11108,7 +11108,7 @@ body.single-post .menu-item.blog > a {
 }
 
 .search-replacement {
-  display: block;
+  display: none;
   width: 10%;
   overflow: hidden;
   padding: 1rem 0;
@@ -11135,6 +11135,35 @@ a:hover {
 
 a.wp-block-button__link:hover {
   color: #ffffff;
+}
+
+.nominate {
+  background: #2AA8A8;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 90%;
+  font-weight: bold;
+  padding: 0.5em 1rem;
+  text-align: center;
+  text-decoration: none;
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nominate:hover {
+  background: #238f8f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu-main-menu-container {
+  overflow-y: auto;
+}
+
+.navbar-brand {
+  margin: 0 auto;
 }
 
 body.blog header.page-header, body.archive header.page-header, body.search header.page-header {
