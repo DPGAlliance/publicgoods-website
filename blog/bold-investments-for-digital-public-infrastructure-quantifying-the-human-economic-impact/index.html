@@ -449,7 +449,7 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 			</div>
 </main>
 </div>
-<footer id="footer">
+<footer id="footer" class="footer-test">
 	<div>
 		<div class="container">
 			<div id="sidebar-footer" class="sidebar">
@@ -463,23 +463,67 @@ var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions
 		</div>
 	</div>
 	<div>
+		
+		<!-- static footer -->
+
 		<div class="container">
 			<div class="site-info">
 				<a class="footer-brand" href="https://digitalpublicgoods.net">
-					<span><img src="/wp-content/themes/dpga/images/logo-w.svg" alt="Digital Public Goods Alliance" /></span>
+					<span><img src="/wp-content/themes/dpga/images/logo-w.svg" alt="Digital Public Goods Alliance"></span>
 				</a>
 				<div>
-					<div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-1511" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1511"><a href="/DPGA_Brand-Guide.pdf">DPGA Brand Guide</a></li>
-</ul></div>					<p>
-						Digital Public Goods Alliance						-
-						2025					</p>
+					<div class="menu-footer-menu-container">
+						<ul id="menu-footer-menu" class="menu">
+							<li id="menu-item-1511" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1511">
+								<a href="/DPGA_Brand-Guide.pdf">DPGA Brand Guide</a>
+							</li>
+						</ul>
+					</div>					
+					<p>
+						Digital Public Goods Alliance - 2025					
+					</p>
 				</div>
 
 			</div>
-			<div class="menu-social-container"><ul id="menu-social" class="menu"><li id="menu-item-897" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-897"><a target="_blank" href="https://twitter.com/dpgalliance">Twitter</a></li>
-<li id="menu-item-898" class="linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-898"><a target="_blank" href="https://www.linkedin.com/company/dpgalliance">LinkedIn</a></li>
-<li id="menu-item-911" class="github menu-item menu-item-type-custom menu-item-object-custom menu-item-911"><a target="_blank" href="https://github.com/dpgalliance">Github</a></li>
-</ul></div>		</div>
+			<style>
+				.footer-logos {
+					display: flex;
+					width: 100%;
+					align-items: center;
+					justify-content: space-between;
+					max-width: 300px;
+					margin-top: 20px;
+					margin-left: auto;	
+					
+					@media (max-width: 990px) {
+						margin-right: auto;
+					}
+				}
+			</style>
+			<div class="footer-logos">
+				<a aria-label="Follow us on Mastodon" class=" text-white hover:text-dpga-violet-200 transition-colors" target="_blank" rel="noopener noreferrer" href="https://mastodon.social/@dpga">
+					<svg viewBox="0 0 30 30" fill="currentColor" class="w-7 h-7 item-center" style="width: 32px;">
+						<path clip-rule="evenodd" d="M 15.9375 4.03125 C 12.917 4.0435 9.9179219 4.4269844 8.3574219 5.1464844 C 8.3574219 5.1464844 5 6.6748594 5 11.880859 C 5 18.077859 4.9955 25.860234 10.5625 27.365234 C 12.6945 27.938234 14.527953 28.061562 16.001953 27.976562 C 18.676953 27.825562 20 27.005859 20 27.005859 L 19.910156 25.029297 C 19.910156 25.029297 18.176297 25.640313 16.029297 25.570312 C 13.902297 25.495313 11.6615 25.335688 11.3125 22.679688 C 11.2805 22.432688 11.264625 22.182594 11.265625 21.933594 C 15.772625 23.052594 19.615828 22.420969 20.673828 22.292969 C 23.627828 21.933969 26.199344 20.081672 26.527344 18.388672 C 27.041344 15.720672 26.998047 11.880859 26.998047 11.880859 C 26.998047 6.6748594 23.646484 5.1464844 23.646484 5.1464844 C 22.000984 4.3779844 18.958 4.019 15.9375 4.03125 z M 12.705078 8.0019531 C 13.739953 8.0297031 14.762578 8.4927031 15.392578 9.4707031 L 16.001953 10.505859 L 16.609375 9.4707031 C 17.874375 7.5037031 20.709594 7.6264375 22.058594 9.1484375 C 23.302594 10.596438 23.025391 11.531 23.025391 18 L 23.025391 18.001953 L 20.578125 18.001953 L 20.578125 12.373047 C 20.578125 9.7380469 17.21875 9.6362812 17.21875 12.738281 L 17.21875 16 L 14.787109 16 L 14.787109 12.738281 C 14.787109 9.6362812 11.429688 9.7360938 11.429688 12.371094 L 11.429688 18 L 8.9765625 18 C 8.9765625 11.526 8.7043594 10.585438 9.9433594 9.1484375 C 10.622859 8.3824375 11.670203 7.9742031 12.705078 8.0019531 z" fill="currentColor" fill-rule="evenodd"></path>
+					</svg>
+				</a>
+				<a aria-label="Follow us on X" class=" text-white hover:text-dpga-violet-200 transition-colors" target="_blank" rel="noopener noreferrer" href="https://x.com/dpgalliance">
+					<svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" style="width: 28px;">
+						<path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" fill="currentColor" fill-rule="evenodd"></path>
+					</svg>
+				</a>
+				<a aria-label="Follow us on LinkedIn" class=" text-white hover:text-dpga-violet-200 transition-colors" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/dpgalliance">
+					<img alt="linkedin logo" loading="lazy" width="28" height="28" decoding="async" data-nimg="1" style="color:transparent" src="https://www.digitalpublicgoods.net/_next/image?url=%2Fimages%2Flogo-linkedin.png&w=64&q=75">
+				</a>
+				<a aria-label="Follow us on GitHub" class=" text-white hover:text-dpga-violet-200 transition-colors" target="_blank" rel="noopener noreferrer" href="https://github.com/dpgalliance">
+					<svg viewBox="0 0 28 28" fill="currentColor" class="w-8 h-8" style="width: 28px;">
+						<path clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z" fill="currentColor" fill-rule="evenodd"></path>
+					</svg>
+				</a>
+			</div>		
+		</div>
+
+		<!-- / static footer -->
+
 	</div>
 </footer>
 <style id='core-block-supports-inline-css' type='text/css'>
