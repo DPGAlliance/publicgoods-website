@@ -326,6 +326,8 @@ var MonsterInsights = function () {
       return el.textContent.replace(/\n/ig, '');
     } else if (el.firstChild && el.firstChild.tagName == "IMG") {
       return el.firstChild.src;
+    } else if (el.href) {
+      return el.href;
     } else {
       return undefined;
     }
